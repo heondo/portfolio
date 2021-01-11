@@ -1,35 +1,48 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">portfolio</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-        <a href="blog"> will this go to blog </a>
-      </div>
-    </div>
-  </div>
+  <app-layout>
+    <template #content>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+      <div>what is up my guys</div>
+    </template>
+  </app-layout>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-
-export default Vue.extend({})
+import AppLayout from '~/layouts/AppLayout.vue'
+export default Vue.extend({
+  components: {
+    AppLayout,
+  },
+})
 </script>
 
 <style>
