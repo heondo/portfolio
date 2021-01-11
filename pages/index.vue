@@ -20,6 +20,7 @@
         >
           GitHub
         </a>
+        <a href="blog"> will this go to blog </a>
       </div>
     </div>
   </div>
