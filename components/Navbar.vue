@@ -9,45 +9,45 @@
               <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-4">
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                  <a
+                  <nuxt-link
                     :class="{
                       active: isCurrentRoute('/', '#about'),
                     }"
-                    href="./#about"
+                    to="./#about"
                     class="navbar-link"
-                    >About</a
+                    >About</nuxt-link
                   >
-                  <a
+                  <nuxt-link
                     :class="{
                       active: isCurrentRoute('/', '#projects'),
                     }"
-                    href="./#projects"
+                    to="./#projects"
                     class="navbar-link"
-                    >Projects</a
+                    >Projects</nuxt-link
                   >
-                  <a
+                  <nuxt-link
                     :class="{
                       active: isCurrentRoute('/', '#resume'),
                     }"
-                    href="./#resume"
+                    to="./#resume"
                     class="navbar-link"
-                    >Resume</a
+                    >Resume</nuxt-link
                   >
-                  <a
+                  <nuxt-link
                     :class="{
                       active: isCurrentRoute('/', '#contact'),
                     }"
-                    href="./#contact"
+                    to="./#contact"
                     class="navbar-link"
-                    >contact</a
+                    >contact</nuxt-link
                   >
-                  <a
+                  <nuxt-link
                     :class="{
-                      active: isCurrentRoute('/blog'),
+                      active: isCurrentRoute('/blogs'),
                     }"
-                    href="/blog"
+                    to="blogs"
                     class="navbar-link"
-                    >Blog</a
+                    >Blog</nuxt-link
                   >
                 </div>
               </div>
@@ -114,45 +114,45 @@
       <div v-show="isOpen" class="border-b border-gray-700 md:hidden">
         <div class="px-2 py-3 space-y-1 sm:px-3">
           <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-          <a
+          <nuxt-link
             :class="{
               active: isCurrentRoute('/', '#about'),
             }"
-            href="./#about"
+            to="./#about"
             class="navbar-link"
-            >About</a
+            >About</nuxt-link
           >
-          <a
+          <nuxt-link
             :class="{
               active: isCurrentRoute('/', '#projects'),
             }"
-            href="./#projects"
+            to="./#projects"
             class="navbar-link"
-            >Projects</a
+            >Projects</nuxt-link
           >
-          <a
+          <nuxt-link
             :class="{
               active: isCurrentRoute('/', '#resume'),
             }"
-            href="./#resume"
+            to="./#resume"
             class="navbar-link"
-            >Resume</a
+            >Resume</nuxt-link
           >
-          <a
+          <nuxt-link
             :class="{
               active: isCurrentRoute('/', '#contact'),
             }"
-            href="./#contact"
+            to="./#contact"
             class="navbar-link"
-            >contact</a
+            >contact</nuxt-link
           >
-          <a
+          <nuxt-link
             :class="{
-              active: isCurrentRoute('/blog'),
+              active: isCurrentRoute('/blogs'),
             }"
-            href="/blog"
+            to="blogs"
             class="navbar-link"
-            >Blog</a
+            >Blog</nuxt-link
           >
         </div>
       </div>
@@ -187,6 +187,8 @@ export default {
       this.isOpen = !this.isOpen
     },
     isCurrentRoute(path = '', hash = '') {
+      if (hash === '#about' && !this.currentHash && this.currentPath === '/')
+        return true
       if (this.currentPath === path && this.currentHash === hash) {
         return true
       }
