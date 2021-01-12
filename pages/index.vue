@@ -2,7 +2,15 @@
   <app-layout>
     <template #title>
       <app-header>
-        <div class="flex col">Heondno Kim</div>
+        <div
+          :class="{ 'opacity-100': headerVisible }"
+          class="flex flex-col items-center transition duration-700 ease-linear opacity-0"
+        >
+          <h2 class="text-3xl sm:text-6xl font-bold text-white">Heondo Kim</h2>
+          <span class="text-xl sm:text-3xl text-blue-200"
+            >Software Engineer</span
+          >
+        </div>
       </app-header>
     </template>
     <template #content>
@@ -48,6 +56,17 @@ export default Vue.extend({
   components: {
     AppLayout,
     AppHeader,
+  },
+  data() {
+    return {
+      headerVisible: false,
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.headerVisible = true
+    }, 200)
+    // this.headerVisible = true
   },
 })
 </script>
