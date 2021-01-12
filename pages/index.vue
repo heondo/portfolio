@@ -2,18 +2,33 @@
   <app-layout>
     <template #title>
       <app-header>
+        <!-- <transition
+          enter-class="transform ease-out duration-300 transition"
+          enter-active-class="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
+          enter-to-class="translate-y-0 opacity-100 sm:translate-x-0"
+          leave-class="transition ease-in duration-100"
+          leave-active-class="opacity-100"
+          leave-to-class="opacity-0"
+        > -->
         <div
-          :class="{ 'opacity-100': headerVisible }"
-          class="flex flex-col items-center transition duration-700 ease-linear opacity-0"
+          :class="{
+            'opacity-100 translate-y-0': headerVisible,
+            '-translate-y-6': !headerVisible,
+          }"
+          class="flex flex-col items-center transition duration-500 ease-linear opacity-0 transform"
         >
-          <h2 class="text-3xl sm:text-6xl font-bold text-white">Heondo Kim</h2>
-          <span class="text-xl sm:text-3xl text-blue-200"
+          <h2 class="text-3xl sm:text-5xl font-bold text-white">Heondo Kim</h2>
+          <span class="text-xl sm:text-2xl italic font-semibold text-blue-200"
             >Software Engineer</span
           >
         </div>
+        <!-- </transition> -->
       </app-header>
     </template>
     <template #content>
+      <app-about-me id="about"></app-about-me>
+      <app-projects id="projects"></app-projects>
+      <!-- <div>what is up my guys</div>
       <div>what is up my guys</div>
       <div>what is up my guys</div>
       <div>what is up my guys</div>
@@ -42,8 +57,7 @@
       <div>what is up my guys</div>
       <div>what is up my guys</div>
       <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
+      <div>what is up my guys</div> -->
     </template>
   </app-layout>
 </template>
@@ -52,10 +66,14 @@
 import Vue from 'vue'
 import AppLayout from '~/layouts/AppLayout.vue'
 import AppHeader from '~/components/AppHeader.vue'
+import AppAboutMe from '~/components/AboutMe.vue'
+import AppProjects from '~/components/Projects.vue'
 export default Vue.extend({
   components: {
     AppLayout,
     AppHeader,
+    AppAboutMe,
+    AppProjects,
   },
   data() {
     return {
@@ -63,9 +81,9 @@ export default Vue.extend({
     }
   },
   mounted() {
-    setTimeout(() => {
-      this.headerVisible = true
-    }, 200)
+    // setTimeout(() => {
+    this.headerVisible = true
+    // }, 200)
     // this.headerVisible = true
   },
 })

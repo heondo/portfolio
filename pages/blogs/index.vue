@@ -7,13 +7,15 @@
     </template>
     <template #content>
       <div v-for="blog in blogs" :key="blog.slug">
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-1 sm:gap-3">
           <nuxt-link
             :to="{ path: `blogs/${blog.slug}` }"
             class="font-bold italic"
             >{{ blog.title }}</nuxt-link
           >
-          <sub>Last updated: {{ formatDate(blog.updatedAt) }}</sub>
+          <time class="break-words text-sm italic">
+            Edited: {{ formatDate(blog.updatedAt) }}
+          </time>
         </div>
         <span>{{ blog.description }}</span>
       </div>
