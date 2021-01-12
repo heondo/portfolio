@@ -1,7 +1,7 @@
 <template>
   <app-layout>
     <template #title>
-      <h1 class="text-xl mb-4">Blogs</h1>
+      <h1 class="applayout-header">Blogs</h1>
     </template>
     <template #content>
       <div v-for="blog in blogs" :key="blog.slug">
@@ -40,3 +40,8 @@ export default {
   },
 }
 </script>
+<style>
+.applayout-header {
+  @apply text-xl mb-2;
+}
+</style>

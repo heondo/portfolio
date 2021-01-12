@@ -1,6 +1,8 @@
 <template>
   <app-layout>
-    <template #title> Blog title goes here </template>
+    <template #title>
+      <h3 class="text-xl applayout-header">{{ blog.title }}</h3>
+    </template>
     <template #content>
       <nuxt-content :document="blog"></nuxt-content>
     </template>

@@ -1,5 +1,8 @@
 <template>
   <app-layout>
+    <template #title>
+      <app-header :title="'Heondo Kim'"></app-header>
+    </template>
     <template #content>
       <div>what is up my guys</div>
       <div>what is up my guys</div>
@@ -38,9 +41,11 @@
 <script lang="ts">
 import Vue from 'vue'
 import AppLayout from '~/layouts/AppLayout.vue'
+import AppHeader from '~/components/AppHeader.vue'
 export default Vue.extend({
   components: {
     AppLayout,
+    AppHeader,
   },
 })
 </script>
