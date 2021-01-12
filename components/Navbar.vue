@@ -114,11 +114,46 @@
       <div v-show="isOpen" class="border-b border-gray-700 md:hidden">
         <div class="px-2 py-3 space-y-1 sm:px-3">
           <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-          <a href="./#about" class="navbar-link active">About</a>
-          <a href="./#projects" class="navbar-link">Projects</a>
-          <a href="./#resume" class="navbar-link">Resume</a>
-          <a href="./#contact" class="navbar-link">Contact</a>
-          <a href="/blog" class="navbar-link">Blog</a>
+          <a
+            :class="{
+              active: isCurrentRoute('/', '#about'),
+            }"
+            href="./#about"
+            class="navbar-link"
+            >About</a
+          >
+          <a
+            :class="{
+              active: isCurrentRoute('/', '#projects'),
+            }"
+            href="./#projects"
+            class="navbar-link"
+            >Projects</a
+          >
+          <a
+            :class="{
+              active: isCurrentRoute('/', '#resume'),
+            }"
+            href="./#resume"
+            class="navbar-link"
+            >Resume</a
+          >
+          <a
+            :class="{
+              active: isCurrentRoute('/', '#contact'),
+            }"
+            href="./#contact"
+            class="navbar-link"
+            >contact</a
+          >
+          <a
+            :class="{
+              active: isCurrentRoute('/blog'),
+            }"
+            href="/blog"
+            class="navbar-link"
+            >Blog</a
+          >
         </div>
       </div>
     </nav>

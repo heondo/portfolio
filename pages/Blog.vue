@@ -1,14 +1,13 @@
 <template>
   <app-layout>
-    <template #title>Blogs</template>
+    <template #title>
+      <h1 class="text-xl mb-4">Blogs</h1>
+    </template>
     <template #content>
-      <!-- <div>
-        {{ articles[0] }}
-      </div> -->
       <div v-for="article in articles" :key="article.slug">
-        {{ article.title }}
+        <h4 class="font-bold italic">{{ article.title }}</h4>
+        <sub> {{ article.description }} </sub>
       </div>
-      <!-- <div>Hello {{ articles.length }}</div> -->
     </template>
   </app-layout>
 </template>
