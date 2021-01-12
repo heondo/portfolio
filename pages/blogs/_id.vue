@@ -1,7 +1,12 @@
 <template>
   <app-layout>
     <template #title>
-      <h3 class="text-xl applayout-header">{{ blog.title }}</h3>
+      <app-header>
+        <h1 class="text-3xl font-bold text-white">
+          {{ blog.title }}
+        </h1>
+      </app-header>
+      <!-- <h3 class="text-xl">{{ blog.title }}</h3> -->
     </template>
     <template #content>
       <nuxt-content :document="blog"></nuxt-content>
@@ -10,9 +15,11 @@
 </template>
 <script>
 import AppLayout from '~/layouts/AppLayout'
+import AppHeader from '~/components/AppHeader'
 export default {
   components: {
     AppLayout,
+    AppHeader,
   },
   async asyncData({ $content, params }) {
     // const a

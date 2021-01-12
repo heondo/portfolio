@@ -5,7 +5,10 @@
       <div class="border-b border-gray-700">
         <div class="flex items-center justify-between h-16 px-4 sm:px-0">
           <div class="flex items-center">
-            <div class="flex-shrink-0 text-white">Heondo</div>
+            <nuxt-link to="/" class="flex-shrink-0 text-white"
+              >Heondo</nuxt-link
+            >
+
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
@@ -39,7 +42,7 @@
                   }"
                   to="/#contact"
                   class="navbar-link"
-                  >contact</nuxt-link
+                  >Contact</nuxt-link
                 >
                 <nuxt-link
                   :class="{
@@ -55,6 +58,14 @@
 
           <div class="-mr-2 flex md:hidden">
             <!-- Mobile menu button -->
+            <nuxt-link
+              :class="{
+                active: isCurrentRoute('/blogs'),
+              }"
+              to="/blogs"
+              class="navbar-link"
+              >Blog</nuxt-link
+            >
             <button
               @click="toggleMenu()"
               class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
@@ -144,16 +155,16 @@
           }"
           to="/#contact"
           class="navbar-link"
-          >contact</nuxt-link
+          >Contact</nuxt-link
         >
-        <nuxt-link
+        <!-- <nuxt-link
           :class="{
             active: isCurrentRoute('/blogs'),
           }"
           to="/blogs"
           class="navbar-link"
           >Blog</nuxt-link
-        >
+        > -->
       </div>
     </div>
   </nav>

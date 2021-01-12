@@ -1,7 +1,9 @@
 <template>
   <app-layout>
     <template #title>
-      <app-header :title="'Heondo Kim'"></app-header>
+      <app-header>
+        <div class="flex col">Heondno Kim</div>
+      </app-header>
     </template>
     <template #content>
       <div>what is up my guys</div>

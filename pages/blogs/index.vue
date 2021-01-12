@@ -1,7 +1,9 @@
 <template>
   <app-layout>
     <template #title>
-      <h1 class="applayout-header">Blogs</h1>
+      <app-header>
+        <h1 class="text-3xl font-bold text-white">Blogs</h1>
+      </app-header>
     </template>
     <template #content>
       <div v-for="blog in blogs" :key="blog.slug">
@@ -21,9 +23,12 @@
 </template>
 <script>
 import AppLayout from '~/layouts/AppLayout'
+import AppHeader from '~/components/AppHeader.vue'
+
 export default {
   components: {
     AppLayout,
+    AppHeader,
   },
   async asyncData({ $content }) {
     const blogs = await $content('blogs').fetch()
@@ -40,8 +45,3 @@ export default {
   },
 }
 </script>
-<style>
-.applayout-header {
-  @apply text-xl mb-2;
-}
-</style>
