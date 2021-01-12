@@ -45,7 +45,7 @@
                     :class="{
                       active: isCurrentRoute('/blogs'),
                     }"
-                    to="blogs"
+                    to="/blogs"
                     class="navbar-link"
                     >Blog</nuxt-link
                   >
@@ -150,7 +150,7 @@
             :class="{
               active: isCurrentRoute('/blogs'),
             }"
-            to="blogs"
+            to="/blogs"
             class="navbar-link"
             >Blog</nuxt-link
           >
