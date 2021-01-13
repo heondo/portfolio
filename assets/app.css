@@ -1,6 +1,10 @@
 html {
   scroll-behavior: smooth;
 }
+
+.nothing {
+  background-color: white;
+}
 /* body {
   overflow: hidden;
 } */

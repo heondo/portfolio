@@ -1,19 +1,21 @@
 <template>
   <div class="overflow-hidden">
-    <div class="bg-gray-800 pb-32">
+    <div class="bg-gray-800 pb-32 z-10">
       <nav-bar></nav-bar>
       <slot name="title"></slot>
     </div>
-    <main class="relative -mt-32 px-2 sm:px-0">
+    <main class="-mt-32 px-2 md:px-4">
       <div class="max-w-6xl mx-auto pb-12">
         <!-- Replace with your content -->
-        <div class="bg-white shadow px-10 relative z-10 py-2 sm:py-4 sm:px-6">
+        <div
+          class="bg-white shadow-xl px-10 relative z-10 py-2 sm:py-4 sm:px-6"
+        >
           <slot name="content"></slot>
         </div>
-        <div class="rotated-block"></div>
         <!-- /End replace -->
       </div>
     </main>
+    <div class="rotated-block"></div>
   </div>
 </template>
 <script>
@@ -26,12 +28,41 @@ export default {
 </script>
 <style>
 .rotated-block {
-  @apply absolute bg-gray-300 py-2 left-0 z-0;
-  height: 200vh;
-  width: 200vw;
-  margin-top: -40vh;
-  -ms-transform: rotate(-10deg); /* IE 9 */
-  -webkit-transform: rotate(-10deg); /* Safari */
-  transform: rotate(-10deg);
+  @apply w-full absolute right-0 bg-blue-700;
+  top: 50vh;
+  z-index: 1;
+
+  &:before,
+  &:after {
+    background: inherit;
+    content: '';
+    display: block;
+    height: 30vh;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    -webkit-backface-visibility: hidden;
+  }
+
+  &:before {
+    top: 0;
+    transform: skewY(1.5deg);
+    transform-origin: 100% 0;
+  }
+
+  &:after {
+    bottom: 0;
+    transform: skewY(-1.5deg);
+    transform-origin: 100%;
+  }
+}
+
+.rotated-block {
+  color: #fff;
+  font-family: 'Fira Sans', sans-serif;
+  margin: 50px 0;
+  padding: 20% 20px;
+  text-align: center;
 }
 </style>
