@@ -56,6 +56,7 @@ export default Vue.extend({
     AppProjects,
     Divider,
   },
+
   data() {
     return {
       headerVisible: false,
@@ -66,6 +67,18 @@ export default Vue.extend({
     this.headerVisible = true
     // }, 200)
     // this.headerVisible = true
+  },
+  head() {
+    return {
+      title: 'Heondo Kim',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Heondo Kim, Software Engineer ',
+        },
+      ],
+    }
   },
 })
 </script>
