@@ -1,12 +1,32 @@
 <template>
   <section class="my-2">
-    <h2 class="text-2xl font-semibold">About me</h2>
-    <div>
-      <p>Some paragraph about myself</p>
-
-      <p>Some paragraph about myself</p>
-    </div>
-    <!-- <div
+    <h2 class="section-header">About me</h2>
+    <span class="flex flex-col gap-1 text-sm"
+      ><p>
+        &emsp;My name is Heondo Kim, I am Softare Engineer at SmartSpace AI
+        working out of Los Angeles, CA. Previously I worked as a data analyst at
+        an insuretech company out in Santa Barbara. Currently I am developing a
+        web application using Laravel and Vue.
+      </p>
+      <p>
+        &emsp;My first hands on experience with web development came late 2019.
+        I attended a local bootcamp and learned the basics of HTML, CSS,
+        JavaScript, React, and PHP. Since then, I have picked up React Native,
+        Angular, Vue, Redux, MongoDB, GraphQL and so much more. It's always
+        interesting to see how a framework deals with certain use cases and to
+        try and pick up my favorite aspects of each when I start a new project.
+      </p>
+      <p class="mb-1">
+        &emsp;At the moment, I am really enjoying using Vue and this website was
+        built using Nuxt! The Vue framework and even Vuex is so easy to work
+        with that ever since learning it at my current role I want to make
+        everything with Vue.
+      </p>
+      <p class="text-sm italic">
+        Currently: Building a React Native app for iOS and Android. Utilizing
+        Firebase, Redux, and Styled Components for the UI.
+      </p> </span
+    ><!-- <div
       class="absolute bg-gray-300 h-48 w-full -mt-10 transform rotate-45"
     ></div> -->
   </section>

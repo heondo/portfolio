@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-hidden">
+  <div class="overflow-hidden bg-gray-300">
     <div class="bg-gray-800 pb-32 z-10">
       <nav-bar></nav-bar>
       <slot name="title"></slot>
@@ -8,7 +8,7 @@
       <div class="max-w-6xl mx-auto pb-12">
         <!-- Replace with your content -->
         <div
-          class="bg-white shadow-xl px-10 relative z-10 py-2 sm:py-4 sm:px-6"
+          class="bg-white rounded-md shadow-xl px-4 sm:px-7 md:px-10 relative z-10 py-2 sm:py-4 sm:px-6"
         >
           <slot name="content"></slot>
         </div>
@@ -64,5 +64,9 @@ export default {
   margin: 50px 0;
   padding: 20% 20px;
   text-align: center;
+}
+
+.section-header {
+  @apply text-xl font-semibold;
 }
 </style>

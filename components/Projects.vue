@@ -1,6 +1,6 @@
 <template>
   <section class="py-2">
-    <h2 class="text-2xl font-semibold">Projects</h2>
+    <h2 class="section-header">Projects</h2>
     <div>
       <p>Some paragraph about myself</p>
       <p>Some paragraph about myself</p>
