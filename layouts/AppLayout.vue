@@ -16,13 +16,16 @@
       </div>
     </main>
     <div class="rotated-block"></div>
+    <app-footer></app-footer>
   </div>
 </template>
 <script>
 import NavBar from '~/components/Navbar'
+import AppFooter from '~/components/Footer'
 export default {
   components: {
     NavBar,
+    AppFooter,
   },
 }
 </script>

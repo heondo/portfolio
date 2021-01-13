@@ -3,10 +3,10 @@
     <h2 class="section-header">About me</h2>
     <span class="flex flex-col gap-1 text-sm"
       ><p>
-        &emsp;My name is Heondo Kim, I am Softare Engineer at SmartSpace AI
+        &emsp;My name is Heondo Kim, I am Software Engineer at SmartSpace AI
         working out of Los Angeles, CA. Previously I worked as a data analyst at
         an insuretech company out in Santa Barbara. Currently I am developing a
-        web application using Laravel and Vue.
+        web application using Laravel, Vue, and websockets.
       </p>
       <p>
         &emsp;My first hands on experience with web development came late 2019.
@@ -20,15 +20,21 @@
         &emsp;At the moment, I am really enjoying using Vue and this website was
         built using Nuxt! The Vue framework and even Vuex is so easy to work
         with that ever since learning it at my current role I want to make
-        everything with Vue.
+        everything with Vue. Nuxt is also fantastic, Laravel is fantastic as
+        well but I'm not as familiar with PHP as I am in JavaScript
       </p>
       <p class="text-sm italic">
         Currently: Building a React Native app for iOS and Android. Utilizing
         Firebase, Redux, and Styled Components for the UI.
-      </p> </span
-    ><!-- <div
-      class="absolute bg-gray-300 h-48 w-full -mt-10 transform rotate-45"
-    ></div> -->
+      </p>
+    </span>
+    <!-- <div class="about-image justify-content-center">
+        <img
+          class="m-auto object-contain border-2 border-solid border-gray-800 rounded-md p-2"
+          src="~/assets/ezgif.com-gif-maker.webp"
+          alt="profile picture for heondo kim"
+        />
+      </div> -->
   </section>
 </template>
 <script>
