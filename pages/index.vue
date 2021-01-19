@@ -30,7 +30,7 @@
           'opacity-100 translate-x-0': headerVisible,
           '-translate-x-6': !headerVisible,
         }"
-        class="transition duration-600 ease-linear opacity-0 transform"
+        class="transition duration-500 ease-linear opacity-0 transform"
       >
         <app-about-me id="about"></app-about-me>
         <divider></divider>
