@@ -5,7 +5,7 @@
       <div class="border-b border-gray-700">
         <div class="flex items-center justify-between h-16 px-4 sm:px-0">
           <div class="flex items-center">
-            <nuxt-link to="/" class="flex-shrink-0 text-white"
+            <nuxt-link :to="{ path: '/' }" class="flex-shrink-0 text-white"
               >Heondo</nuxt-link
             >
 
@@ -16,7 +16,7 @@
                   :class="{
                     active: isCurrentRoute('/', '#about'),
                   }"
-                  to="/#about"
+                  :to="{ path: '/#about' }"
                   class="navbar-link"
                   >About</nuxt-link
                 >
@@ -24,7 +24,7 @@
                   :class="{
                     active: isCurrentRoute('/', '#projects'),
                   }"
-                  to="/#projects"
+                  :to="{ path: '/#projects' }"
                   class="navbar-link"
                   >Projects</nuxt-link
                 >
@@ -32,7 +32,7 @@
                   :class="{
                     active: isCurrentRoute('/', '#resume'),
                   }"
-                  to="/#resume"
+                  :to="{ path: '/#resume' }"
                   class="navbar-link"
                   >Resume</nuxt-link
                 >
@@ -40,7 +40,7 @@
                   :class="{
                     active: isCurrentRoute('/', '#contact'),
                   }"
-                  to="/#contact"
+                  :to="{ path: '/#contact' }"
                   class="navbar-link"
                   >Contact</nuxt-link
                 >
@@ -48,7 +48,7 @@
                   :class="{
                     active: isCurrentRoute('/blogs'),
                   }"
-                  to="/blogs"
+                  :to="{ path: `/blogs` }"
                   class="navbar-link"
                   >Blog</nuxt-link
                 >
@@ -62,7 +62,7 @@
               :class="{
                 active: isCurrentRoute('/blogs'),
               }"
-              to="/blogs"
+              :to="{ path: '/blogs' }"
               class="navbar-link"
               >Blog</nuxt-link
             >
@@ -129,7 +129,7 @@
           :class="{
             active: isCurrentRoute('/', '#about'),
           }"
-          to="/#about"
+          :to="{ path: '/#about' }"
           class="navbar-link"
           >About</nuxt-link
         >
@@ -137,7 +137,7 @@
           :class="{
             active: isCurrentRoute('/', '#projects'),
           }"
-          to="/#projects"
+          :to="{ path: '/#projects' }"
           class="navbar-link"
           >Projects</nuxt-link
         >
@@ -145,7 +145,7 @@
           :class="{
             active: isCurrentRoute('/', '#resume'),
           }"
-          to="/#resume"
+          :to="{ path: '/#resume' }"
           class="navbar-link"
           >Resume</nuxt-link
         >
@@ -153,7 +153,7 @@
           :class="{
             active: isCurrentRoute('/', '#contact'),
           }"
-          to="/#contact"
+          :to="{ path: '/#contact' }"
           class="navbar-link"
           >Contact</nuxt-link
         >
