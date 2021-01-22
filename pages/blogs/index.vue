@@ -6,6 +6,12 @@
       </app-header>
     </template>
     <template #content>
+      <p>
+        Thank you so much for clicking visting this section. I do not currently
+        plan on writing any tutorials or the like, but I hope to write blurbs
+        about specific issues I was able to work around or new tools that I love
+        to work with.
+      </p>
       <div v-for="blog in blogs" :key="blog.slug">
         <div class="flex items-center gap-1 sm:gap-3">
           <nuxt-link
@@ -19,36 +25,6 @@
         </div>
         <span>{{ blog.description }}</span>
       </div>
-      <!-- <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div>
-      <div>what is up my guys</div> -->
     </template>
   </app-layout>
 </template>
@@ -63,7 +39,6 @@ export default {
   },
   async asyncData({ $content }) {
     const blogs = await $content('blogs').fetch()
-
     return {
       blogs,
     }

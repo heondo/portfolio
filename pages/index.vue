@@ -30,7 +30,7 @@
           'opacity-100 translate-x-0': headerVisible,
           '-translate-x-6': !headerVisible,
         }"
-        class="transition duration-600 ease-linear opacity-0 transform"
+        class="transition duration-500 ease-linear opacity-0 transform"
       >
         <app-about-me id="about"></app-about-me>
         <divider></divider>
@@ -56,6 +56,7 @@ export default Vue.extend({
     AppProjects,
     Divider,
   },
+
   data() {
     return {
       headerVisible: false,
@@ -66,6 +67,18 @@ export default Vue.extend({
     this.headerVisible = true
     // }, 200)
     // this.headerVisible = true
+  },
+  head() {
+    return {
+      title: 'Heondo Kim',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Heondo Kim, Software Engineer ',
+        },
+      ],
+    }
   },
 })
 </script>
