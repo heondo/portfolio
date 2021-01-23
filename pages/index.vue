@@ -35,6 +35,8 @@
         <app-about-me id="about"></app-about-me>
         <divider></divider>
         <app-projects id="projects"></app-projects>
+        <divider></divider>
+        <app-skills></app-skills>
       </div>
     </template>
   </app-layout>
@@ -46,6 +48,7 @@ import AppLayout from '~/layouts/AppLayout.vue'
 import AppHeader from '~/components/AppHeader.vue'
 import AppAboutMe from '~/components/AboutMe.vue'
 import AppProjects from '~/components/Projects.vue'
+import AppSkills from '~/components/SkillsSection.vue'
 import Divider from '~/components/Divider.vue'
 
 export default Vue.extend({
@@ -55,6 +58,7 @@ export default Vue.extend({
     AppAboutMe,
     AppProjects,
     Divider,
+    AppSkills,
   },
 
   data() {

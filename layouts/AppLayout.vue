@@ -15,7 +15,7 @@
         <!-- /End replace -->
       </div>
     </main>
-    <div class="rotated-block"></div>
+    <!-- <div class="absolute bottom-0 z-0">Hello</div> -->
     <app-footer></app-footer>
   </div>
 </template>
@@ -30,46 +30,7 @@ export default {
 }
 </script>
 <style>
-.rotated-block {
-  @apply w-full absolute right-0 bg-blue-700;
-  top: 50vh;
-  z-index: 1;
-
-  &:before,
-  &:after {
-    background: inherit;
-    content: '';
-    display: block;
-    height: 30vh;
-    left: 0;
-    position: absolute;
-    right: 0;
-    z-index: -1;
-    -webkit-backface-visibility: hidden;
-  }
-
-  &:before {
-    top: 0;
-    transform: skewY(1.5deg);
-    transform-origin: 100% 0;
-  }
-
-  &:after {
-    bottom: 0;
-    transform: skewY(-1.5deg);
-    transform-origin: 100%;
-  }
-}
-
-.rotated-block {
-  color: #fff;
-  font-family: 'Fira Sans', sans-serif;
-  margin: 50px 0;
-  padding: 20% 20px;
-  text-align: center;
-}
-
 .section-header {
-  @apply text-xl font-semibold;
+  @apply text-xl font-semibold mb-2;
 }
 </style>
