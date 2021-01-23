@@ -1,6 +1,6 @@
 <template>
   <section class="my-2">
-    <h2 class="section-header">Skill</h2>
+    <h2 class="section-header">Languages, Frameworks, and Libraries</h2>
     <div class="text-gray-600">
       <span class="flex flex-wrap justify-center gap-6 text-sm mb-2 md:mb-4">
         <!-- <div>Vue</div>
@@ -32,6 +32,10 @@ export default {
     return {
       skills: [
         {
+          name: 'Vue',
+          icon: ' https://vuejs.org/images/logo.png',
+        },
+        {
           name: 'React',
           icon:
             'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K',
@@ -40,11 +44,7 @@ export default {
           name: 'Angular',
           icon: 'https://angular.io/assets/images/logos/angular/angular.svg',
         },
-        {
-          name: 'Vue',
-          icon:
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/277px-Vue.js_Logo_2.svg.png',
-        },
+
         {
           name: 'Laravel',
           icon:

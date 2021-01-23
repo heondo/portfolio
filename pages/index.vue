@@ -36,7 +36,22 @@
         <divider></divider>
         <app-projects id="projects"></app-projects>
         <divider></divider>
-        <app-skills></app-skills>
+        <app-skills id="tools"></app-skills>
+        <divider></divider>
+        <!-- Resume -->
+        <section id="resume">
+          <h4 class="section-header">Resume</h4>
+          <div class="flex justify-center">
+            <iframe
+              class="rounded-xl mb-2"
+              src="https://drive.google.com/file/d/13fR9a1kTlyQtHKRe60S_YbUUE2mvOq3L/preview"
+              width="80%"
+              height="400"
+            ></iframe>
+          </div>
+        </section>
+        <divider></divider>
+        <!-- End of resume -->
       </div>
     </template>
   </app-layout>

@@ -30,6 +30,14 @@
                 >
                 <nuxt-link
                   :class="{
+                    active: isCurrentRoute('/', '#tools'),
+                  }"
+                  :to="{ path: '/#tools' }"
+                  class="navbar-link"
+                  >Tools</nuxt-link
+                >
+                <nuxt-link
+                  :class="{
                     active: isCurrentRoute('/', '#resume'),
                   }"
                   :to="{ path: '/#resume' }"
@@ -140,6 +148,14 @@
           :to="{ path: '/#projects' }"
           class="navbar-link"
           >Projects</nuxt-link
+        >
+        <nuxt-link
+          :class="{
+            active: isCurrentRoute('/', '#tools'),
+          }"
+          :to="{ path: '/#tools' }"
+          class="navbar-link"
+          >Tools</nuxt-link
         >
         <nuxt-link
           :class="{

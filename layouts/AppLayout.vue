@@ -8,7 +8,7 @@
       <div class="max-w-6xl mx-auto pb-12">
         <!-- Replace with your content -->
         <div
-          class="bg-white rounded-md shadow-xl px-4 sm:px-7 md:px-10 relative z-10 py-2 sm:py-4 sm:px-6"
+          class="bg-white rounded-md shadow-xl text-gray-800 px-4 sm:px-7 md:px-10 relative z-10 py-2 sm:py-4 sm:px-6"
         >
           <slot name="content"></slot>
         </div>
@@ -31,6 +31,6 @@ export default {
 </script>
 <style>
 .section-header {
-  @apply text-xl font-semibold mb-2;
+  @apply text-xl font-semibold mb-2 text-gray-700;
 }
 </style>
