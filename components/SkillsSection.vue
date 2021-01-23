@@ -5,7 +5,7 @@
       <span class="flex flex-wrap justify-center gap-6 text-sm mb-2 md:mb-4">
         <!-- <div>Vue</div>
       <div>React</div> -->
-        <div :key="skill.name" v-for="skill in skills">
+        <div v-for="skill in skills" :key="skill.name">
           <!-- {{ skill.name }} -->
           <img class="h-12 w-auto mb-2 mx-auto" :src="skill.icon" alt="hello" />
           <p class="text-center italic text-xs md:text-sm">
@@ -14,7 +14,7 @@
         </div>
       </span>
       <p class="text-center w-full italic">
-        along with MongoDB, GraphQL, Python, and more.
+        along with Express.js, MongoDB, GraphQL, Python, and more.
       </p>
     </div>
     <!-- <div class="about-image justify-content-center">
