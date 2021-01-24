@@ -31,6 +31,13 @@ export default {
 </script>
 <style>
 .section-header {
-  @apply text-xl font-semibold mb-2 text-gray-700;
+  @apply text-lg font-semibold mb-2 text-gray-700;
+  @screen md {
+    @apply text-xl;
+  }
 }
+
+/* .section-header:md {
+  @apply text-2xl;
+} */
 </style>

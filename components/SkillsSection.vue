@@ -7,7 +7,11 @@
       <div>React</div> -->
         <div :key="skill.name" v-for="skill in skills">
           <!-- {{ skill.name }} -->
-          <img class="h-12 w-auto mb-2 mx-auto" :src="skill.icon" alt="hello" />
+          <img
+            class="h-6 sm:h-8 md:h-10 w-auto mb-2 mx-auto transition-all duration-300 ease-in-out"
+            :src="skill.icon"
+            alt="hello"
+          />
           <p class="text-center italic text-xs md:text-sm">
             {{ skill.name }}
           </p>
