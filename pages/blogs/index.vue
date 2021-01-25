@@ -20,7 +20,7 @@
             >{{ blog.title }}</nuxt-link
           >
           <time class="break-words text-sm italic">
-            Edited: {{ formatDate(blog.updatedAt) }}
+            Created: {{ formatDate(blog.createdAt) }}
           </time>
         </div>
         <span>{{ blog.description }}</span>

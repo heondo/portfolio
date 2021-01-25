@@ -1,6 +1,15 @@
 <template>
   <div>
-    <!-- <div>All - React - Vue - Angular</div> -->
+    <div>
+      When I first started developing I deployed quite a few projects, I wanted
+      to practice the process of starting an application from scratch each time
+      and to try something new each time. I would try one project with no
+      styling libraries, Angular, MongoDB, Redux, and just whatever seemed
+      useful. I feel like taking them down was only appropriate and any future
+      applications would be a more serious endeavor using the proper tools for
+      each. Old projects can be seen in my
+      <a href="https://github.com/heondo" class="underline">Github</a>.
+    </div>
     <div class="flex flex-col gap-3">
       <span
         v-for="project in projects"
