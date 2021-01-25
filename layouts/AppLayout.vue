@@ -30,12 +30,12 @@ export default {
 }
 </script>
 <style>
-.section-header {
-  @apply text-lg font-semibold mb-2 text-gray-700;
+/* .section-header {
+  @apply text-lg font-semibold mb-4 text-gray-700;
   @screen md {
     @apply text-xl;
   }
-}
+} */
 
 /* .section-header:md {
   @apply text-2xl;
