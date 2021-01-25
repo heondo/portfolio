@@ -1,30 +1,27 @@
 <template>
-  <section class="my-2">
-    <h2 class="section-header">Languages, Frameworks, and Libraries</h2>
-    <div class="text-gray-600">
-      <span class="flex flex-wrap justify-center gap-6 text-sm mb-2 md:mb-4">
-        <!-- <div>Vue</div>
+  <div>
+    <span class="flex flex-wrap justify-center gap-6 text-sm mb-2 md:mb-4">
+      <!-- <div>Vue</div>
       <div>React</div> -->
-        <div v-for="skill in skills" :key="skill.name">
-          <!-- {{ skill.name }} -->
-          <img class="h-12 w-auto mb-2 mx-auto" :src="skill.icon" alt="hello" />
-          <p class="text-center italic text-xs md:text-sm">
-            {{ skill.name }}
-          </p>
-        </div>
-      </span>
-      <p class="text-center w-full italic">
-        along with Express.js, MongoDB, GraphQL, Python, and more.
-      </p>
-    </div>
-    <!-- <div class="about-image justify-content-center">
+      <div v-for="skill in skills" :key="skill.name">
+        <!-- {{ skill.name }} -->
+        <img class="h-12 w-auto mb-2 mx-auto" :src="skill.icon" alt="hello" />
+        <p class="text-center italic text-xs md:text-sm">
+          {{ skill.name }}
+        </p>
+      </div>
+    </span>
+    <p class="text-center w-full italic">
+      along with Express.js, MongoDB, GraphQL, Python, and more.
+    </p>
+  </div>
+  <!-- <div class="about-image justify-content-center">
         <img
           class="m-auto object-contain border-2 border-solid border-gray-800 rounded-md p-2"
           src="~/assets/ezgif.com-gif-maker.webp"
           alt="profile picture for heondo kim"
         />
       </div> -->
-  </section>
 </template>
 <script>
 export default {

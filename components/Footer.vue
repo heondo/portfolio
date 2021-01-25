@@ -50,9 +50,9 @@
           </div>
           <div
             id="contact"
-            class="flex flex-col mt-4 sm:mt-0 font-bold text-blue-200"
+            class="flex flex-col mt-4 sm:mt-0 font-bold text-gray-400"
           >
-            <h4 class="mb-4">Contact</h4>
+            <h4 class="mb-4 uppercase">Contact</h4>
             <form
               action="https://formspree.io/mqkabjjp"
               method="POST"
@@ -73,7 +73,7 @@
               ></textarea>
               <button
                 type="submit"
-                class="bg-blue-500 text-white mx-auto rounded-md py-1 px-3"
+                class="bg-blue-500 text-white rounded-md py-1 px-3"
               >
                 Send
               </button>
@@ -85,14 +85,31 @@
     <div class="container mx-auto px-6">
       <div class="mt-16 border-t-2 border-gray-300 flex flex-col items-center">
         <div class="sm:w-2/3 text-center py-6">
-          <p class="text-sm text-blue-200 font-bold mb-2">
-            © 2020 by Pavlove BIOKOU
-          </p>
+          <a
+            href="https://github.com/heondo/portfolio"
+            _target="blank"
+            class="text-sm text-blue-200 font-bold mb-2"
+          >
+            © {{ year }} by Heondo Kim using Nuxt.js
+            <svg class="h-4 w-4 inline" viewBox="0 0 32 29.6">
+              <path
+                fill="red"
+                d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+	c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"
+              />
+            </svg>
+          </a>
         </div>
       </div>
     </div>
   </footer>
 </template>
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      year: new Date().getFullYear(),
+    }
+  },
+}
 </script>
