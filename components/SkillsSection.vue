@@ -5,14 +5,18 @@
       <div>React</div> -->
       <div v-for="skill in skills" :key="skill.name">
         <!-- {{ skill.name }} -->
-        <img class="h-12 w-auto mb-2 mx-auto" :src="skill.icon" alt="hello" />
+        <img
+          class="h-6 sm:h-8 md:h-10 w-auto mb-2 mx-auto transition-all duration-300 ease-in-out"
+          :src="skill.icon"
+          alt="hello"
+        />
         <p class="text-center italic text-xs md:text-sm">
           {{ skill.name }}
         </p>
       </div>
     </span>
     <p class="text-center w-full italic">
-      along with Express.js, MongoDB, GraphQL, Python, and more.
+      along with MongoDB, GraphQL, Python, and more.
     </p>
   </div>
   <!-- <div class="about-image justify-content-center">
