@@ -1,7 +1,5 @@
 <template>
-  <footer
-    class="footer bg-gray-800 relative pt-1 border-b-2 z-10 border-blue-700"
-  >
+  <footer class="footer relative pt-1 border-b-2 z-10 border-blue-700">
     <div class="container max-w-4xl mx-auto px-6">
       <div class="sm:flex sm:mt-8">
         <div

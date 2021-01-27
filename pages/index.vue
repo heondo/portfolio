@@ -39,23 +39,21 @@
           </template>
         </section-layout>
         <!-- <app-about-me id="about"></app-about-me> -->
-        <divider></divider>
-        <section-layout id="projects">
+        <!-- <divider></divider> -->
+        <section-layout id="projects" bgColor="bg-gray-100">
           <template #header> Projects </template>
           <template #sectionContent>
             <app-projects></app-projects>
           </template>
         </section-layout>
-        <divider></divider>
         <section-layout id="tools">
           <template #header> Languages, Frameworks, and Libraries </template>
           <template #sectionContent>
             <app-skills></app-skills>
           </template>
         </section-layout>
-        <divider></divider>
         <!-- Resume -->
-        <section-layout id="resume">
+        <section-layout id="resume" bgColor="bg-indigo-100">
           <template #header> Resume </template>
           <template #sectionContent>
             <div class="flex justify-center">
@@ -68,7 +66,6 @@
             </div>
           </template>
         </section-layout>
-        <divider></divider>
         <!-- End of resume -->
       </div>
     </template>
@@ -82,7 +79,7 @@ import AppHeader from '~/components/AppHeader.vue'
 import AppAboutMe from '~/components/AboutMe.vue'
 import AppProjects from '~/components/Projects.vue'
 import AppSkills from '~/components/SkillsSection.vue'
-import Divider from '~/components/Divider.vue'
+// import Divider from '~/components/Divider.vue'
 import SectionLayout from '~/layouts/SectionLayout.vue'
 
 export default Vue.extend({
@@ -91,7 +88,7 @@ export default Vue.extend({
     AppHeader,
     AppAboutMe,
     AppProjects,
-    Divider,
+    // Divider,
     AppSkills,
     SectionLayout,
   },

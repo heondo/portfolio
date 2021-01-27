@@ -1,15 +1,13 @@
 <template>
-  <div class="overflow-hidden bg-gray-300">
+  <div class="overflow-hidden bg-gray-800">
     <div class="bg-gray-800 pb-32 z-10">
       <nav-bar></nav-bar>
       <slot name="title"></slot>
     </div>
-    <main class="-mt-32 px-2 md:px-4">
-      <div class="max-w-6xl mx-auto pb-12">
+    <main class="-mt-32">
+      <div class="mx-auto">
         <!-- Replace with your content -->
-        <div
-          class="bg-white rounded-md shadow-xl text-gray-800 px-4 sm:px-7 md:px-10 relative z-10 py-2 sm:py-4 sm:px-6"
-        >
+        <div class="text-gray-800 relative z-10 py-2 sm:py-4">
           <slot name="content"></slot>
         </div>
         <!-- /End replace -->

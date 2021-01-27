@@ -1,7 +1,7 @@
 <template>
   <!-- <section class="my-2"> -->
   <!-- <h2 class="section-header">About me</h2> -->
-  <span class="flex flex-col gap-1 text-sm sm:text-md"
+  <span class="flex flex-col gap-1 text-sm sm:text-base"
     ><p>
       &emsp;My name is Heondo Kim, I am Software Engineer at SmartSpace AI
       working out of Los Angeles, CA. Previously I worked as a data analyst at
