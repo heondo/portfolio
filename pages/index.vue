@@ -1,14 +1,19 @@
 <template>
   <app-layout>
-    <template #content> Content placed here </template>
+    <template #content>
+      <section-layout> Heondo Kim </section-layout>
+      <section-layout bgColor="bg-indigo-800"> Section two</section-layout>
+    </template>
   </app-layout>
 </template>
 
 <script>
 import AppLayout from '~/layouts/AppLayout'
+import SectionLayout from '~/layouts/SectionLayout'
 export default {
   components: {
     AppLayout,
+    SectionLayout,
   },
 }
 </script>
