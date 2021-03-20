@@ -3,6 +3,11 @@
     <template #content>
       <section-layout> Heondo Kim </section-layout>
       <section-layout bgColor="bg-indigo-800"> Section two</section-layout>
+      <section-layout bgColor="bg-indigo-800"> Section two</section-layout>
+      <section-layout bgColor="bg-indigo-800"> Section two</section-layout>
+      <section-layout bgColor="bg-indigo-800"> Section two</section-layout>
+      <section-layout bgColor="bg-indigo-800"> Section two</section-layout>
+      <section-layout bgColor="bg-indigo-800"> Section two</section-layout>
     </template>
   </app-layout>
 </template>

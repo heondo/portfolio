@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="bg-gray-800 text-white">
+    <nav class="fixed bg-gray-800 text-white z-10 w-full">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <div class="flex items-center">
@@ -76,14 +76,11 @@
         leave-class="opacity-100 translate-y-0 sm:scale-100"
         leave-to-class="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
       >
-        <div
-          v-show="menuOpen"
-          class="md:hidden fixed z-10 inset-0 overflow-y-auto"
-        >
+        <div v-show="menuOpen" class="md:hidden fixed inset-0 overflow-y-auto">
           <div class="flex pt-4 px-4 text-center">
             <!-- background overlay -->
             <div
-              class="fixed inset-0 z-10 transition-opacity"
+              class="fixed inset-0 transition-opacity"
               aria-hidden="true"
               @click="menuOpen = !menuOpen"
             >
@@ -112,7 +109,7 @@
     <main class="bg-gray-800 text-white">
       <div class="">
         <!-- Replace with your content -->
-        <div class="px-4 py-6 sm:px-0">
+        <div class="pt-16 pb-8">
           <slot name="content"></slot>
         </div>
         <!-- /End replace -->

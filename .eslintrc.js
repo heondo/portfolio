@@ -14,6 +14,6 @@ module.exports = {
   plugins: ['prettier'],
   // add your custom rules here
   rules: {
-    'vue/attribute-hyphenation': ['never'],
+    'vue/attribute-hyphenation': ['off'],
   },
 }

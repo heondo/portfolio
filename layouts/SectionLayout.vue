@@ -52,16 +52,10 @@ export default {
   line-height: 1.5;
 }
 
-.top-left:after {
-  transform-origin: left top;
-}
 .top-right:after {
-  transform-origin: right top;
+  @apply origin-top-right;
 }
 .bottom-left:after {
-  transform-origin: left bottom;
-}
-.bottom-right:after {
-  transform-origin: right bottom;
+  @apply origin-bottom-left;
 }
 </style>
