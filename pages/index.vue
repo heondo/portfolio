@@ -14,9 +14,9 @@
           >
             Heondo Kim
           </div>
-          <sub class="text-white font-semibold text-lg sm:text-xl mt-1 mb-4">
+          <!-- <sub class="text-white font-semibold text-lg sm:text-xl mt-1 mb-4">
             ( hē &middot; ôn &middot; dōh )</sub
-          >
+          > -->
           <span class="text-xl sm:text-2xl italic font-semibold text-blue-200"
             >Software Engineer</span
           >
@@ -32,7 +32,7 @@
         }"
         class="transition duration-500 ease-linear opacity-0 transform"
       >
-        <section-layout id="about">
+        <section-layout id="about" bgColor="bg-gray-900">
           <template #header> About </template>
           <template #sectionContent>
             <app-about-me></app-about-me>
@@ -40,20 +40,26 @@
         </section-layout>
         <!-- <app-about-me id="about"></app-about-me> -->
         <!-- <divider></divider> -->
-        <section-layout id="projects" bgColor="bg-gray-100">
+        <!-- <section-layout id="projects" bgColor="bg-gray-800">
           <template #header> Projects </template>
           <template #sectionContent>
             <app-projects></app-projects>
           </template>
-        </section-layout>
-        <section-layout id="tools">
+        </section-layout> -->
+        <!-- <section-layout id="Timeline" bgColor="bg-gray-800">
+          <template #header> Timeline </template>
+          <template #sectionContent>
+            <me-timeline></me-timeline>
+          </template>
+        </section-layout> -->
+        <section-layout id="tools" bgColor="bg-gray-800">
           <template #header> Languages, Frameworks, and Libraries </template>
           <template #sectionContent>
             <app-skills></app-skills>
           </template>
         </section-layout>
         <!-- Resume -->
-        <section-layout id="resume" bgColor="bg-indigo-100">
+        <section-layout id="resume" bgColor="bg-gray-900">
           <template #header> Resume </template>
           <template #sectionContent>
             <div class="flex justify-center">
@@ -77,7 +83,6 @@ import Vue from 'vue'
 import AppLayout from '~/layouts/AppLayout.vue'
 import AppHeader from '~/components/AppHeader.vue'
 import AppAboutMe from '~/components/AboutMe.vue'
-import AppProjects from '~/components/Projects.vue'
 import AppSkills from '~/components/SkillsSection.vue'
 // import Divider from '~/components/Divider.vue'
 import SectionLayout from '~/layouts/SectionLayout.vue'
@@ -87,7 +92,6 @@ export default Vue.extend({
     AppLayout,
     AppHeader,
     AppAboutMe,
-    AppProjects,
     // Divider,
     AppSkills,
     SectionLayout,
