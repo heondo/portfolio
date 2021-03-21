@@ -2,7 +2,7 @@
   <div class="container px-8 py-8 mx-auto lg:px-4">
     <div class="flex flex-col w-full mt-6 text-left lg:text-center">
       <h2
-        class="mb-1 text-xs font-semibold tracking-widest text-blue-600 uppercase title-font"
+        class="mb-1 text-xs font-semibold tracking-widest text-blue-300 uppercase title-font"
       >
         Full Snack Devourer
       </h2>
@@ -26,3 +26,4 @@ export default {
   components: {},
 }
 </script>
+<style scoped></style>
