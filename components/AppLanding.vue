@@ -4,7 +4,16 @@
       <h2
         class="mb-1 text-xs font-semibold tracking-widest text-blue-300 uppercase title-font"
       >
-        Full Snack Devourer
+        <div class="mr-20">
+          Full
+          <span class="slidingVertical">
+            <span> Of Passion </span>
+            <span> Of Candy 🍬 </span>
+            <span> Time Learner </span>
+            <span> Time KKB Fan </span>
+            <span class="last"> Stack Developer </span>
+          </span>
+        </div>
       </h2>
       <h1
         class="uppercase mb-6 text-2xl font-semibold tracking-tighter text-white sm:text-5xl title-font"
@@ -26,4 +35,218 @@ export default {
   components: {},
 }
 </script>
-<style scoped></style>
+<style scoped>
+/*Vertical Sliding*/
+.slidingVertical {
+  display: inline;
+  text-indent: 8px;
+}
+.slidingVertical span {
+  animation: topToBottom 6s linear 0s;
+  -ms-animation: topToBottom 6s linear 0s;
+  -webkit-animation: topToBottom 6s linear 0s;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  @apply text-blue-400;
+}
+
+.slidingVertical span.last {
+  animation: finalKeyframe 6s linear 0s;
+  -ms-animation: finalKeyframe 6s linear 0s;
+  -webkit-animation: finalKeyframe 6s linear 0s;
+  animation-fill-mode: forwards;
+}
+.slidingVertical span:nth-child(2) {
+  animation-delay: 1.5s;
+  -ms-animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+}
+.slidingVertical span:nth-child(3) {
+  animation-delay: 3s;
+  -ms-animation-delay: 3s;
+  -webkit-animation-delay: 3s;
+}
+.slidingVertical span:nth-child(4) {
+  animation-delay: 4.5s;
+  -ms-animation-delay: 4.5s;
+  -webkit-animation-delay: 4.5s;
+}
+.slidingVertical span:nth-child(5) {
+  animation-delay: 6s;
+  -ms-animation-delay: 6s;
+  -webkit-animation-delay: 6s;
+}
+
+/*topToBottom Animation*/
+@-moz-keyframes topToBottom {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+    -moz-transform: translateY(-30px);
+  }
+  10% {
+    opacity: 1;
+    -moz-transform: translateY(0px);
+  }
+  25% {
+    opacity: 1;
+    -moz-transform: translateY(0px);
+  }
+  30% {
+    opacity: 0;
+    -moz-transform: translateY(30px);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes topToBottom {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+  }
+  25% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+  }
+  30% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-ms-keyframes topToBottom {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+    -ms-transform: translateY(-30px);
+  }
+  10% {
+    opacity: 1;
+    -ms-transform: translateY(0px);
+  }
+  25% {
+    opacity: 1;
+    -ms-transform: translateY(0px);
+  }
+  30% {
+    opacity: 0;
+    -ms-transform: translateY(30px);
+  }
+  80% {
+    opacity: 0;
+    -ms-transform: translateY(30px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes finalKeyframe {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+    -moz-transform: translateY(-30px);
+  }
+  10% {
+    opacity: 1;
+    -moz-transform: translateY(0px);
+  }
+  25% {
+    opacity: 1;
+    -moz-transform: translateY(0px);
+  }
+  30% {
+    opacity: 1;
+    -moz-transform: translateY(30px);
+  }
+  80% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+@-webkit-keyframes finalKeyframe {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+  }
+  25% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+  }
+  30% {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+  }
+  80% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@-ms-keyframes finalKeyframe {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+    -ms-transform: translateY(-30px);
+  }
+  10% {
+    opacity: 1;
+    -ms-transform: translateY(0px);
+  }
+  25% {
+    opacity: 1;
+    -ms-transform: translateY(0px);
+  }
+  30% {
+    opacity: 1;
+    -ms-transform: translateY(30px);
+  }
+  80% {
+    opacity: 1;
+    -ms-transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    -ms-transform: translateY(0);
+  }
+}
+</style>
