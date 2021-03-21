@@ -4,12 +4,24 @@
       <section-layout>
         <app-landing></app-landing>
       </section-layout>
-      <section-layout bgColor="bg-indigo-800"> Section two</section-layout>
-      <section-layout bgColor="bg-indigo-800"> Section two</section-layout>
-      <section-layout bgColor="bg-indigo-800"> Section two</section-layout>
-      <section-layout bgColor="bg-indigo-800"> Section two</section-layout>
-      <section-layout bgColor="bg-indigo-800"> Section two</section-layout>
-      <section-layout bgColor="bg-indigo-800"> Section two</section-layout>
+      <section-layout bgColor="bg-indigo-800">
+        <div id="about">Section two</div>
+      </section-layout>
+      <section-layout bgColor="bg-blue-800">
+        <div id="skills">Section two</div>
+      </section-layout>
+      <section-layout bgColor="bg-purple-800">
+        <div id="resume">
+          <div class="d-flex justify-content-center">
+            <iframe
+              style="border-radius: 1%"
+              src="https://drive.google.com/file/d/13fR9a1kTlyQtHKRe60S_YbUUE2mvOq3L/preview"
+              width="80%"
+              height="350"
+            ></iframe>
+          </div>
+        </div>
+      </section-layout>
     </template>
   </app-layout>
 </template>
@@ -33,12 +45,7 @@ export default {
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
-.container {
-  /* margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center; */
+html {
+  scroll-behavior: smooth;
 }
 </style>

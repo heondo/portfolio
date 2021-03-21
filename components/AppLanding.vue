@@ -43,6 +43,7 @@ export default {
 .sliding-vertical {
   display: inline;
   text-indent: 8px;
+  @apply text-blue-500;
 }
 .sliding-vertical span {
   animation: topToBottom 6s linear 0s;
@@ -51,7 +52,6 @@ export default {
   opacity: 0;
   overflow: hidden;
   position: absolute;
-  @apply text-blue-400;
 }
 
 .sliding-vertical div.last {
@@ -184,12 +184,15 @@ export default {
   }
   30% {
     opacity: 1;
+    @apply text-blue-300;
   }
   80% {
     opacity: 1;
+    @apply text-blue-300;
   }
   100% {
     opacity: 1;
+    @apply text-blue-300;
   }
 }
 @-webkit-keyframes finalKeyframe {
@@ -210,12 +213,15 @@ export default {
   }
   30% {
     opacity: 1;
+    @apply text-blue-300;
   }
   80% {
     opacity: 1;
+    @apply text-blue-300;
   }
   100% {
     opacity: 1;
+    @apply text-blue-300;
   }
 }
 @-ms-keyframes finalKeyframe {
@@ -236,12 +242,15 @@ export default {
   }
   30% {
     opacity: 1;
+    @apply text-blue-300;
   }
   80% {
     opacity: 1;
+    @apply text-blue-300;
   }
   100% {
     opacity: 1;
+    @apply text-blue-300;
   }
 }
 </style>

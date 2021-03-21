@@ -4,7 +4,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <div class="flex items-center">
-            <div class="flex-shrink-0 text-white">Heondo</div>
+            <div class="flex-shrink-0 text-white font-bold">HK</div>
             <!-- Desktop nav -->
             <nav class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
@@ -13,25 +13,42 @@
                   <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-300" -->
                   <a
                     href="#"
-                    class="border-indigo-500 inline-flex items-center px-2 py-2 border-b-2 text-sm font-medium"
+                    class="desktop-nav-link"
+                    :class="{
+                      'border-blue-400 border-b-2': !$route.hash,
+                    }"
                   >
-                    Dashboard
+                    Me
+                    <!-- {{ Object.keys($route) }}
+                    {{ $route.name }}
+                    {{ $route.meta }}
+                    {{ $route.hash }}
+                    {{ $route.hash }} -->
                   </a>
                   <a
-                    href="#"
-                    class="border-transparent hover:border-gray-300 hover:text-gray-300 inline-flex items-center px-2 py-2 border-b-2 text-sm font-medium"
+                    href="#about"
+                    class="desktop-nav-link"
+                    :class="{
+                      'border-blue-400 border-b-2': $route.hash === '#about',
+                    }"
                   >
                     Team
                   </a>
                   <a
-                    href="#"
-                    class="border-transparent hover:border-gray-300 hover:text-gray-300 inline-flex items-center px-2 py-2 border-b-2 text-sm font-medium"
+                    href="#skills"
+                    class="desktop-nav-link"
+                    :class="{
+                      'border-blue-400 border-b-2': $route.hash === '#skills',
+                    }"
                   >
                     Projects
                   </a>
                   <a
-                    href="#"
-                    class="border-transparent hover:border-gray-300 hover:text-gray-300 inline-flex items-center px-2 py-2 border-b-2 text-sm font-medium"
+                    href="#resume"
+                    class="desktop-nav-link"
+                    :class="{
+                      'border-blue-400 border-b-2': $route.hash === '#resume',
+                    }"
                   >
                     Calendar
                   </a>
@@ -96,9 +113,9 @@
               <div class="flex space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 <a href="#" class="nav-link">Dashboard</a>
-                <a href="#" class="nav-link">Team</a>
-                <a href="#" class="nav-link">Projects</a>
-                <a href="#" class="nav-link">Calendar</a>
+                <a href="#about" class="nav-link">Team</a>
+                <a href="#skills" class="nav-link">Projects</a>
+                <a href="#resume" class="nav-link">Calendar</a>
               </div>
             </div>
           </div>
@@ -108,10 +125,11 @@
 
     <main class="bg-gray-800 text-white">
       <div class="">
-        <!-- This padding is to account for the fixed top navbar -->
+        <!-- Replace with your content -->
         <div class="pt-16 pb-8">
           <slot name="content"></slot>
         </div>
+        <!-- /End replace -->
       </div>
     </main>
   </div>
@@ -132,5 +150,13 @@ export default {
 
 .nav-link:hover {
   @apply bg-gray-600;
+}
+
+.desktop-nav-link {
+  @apply inline-flex items-center px-2 py-2 text-sm font-medium transition ease-in-out duration-150;
+}
+
+.desktop-nav-link:hover {
+  @apply border-gray-300 border-b-2 text-gray-300;
 }
 </style>
