@@ -4,14 +4,14 @@
       <h2
         class="mb-1 text-xs font-semibold tracking-widest text-blue-300 uppercase title-font"
       >
-        <div class="mr-20">
+        <div class="sliding-container">
           Full
-          <span class="slidingVertical">
+          <span class="sliding-vertical">
             <span> Of Passion </span>
             <span> Of Candy 🍬 </span>
             <span> Time Learner </span>
             <span> Time KKB Fan </span>
-            <span class="last"> Stack Developer </span>
+            <div class="last inline">Stack Developer</div>
           </span>
         </div>
       </h2>
@@ -36,12 +36,15 @@ export default {
 }
 </script>
 <style scoped>
+.sliding-container {
+  margin-right: 8.5rem;
+}
 /*Vertical Sliding*/
-.slidingVertical {
+.sliding-vertical {
   display: inline;
   text-indent: 8px;
 }
-.slidingVertical span {
+.sliding-vertical span {
   animation: topToBottom 6s linear 0s;
   -ms-animation: topToBottom 6s linear 0s;
   -webkit-animation: topToBottom 6s linear 0s;
@@ -51,28 +54,30 @@ export default {
   @apply text-blue-400;
 }
 
-.slidingVertical span.last {
+.sliding-vertical div.last {
   animation: finalKeyframe 6s linear 0s;
   -ms-animation: finalKeyframe 6s linear 0s;
   -webkit-animation: finalKeyframe 6s linear 0s;
+  opacity: 0;
+  position: absolute;
   animation-fill-mode: forwards;
 }
-.slidingVertical span:nth-child(2) {
+.sliding-vertical span:nth-child(2) {
   animation-delay: 1.5s;
   -ms-animation-delay: 1.5s;
   -webkit-animation-delay: 1.5s;
 }
-.slidingVertical span:nth-child(3) {
+.sliding-vertical span:nth-child(3) {
   animation-delay: 3s;
   -ms-animation-delay: 3s;
   -webkit-animation-delay: 3s;
 }
-.slidingVertical span:nth-child(4) {
+.sliding-vertical span:nth-child(4) {
   animation-delay: 4.5s;
   -ms-animation-delay: 4.5s;
   -webkit-animation-delay: 4.5s;
 }
-.slidingVertical span:nth-child(5) {
+.sliding-vertical div:nth-child(5) {
   animation-delay: 6s;
   -ms-animation-delay: 6s;
   -webkit-animation-delay: 6s;
@@ -155,7 +160,6 @@ export default {
   }
   80% {
     opacity: 0;
-    -ms-transform: translateY(30px);
   }
   100% {
     opacity: 0;
@@ -180,15 +184,12 @@ export default {
   }
   30% {
     opacity: 1;
-    -moz-transform: translateY(30px);
   }
   80% {
     opacity: 1;
-    -moz-transform: translateY(0);
   }
   100% {
     opacity: 1;
-    -moz-transform: translateY(0);
   }
 }
 @-webkit-keyframes finalKeyframe {
@@ -209,15 +210,12 @@ export default {
   }
   30% {
     opacity: 1;
-    -webkit-transform: translateY(30px);
   }
   80% {
     opacity: 1;
-    -webkit-transform: translateY(0);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0);
   }
 }
 @-ms-keyframes finalKeyframe {
@@ -238,15 +236,12 @@ export default {
   }
   30% {
     opacity: 1;
-    -ms-transform: translateY(30px);
   }
   80% {
     opacity: 1;
-    -ms-transform: translateY(0);
   }
   100% {
     opacity: 1;
-    -ms-transform: translateY(0);
   }
 }
 </style>
