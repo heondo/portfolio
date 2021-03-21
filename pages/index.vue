@@ -4,13 +4,13 @@
       <section-layout>
         <app-landing></app-landing>
       </section-layout>
-      <section-layout bgColor="bg-indigo-800">
-        <div id="about">Section two</div>
+      <section-layout class="slanted" bgColor="bg-blue-900">
+        <div id="about">I really want a slanted div right here</div>
       </section-layout>
-      <section-layout bgColor="bg-blue-800">
+      <section-layout>
         <div id="skills">Section two</div>
       </section-layout>
-      <section-layout bgColor="bg-purple-800">
+      <section-layout bgColor="bg-purple-900">
         <div id="">
           <iframe
             class="mx-auto"
@@ -45,5 +45,16 @@ export default {
 */
 html {
   scroll-behavior: smooth;
+}
+
+.slanted {
+  padding: 4rem 0;
+  margin: 3rem 0;
+  transform: skewY(-4deg);
+  transform-origin: 0;
+}
+
+.slanted > div {
+  transform: skewY(4deg);
 }
 </style>
