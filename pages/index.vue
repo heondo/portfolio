@@ -1,7 +1,9 @@
 <template>
   <app-layout>
     <template #content>
-      <section-layout> Heondo Kim </section-layout>
+      <section-layout>
+        <app-landing></app-landing>
+      </section-layout>
       <section-layout bgColor="bg-indigo-800"> Section two</section-layout>
       <section-layout bgColor="bg-indigo-800"> Section two</section-layout>
       <section-layout bgColor="bg-indigo-800"> Section two</section-layout>
@@ -15,10 +17,12 @@
 <script>
 import AppLayout from '~/layouts/AppLayout'
 import SectionLayout from '~/layouts/SectionLayout'
+import AppLanding from '~/components/AppLanding'
 export default {
   components: {
     AppLayout,
     SectionLayout,
+    AppLanding,
   },
 }
 </script>

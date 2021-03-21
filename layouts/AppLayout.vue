@@ -108,11 +108,10 @@
 
     <main class="bg-gray-800 text-white">
       <div class="">
-        <!-- Replace with your content -->
+        <!-- This padding is to account for the fixed top navbar -->
         <div class="pt-16 pb-8">
           <slot name="content"></slot>
         </div>
-        <!-- /End replace -->
       </div>
     </main>
   </div>
