@@ -1,35 +1,40 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">portfolio</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-        <a href="blog"> will this go to blog </a>
-      </div>
-    </div>
-  </div>
+  <app-layout>
+    <template #content>
+      <section-layout>
+        <app-landing></app-landing>
+      </section-layout>
+      <section-layout bgColor="bg-indigo-800">
+        <div id="about">Section two</div>
+      </section-layout>
+      <section-layout bgColor="bg-blue-800">
+        <div id="skills">Section two</div>
+      </section-layout>
+      <section-layout bgColor="bg-purple-800">
+        <div id="">
+          <iframe
+            class="mx-auto"
+            src="https://drive.google.com/file/d/13fR9a1kTlyQtHKRe60S_YbUUE2mvOq3L/preview"
+            width="80%"
+            height="350"
+          ></iframe>
+        </div>
+      </section-layout>
+    </template>
+  </app-layout>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({})
+<script>
+import AppLayout from '~/layouts/AppLayout'
+import SectionLayout from '~/layouts/SectionLayout'
+import AppLanding from '~/components/AppLanding'
+export default {
+  components: {
+    AppLayout,
+    SectionLayout,
+    AppLanding,
+  },
+}
 </script>
 
 <style>
@@ -38,34 +43,7 @@ export default Vue.extend({})
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+html {
+  scroll-behavior: smooth;
 }
 </style>
