@@ -16,7 +16,7 @@
         </div>
       </h2>
       <h1
-        class="mb-6 text-2xl font-semibold tracking-tighter text-white sm:text-5xl title-font"
+        class="mb-4 text-2xl font-semibold tracking-tighter text-white sm:text-5xl title-font"
       >
         Heondo Kim
       </h1>
@@ -43,7 +43,7 @@ export default {
 .sliding-vertical {
   display: inline;
   text-indent: 8px;
-  @apply text-blue-500;
+  @apply text-indigo-300;
 }
 .sliding-vertical span {
   animation: topToBottom 6s linear 0s;
