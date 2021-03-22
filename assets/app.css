@@ -1,3 +1,19 @@
 html {
   scroll-behavior: smooth;
+  font-family: 'Karla';
+
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url('~assets/fonts/Karla/Karla-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('~assets/fonts/Spectral/Spectral-Regular.ttf') format('truetype');
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Spectral';
 }

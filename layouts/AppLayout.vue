@@ -1,10 +1,10 @@
 <template>
   <div>
     <nav class="fixed bg-gray-800 text-white z-10 w-full">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <div class="flex items-center">
-            <div class="flex-shrink-0 text-white font-bold">HK</div>
+            <a class="flex-shrink-0 text-white font-bold" href="#">HK</a>
             <!-- Desktop nav -->
             <nav class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
@@ -12,45 +12,31 @@
                 <div class="lg:ml-6 lg:flex lg:space-x-8">
                   <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-300" -->
                   <a
-                    href="#"
-                    class="desktop-nav-link"
-                    :class="{
-                      'border-blue-400 border-b-2': !$route.hash,
-                    }"
-                  >
-                    Me
-                    <!-- {{ Object.keys($route) }}
-                    {{ $route.name }}
-                    {{ $route.meta }}
-                    {{ $route.hash }}
-                    {{ $route.hash }} -->
-                  </a>
-                  <a
                     href="#about"
-                    class="desktop-nav-link"
+                    class="desktop-nav-link border-transparent"
                     :class="{
-                      'border-blue-400 border-b-2': $route.hash === '#about',
+                      'border-blue-400': $route.hash === '#about',
                     }"
                   >
-                    Team
+                    About
                   </a>
                   <a
                     href="#skills"
-                    class="desktop-nav-link"
+                    class="desktop-nav-link border-transparent"
                     :class="{
-                      'border-blue-400 border-b-2': $route.hash === '#skills',
+                      'border-blue-400': $route.hash === '#skills',
                     }"
                   >
-                    Projects
+                    Skills
                   </a>
                   <a
                     href="#resume"
-                    class="desktop-nav-link"
+                    class="desktop-nav-link border-transparent"
                     :class="{
-                      'border-blue-400 border-b-2': $route.hash === '#resume',
+                      'border-blue-400': $route.hash === '#resume',
                     }"
                   >
-                    Calendar
+                    Resume
                   </a>
                 </div>
               </div>
@@ -112,10 +98,9 @@
             >
               <div class="flex space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="#" class="nav-link">Dashboard</a>
-                <a href="#about" class="nav-link">Team</a>
-                <a href="#skills" class="nav-link">Projects</a>
-                <a href="#resume" class="nav-link">Calendar</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#resume" class="nav-link">Resume</a>
               </div>
             </div>
           </div>
@@ -153,10 +138,10 @@ export default {
 }
 
 .desktop-nav-link {
-  @apply inline-flex items-center px-2 py-2 text-sm font-medium transition ease-in-out duration-150;
+  @apply border-b-2 inline-flex items-center px-2 py-2 text-sm font-medium transition ease-in-out duration-300;
 }
 
 .desktop-nav-link:hover {
-  @apply border-gray-300 border-b-2 text-gray-300;
+  @apply border-gray-300 text-gray-300;
 }
 </style>
