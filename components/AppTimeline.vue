@@ -97,7 +97,7 @@ export default {
   z-index: 0;
   opacity: 0.8;
   width: 2px;
-  @apply absolute bg-gray-100;
+  @apply absolute bg-gray-300;
 }
 
 .date {
@@ -106,7 +106,7 @@ export default {
 
 .event {
   background-color: #3b4252;
-  @apply col-span-9 p-4 text-white rounded-lg;
+  @apply col-span-9 p-4 text-white rounded-lg shadow-lg;
 }
 
 .event > h3 {
@@ -143,7 +143,7 @@ export default {
 }
 
 .circle {
-  @apply bg-blue-600 h-8 w-8 rounded-2xl p-1;
+  @apply bg-green-500 h-8 w-8 rounded-2xl p-1 shadow-xl;
 }
 
 .date > div:last-child {

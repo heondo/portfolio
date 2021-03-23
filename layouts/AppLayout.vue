@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <nav class="fixed bg-gray-800 text-white z-10 w-full">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="bg-gray-800 text-white">
+    <nav class="fixed bg-gray-800 z-10 w-full shadow-md">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <div class="flex items-center">
             <a class="flex-shrink-0 text-white font-bold" href="#">HK</a>
@@ -146,7 +146,7 @@
       </transition>
     </nav>
 
-    <main class="bg-gray-800 text-white">
+    <main class="">
       <div class="">
         <!-- Replace with your content -->
         <div class="pt-16 pb-8">
@@ -155,10 +155,26 @@
         <!-- /End replace -->
       </div>
     </main>
+
+    <footer>
+      <section-layout>
+        <div class="grid grid-cols-1 sm:grid-cols-2">
+          <span>
+            <div>Linkedin</div>
+            <div>Github</div>
+          </span>
+          <span> Email form here </span>
+        </div>
+      </section-layout>
+    </footer>
   </div>
 </template>
 <script>
+import SectionLayout from '~/layouts/SectionLayout'
 export default {
+  components: {
+    SectionLayout,
+  },
   data() {
     return {
       menuOpen: false,

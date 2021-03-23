@@ -5,14 +5,14 @@
         <app-landing></app-landing>
       </section-layout>
       <section-layout id="about" class="slanted" bgColor="bg-blue-900">
-        <template #title> Who, Me? </template>
+        <template #title class="underline"> Who, Me? </template>
         <app-about></app-about>
       </section-layout>
       <section-layout id="skills">
         <template #title> Skills </template>
         <app-skills></app-skills>
       </section-layout>
-      <section-layout id="timeline" class="slanted" bgColor="bg-indigo-900">
+      <section-layout id="timeline" class="slanted" bgColor="bg-blue-900">
         <template #title> Timeline</template>
 
         <app-timeline></app-timeline>
@@ -22,7 +22,7 @@
         <template #title> Resume</template>
 
         <iframe
-          class="mx-auto"
+          class="mx-auto rounded-lg shadow-xl"
           src="https://drive.google.com/file/d/13fR9a1kTlyQtHKRe60S_YbUUE2mvOq3L/preview"
           width="80%"
           height="350"
