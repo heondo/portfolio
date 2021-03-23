@@ -12,11 +12,15 @@
         <template #title> Skills </template>
         <app-skills></app-skills>
       </section-layout>
-      <section-layout id="testing" class="slanted" bgColor="bg-indigo-900">
-        Section Testing
+      <section-layout id="timeline" class="slanted" bgColor="bg-indigo-900">
+        <template #title> Timeline</template>
+
+        <app-timeline></app-timeline>
       </section-layout>
 
       <section-layout id="resume">
+        <template #title> Resume</template>
+
         <iframe
           class="mx-auto"
           src="https://drive.google.com/file/d/13fR9a1kTlyQtHKRe60S_YbUUE2mvOq3L/preview"
@@ -34,6 +38,7 @@ import SectionLayout from '~/layouts/SectionLayout'
 import AppLanding from '~/components/AppLanding'
 import AppAbout from '~/components/AppAbout'
 import AppSkills from '~/components/AppSkills'
+import AppTimeline from '~/components/AppTimeline'
 export default {
   components: {
     AppLayout,
@@ -41,6 +46,7 @@ export default {
     AppLanding,
     AppAbout,
     AppSkills,
+    AppTimeline,
   },
 }
 </script>

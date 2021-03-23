@@ -30,6 +30,15 @@
                     Skills
                   </a>
                   <a
+                    href="#timeline"
+                    class="desktop-nav-link border-transparent"
+                    :class="{
+                      'border-blue-400': $route.hash === '#timeline',
+                    }"
+                  >
+                    Timeline
+                  </a>
+                  <a
                     href="#resume"
                     class="desktop-nav-link border-transparent"
                     :class="{
@@ -98,9 +107,38 @@
             >
               <div class="flex space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#resume" class="nav-link">Resume</a>
+                <a
+                  href="#about"
+                  :class="{
+                    'bg-gray-600': $route.hash === '#about',
+                  }"
+                  class="nav-link"
+                  >About</a
+                >
+                <a
+                  href="#skills"
+                  :class="{
+                    'bg-gray-600': $route.hash === '#skills',
+                  }"
+                  class="nav-link"
+                  >Skills</a
+                >
+                <a
+                  href="#timeline"
+                  :class="{
+                    'bg-gray-600': $route.hash === '#timeline',
+                  }"
+                  class="nav-link"
+                  >Timeline</a
+                >
+                <a
+                  href="#resume"
+                  :class="{
+                    'bg-gray-600': $route.hash === '#resume',
+                  }"
+                  class="nav-link"
+                  >Resume</a
+                >
               </div>
             </div>
           </div>
