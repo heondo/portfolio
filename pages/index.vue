@@ -62,10 +62,19 @@ export default {
 } */
 
 .slanted {
-  padding: 4rem 0;
-  margin: 6rem 0 4rem 0;
+  padding: 5rem 0 4rem 0;
+  margin: 8rem 0 4rem 0;
   transform: skewY(-3deg);
   transform-origin: 0;
+}
+
+@screen md {
+  /* .slanted {
+    padding: 4rem 0;
+    margin: 8rem 0 4rem 0;
+    transform: skewY(-3deg);
+    transform-origin: 0;
+  } */
 }
 
 .slanted > div {
