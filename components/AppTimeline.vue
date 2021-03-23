@@ -1,8 +1,6 @@
 <template>
   <span class="grid grid-cols-12 gap-2 gap-y-5 relative">
-    <div class="timeline-line">
-      {{ '*' }}
-    </div>
+    <div class="timeline-line">,</div>
     <div class="date">
       <div class="circle">
         <svg
@@ -19,7 +17,10 @@
       </div>
       <div>04/18</div>
     </div>
-    <div class="event">First Event</div>
+    <div class="event">
+      <h3>Data Analyst, Carpe Data</h3>
+      <span> Description of event </span>
+    </div>
     <div class="date">
       <div class="circle">
         <svg
@@ -36,7 +37,10 @@
       </div>
       <div>08/19</div>
     </div>
-    <div class="event">LFZ</div>
+    <div class="event">
+      <h3>Learning Web Dev</h3>
+      LFZ
+    </div>
     <div class="date">
       <div class="circle">
         <svg
@@ -54,11 +58,8 @@
       <div>01/20</div>
     </div>
     <div class="event">
-      Data Science InstructorData Science InstructorData Science InstructorData
-      Science InstructorData Science InstructorData Science InstructorData
-      Science InstructorData Science InstructorData Science InstructorData
-      Science InstructorData Science InstructorData Science InstructorData
-      Science InstructorData Science Instructor
+      <h3>Data Science Instructor</h3>
+      <span> Tae coding </span>
     </div>
     <div class="date">
       <div class="circle">
@@ -76,7 +77,10 @@
       </div>
       <div>08/20</div>
     </div>
-    <div class="event">Smartspace</div>
+    <div class="event">
+      <h3>Software Developer</h3>
+      <span> Smartspace ai </span>
+    </div>
   </span>
 </template>
 <script>
@@ -87,9 +91,9 @@ export default {
 <style scoped>
 .timeline-line {
   content: '';
-  height: 92%;
-  left: 1.15rem;
-  top: 1.15rem;
+  height: 85%;
+  left: 4.7%;
+  top: 6.2%;
   z-index: 0;
   opacity: 0.8;
   width: 2px;
@@ -97,26 +101,33 @@ export default {
 }
 
 .date {
-  @apply col-span-4 flex items-center rounded-2xl p-1 gap-2 z-10;
+  @apply col-span-3 flex items-center rounded-2xl p-1 gap-2 z-10;
 }
 
 .event {
   background-color: #3b4252;
-  @apply col-span-8 p-4 text-white rounded-lg;
+  @apply col-span-9 p-4 text-white rounded-lg;
+}
+
+.event > h3 {
+  @apply font-semibold uppercase;
 }
 
 @screen sm {
   .date {
-    @apply col-span-3 p-4;
+    @apply p-4;
   }
 
   .event {
-    @apply col-span-9;
+  }
+
+  .event > h3 {
+    @apply text-lg;
   }
 
   .timeline-line {
-    left: 1.9rem;
-    top: 1.9rem;
+    left: 3.65%;
+    top: 7%;
     height: 85%;
   }
 }
@@ -131,11 +142,11 @@ export default {
   }
 }
 
-.date > .circle {
-  @apply bg-blue-400 h-8 w-8 rounded-2xl p-1;
+.circle {
+  @apply bg-blue-600 h-8 w-8 rounded-2xl p-1;
 }
 
 .date > div:last-child {
-  @apply text-sm;
+  @apply text-sm font-semibold;
 }
 </style>
