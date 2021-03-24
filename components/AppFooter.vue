@@ -66,11 +66,9 @@
         >Message</label
       >
       <div class="mt-1 relative rounded-md shadow-sm mb-4">
-        <div
-          class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
-        >
+        <div class="absolute left-0 pl-3 flex items-center pointer-events-none">
           <svg
-            class="h-5 w-5 text-gray-300"
+            class="h-5 w-5 mt-2 text-gray-300"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -96,7 +94,7 @@
 
       <div class="flex justify-end">
         <button
-          class="inline-flex shadow-xl items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transform transition duration-300 ease-in-out"
+          class="inline-flex shadow-xl items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transform transition duration-300 ease-in-out"
           type="submit"
         >
           Send
