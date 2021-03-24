@@ -111,4 +111,22 @@ a {
 a:hover {
   @apply text-gray-300;
 }
+
+a:hover {
+  @apply text-gray-300;
+}
+input::placeholder,
+textarea::placeholder {
+  @apply text-gray-200;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  @apply text-gray-200;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  @apply text-gray-200;
+}
 </style>
