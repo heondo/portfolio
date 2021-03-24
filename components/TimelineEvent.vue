@@ -26,7 +26,40 @@
       <div :class="[eventExpanded ? '' : 'h-24 overflow-y-hidden']">
         <slot></slot>
       </div>
-      <div class="absolute" @click="eventExpanded = !eventExpanded">Hello</div>
+      <div class="absolute w-full expand-container">
+        <svg
+          v-if="!eventExpanded"
+          class="h-6 w-6 mt-2 mx-auto"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          @click="eventExpanded = !eventExpanded"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 13l-7 7-7-7m14-8l-7 7-7-7"
+          />
+        </svg>
+        <svg
+          v-else
+          class="h-6 w-6 mt-2 mx-auto"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          @click="eventExpanded = !eventExpanded"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 11l7-7 7 7M5 19l7-7 7 7"
+          />
+        </svg>
+      </div>
     </div>
   </span>
 </template>
@@ -50,6 +83,14 @@ export default {
 }
 </script>
 <style scoped>
+.expand-container svg {
+  @apply transition duration-300 ease-in-out;
+}
+
+.expand-container:hover svg {
+  @apply transform -translate-y-1 scale-105 shadow-xl font-bold;
+}
+
 .timeline-line {
   content: '';
   height: 115%;
