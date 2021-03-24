@@ -1,6 +1,6 @@
 <template>
   <section :class="{ [bgColor]: true }" class="">
-    <div class="max-w-4xl mx-auto py-6 px-6 sm:px-8">
+    <div :class="[width]" class="mx-auto py-6 px-6 sm:px-8">
       <h3 v-if="$slots.title" class="text-xl uppercase font-bold mb-4">
         <slot name="title"></slot>
       </h3>
@@ -16,6 +16,10 @@ export default {
     bgColor: {
       type: String,
       default: 'bg-gray-800',
+    },
+    width: {
+      type: String,
+      default: 'max-w-4xl',
     },
   },
 }

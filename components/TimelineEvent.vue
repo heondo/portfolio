@@ -1,5 +1,11 @@
 <template>
-  <div class="grid grid-cols-12 gap-2">
+  <span class="grid grid-cols-12 gap-2 gap-y-5 relative">
+    <div
+      v-if="!hideTimeline"
+      :class="[lineClasses]"
+      class="timeline-line transform"
+    ></div>
+
     <div class="date">
       <div class="circle">
         <svg
@@ -19,33 +25,61 @@
     <div class="event">
       <slot></slot>
     </div>
-  </div>
+  </span>
 </template>
 <script>
-export default {}
+export default {
+  props: {
+    hideTimeline: {
+      type: String,
+      default: '',
+    },
+    lineClasses: {
+      type: String,
+      default: '',
+    },
+  },
+}
 </script>
 <style scoped>
+.timeline-line {
+  content: '';
+  height: 100%;
+  left: 1.2rem;
+  top: 42.5%;
+  z-index: 0;
+  opacity: 0.8;
+  width: 2px;
+  @apply absolute bg-gray-300;
+}
+
 .date {
-  @apply col-span-4 flex items-center rounded-2xl p-1 gap-2 z-10;
+  @apply col-span-3 flex items-center rounded-2xl p-1 gap-2 z-10;
 }
 
 .event {
   background-color: #3b4252;
-  @apply col-span-8 p-4 text-white rounded-lg;
+  @apply col-span-9 p-4 text-white rounded-lg shadow-lg;
+}
+
+.event > h3 {
+  @apply font-semibold uppercase;
 }
 
 @screen sm {
   .date {
-    @apply col-span-3 p-4;
+    @apply p-4;
   }
 
   .event {
-    @apply col-span-9;
+  }
+
+  .event > h3 {
+    @apply text-lg;
   }
 
   .timeline-line {
-    left: 1.9rem;
-    top: 1.9rem;
+    left: 3.7%;
   }
 }
 
@@ -59,11 +93,11 @@ export default {}
   }
 }
 
-.date > .circle {
-  @apply bg-blue-400 h-8 w-8 rounded-2xl p-1;
+.circle {
+  @apply bg-green-500 h-8 w-8 rounded-2xl p-1 shadow-xl;
 }
 
 .date > div:last-child {
-  @apply text-sm;
+  @apply text-sm font-semibold;
 }
 </style>

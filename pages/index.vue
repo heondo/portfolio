@@ -12,7 +12,12 @@
         <template #title> Skills </template>
         <app-skills></app-skills>
       </section-layout>
-      <section-layout id="timeline" class="slanted" bgColor="bg-blue-900">
+      <section-layout
+        id="timeline"
+        class="slanted"
+        bgColor="bg-blue-900"
+        width="max-w-6xl"
+      >
         <template #title> Timeline</template>
 
         <app-timeline></app-timeline>
