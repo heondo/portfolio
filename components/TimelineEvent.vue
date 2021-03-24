@@ -67,8 +67,8 @@
 export default {
   props: {
     hideTimeline: {
-      type: String,
-      default: '',
+      type: Boolean,
+      default: false,
     },
     lineClasses: {
       type: String,
