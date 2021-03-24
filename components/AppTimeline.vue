@@ -140,7 +140,7 @@ export default {
 .timeline-line {
   content: '';
   height: 100%;
-  left: 3.7%;
+  left: 1.2rem;
   top: 42.5%;
   z-index: 0;
   opacity: 0.8;
@@ -171,6 +171,10 @@ export default {
 
   .event > h3 {
     @apply text-lg;
+  }
+
+  .timeline-line {
+    left: 3.7%;
   }
 }
 

@@ -158,22 +158,18 @@
 
     <footer>
       <section-layout>
-        <div class="grid grid-cols-1 sm:grid-cols-2">
-          <span>
-            <div>Linkedin</div>
-            <div>Github</div>
-          </span>
-          <span> Email form here </span>
-        </div>
+        <app-footer></app-footer>
       </section-layout>
     </footer>
   </div>
 </template>
 <script>
 import SectionLayout from '~/layouts/SectionLayout'
+import AppFooter from '~/components/AppFooter'
 export default {
   components: {
     SectionLayout,
+    AppFooter,
   },
   data() {
     return {
