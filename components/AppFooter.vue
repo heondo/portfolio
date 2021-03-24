@@ -117,16 +117,16 @@ a:hover {
 }
 input::placeholder,
 textarea::placeholder {
-  @apply text-gray-200;
+  @apply text-gray-400;
 }
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {
-  @apply text-gray-200;
+  @apply text-gray-400;
 }
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  @apply text-gray-200;
+  @apply text-gray-400;
 }
 </style>
