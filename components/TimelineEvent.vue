@@ -22,8 +22,11 @@
       </div>
       <div><slot name="date"></slot></div>
     </div>
-    <div class="event">
-      <slot></slot>
+    <div class="event relative">
+      <div :class="[eventExpanded ? '' : 'h-24 overflow-y-hidden']">
+        <slot></slot>
+      </div>
+      <div class="absolute" @click="eventExpanded = !eventExpanded">Hello</div>
     </div>
   </span>
 </template>
@@ -39,18 +42,22 @@ export default {
       default: '',
     },
   },
+  data() {
+    return {
+      eventExpanded: false,
+    }
+  },
 }
 </script>
 <style scoped>
 .timeline-line {
   content: '';
-  height: 100%;
+  height: 115%;
   left: 1.2rem;
-  top: 42.5%;
+  top: 52%;
   z-index: 0;
-  opacity: 0.8;
   width: 2px;
-  @apply absolute bg-gray-300;
+  @apply absolute bg-gray-200;
 }
 
 .date {
@@ -79,7 +86,7 @@ export default {
   }
 
   .timeline-line {
-    left: 3.7%;
+    left: 2rem;
   }
 }
 
@@ -90,6 +97,9 @@ export default {
 
   .event {
     @apply col-span-10;
+  }
+  .timeline-line {
+    left: 2rem;
   }
 }
 
