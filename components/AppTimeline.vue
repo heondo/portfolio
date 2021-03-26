@@ -7,7 +7,7 @@
         <span
           ><p class="text-sm inline">Santa Barbara</p>
           <svg
-            class="h-6 w-6 inline"
+            class="map-marker"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -69,7 +69,7 @@
         <h3 class="flex flex-wrap items-center gap-2 mb-1">
           Data Analyst, Carpe Data -
           <svg
-            class="h-6 w-6 inline"
+            class="map-marker"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -106,7 +106,7 @@
         <span
           ><p class="text-sm inline">Irvine, CA</p>
           <svg
-            class="h-6 w-6 inline"
+            class="map-marker"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -143,7 +143,7 @@
         <span
           ><p class="text-sm inline">Santa Barbara</p>
           <svg
-            class="h-6 w-6 inline"
+            class="map-marker"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -174,13 +174,13 @@
       </span>
     </timeline-event>
     <timeline-event :hideTimeline="true">
-      <template #date> 048/20 </template>
+      <template #date> 04/20 </template>
       <h3 class="flex flex-wrap items-center gap-2 mb-1">
         Data Analyst, Carpe Data -
         <span
           ><p class="text-sm inline">Santa Barbara</p>
           <svg
-            class="h-6 w-6 inline"
+            class="map-marker"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -226,4 +226,8 @@ export default {
   },
 }
 </script>
-<style scoped></style>
+<style scoped>
+.map-marker {
+  @apply h-4 w-4 inline;
+}
+</style>

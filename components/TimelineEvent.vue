@@ -23,9 +23,11 @@
       <div><slot name="date"></slot></div>
     </div>
     <div class="event relative">
+      <!-- Event content -->
       <div :class="[eventExpanded ? '' : 'h-24 overflow-y-hidden']">
         <slot></slot>
       </div>
+      <!-- Expand or hide arrows -->
       <div class="absolute w-full expand-container">
         <svg
           v-if="!eventExpanded"
@@ -83,12 +85,12 @@ export default {
 }
 </script>
 <style scoped>
-.expand-container svg {
-  @apply transition duration-300 ease-in-out;
+.event .expand-container svg {
+  @apply transition opacity-0 duration-300 ease-in-out;
 }
 
-.expand-container:hover svg {
-  @apply transform -translate-y-1 scale-105 shadow-xl font-bold;
+.event:hover .expand-container svg {
+  @apply transform opacity-100 -translate-y-1 scale-105 shadow-xl font-bold;
 }
 
 .timeline-line {
