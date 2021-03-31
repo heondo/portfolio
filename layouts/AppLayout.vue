@@ -53,7 +53,7 @@
           </div>
 
           <!-- Mobile menu button -->
-          <div class="-mr-2 flex md:hidden">
+          <div class="flex md:hidden">
             <button
               type="button"
               class="bg-white bg-opacity-25 text-white inline-flex items-center justify-center p-1 rounded-md text-gray-500 hover:text-white hover:bg-gray-600 transition duration-150 ease-in-out"
@@ -89,7 +89,7 @@
         leave-to-class="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
       >
         <div v-show="menuOpen" class="md:hidden fixed inset-0 overflow-y-auto">
-          <div class="flex pt-4 px-4 text-center">
+          <div class="flex pt-4 text-center">
             <!-- background overlay -->
             <div
               class="fixed inset-0 transition-opacity"

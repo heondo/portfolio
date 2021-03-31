@@ -3,6 +3,11 @@ html {
   font-family: 'Karla';
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 @font-face {
   font-family: 'Karla';
   src: url('~assets/fonts/Karla/Karla-VariableFont_wght.ttf') format('truetype');
@@ -13,6 +18,11 @@ html {
   src: url('~assets/fonts/Spectral/Spectral-Regular.ttf') format('truetype');
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Spectral';
 }
