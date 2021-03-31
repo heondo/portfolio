@@ -6,7 +6,7 @@
         <slot name="title"> </slot>
       </h3>
     </div>
-    <div class="ml-12 event text-sm sm:text-md">
+    <div class="ml-12 event text-sm sm:text-base">
       <ul
         class="list-container"
         :class="[eventExpanded ? '' : 'h-24 overflow-y-hidden']"
@@ -138,21 +138,7 @@ export default {
 }
 
 .event:hover .expand-container > svg {
-  @apply transform opacity-100 -translate-y-1 scale-105 shadow-xl font-bold;
-}
-
-.timeline-line {
-  content: '';
-  height: 115%;
-  left: 1.2rem;
-  top: 52%;
-  z-index: 0;
-  width: 2px;
-  @apply absolute bg-gray-200;
-}
-
-.date {
-  @apply col-span-3 flex items-center rounded-2xl p-1 gap-2 z-10;
+  @apply transform opacity-100 -translate-y-1 scale-110;
 }
 
 .event {
@@ -165,10 +151,6 @@ export default {
 }
 
 @screen sm {
-  .date {
-    @apply p-4;
-  }
-
   .event {
   }
 
@@ -182,10 +164,6 @@ export default {
 }
 
 @screen md {
-  .date {
-    @apply col-span-2 p-4;
-  }
-
   .event {
     @apply col-span-10;
   }
@@ -194,15 +172,8 @@ export default {
   }
 }
 
-.circle {
-  @apply bg-green-500 h-8 w-8 rounded-2xl p-1 shadow-xl;
-}
-
-.date > div:last-child {
-  @apply text-sm font-semibold;
-}
-
 .list-container {
-  @apply list-disc pl-4;
+  max-height: 50rem;
+  @apply list-disc pl-4  transform transition duration-300 ease-in-out;
 }
 </style>

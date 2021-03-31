@@ -73,23 +73,7 @@ export default {
   transform-origin: 0;
 }
 
-@screen md {
-  /* .slanted {
-    padding: 4rem 0;
-    margin: 8rem 0 4rem 0;
-    transform: skewY(-3deg);
-    transform-origin: 0;
-  } */
-}
-
 .slanted > div {
   transform: skewY(3deg);
 }
-
-/* @screen lg {
-  .slanted {
-    padding: 6rem 0;
-    margin: 8rem 0;
-  }
-} */
 </style>

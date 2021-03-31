@@ -1,5 +1,5 @@
 <template>
-  <span class="grid md:grid-cols-2 grid-cols-1 gap-2">
+  <div class="grid md:grid-cols-2 grid-cols-1 gap-2">
     <div class="md:cols-span-1">
       I graduated from
       <p>UC Santa Barbara</p>
@@ -27,7 +27,7 @@
       <p>SQL, Laravel, NodeJs, Vue, React, and Angular</p>
       .
     </div>
-  </span>
+  </div>
 </template>
 <script>
 export default {}
