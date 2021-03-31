@@ -1,7 +1,7 @@
 <template>
-  <div class="relative w-1/2 m-8">
+  <div class="relative max-w-3xl mx-auto">
     <div
-      class="border-r-2 border-gray-500 absolute h-full top-0"
+      class="border-r-2 border-gray-500 absolute h-full timeline-line"
       style="left: 15px"
     ></div>
     <ul class="list-none m-0 p-0">
@@ -120,7 +120,13 @@ export default {
   @apply h-4 w-4 inline;
 }
 
-.list-container {
-  @apply list-disc pl-4;
+.timeline-line {
+  top: 2rem;
+}
+
+@screem sm {
+  .timeline-line {
+    top: 0;
+  }
 }
 </style>

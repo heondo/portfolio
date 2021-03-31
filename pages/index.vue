@@ -83,7 +83,7 @@ export default {
 }
 
 .slanted > div {
-  transform: translateZ(0) skewY(3deg);
+  transform: skewY(3deg);
 }
 
 /* @screen lg {
