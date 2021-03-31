@@ -1,83 +1,35 @@
 <template>
-  <div class="flex flex-col gap-5">
-    <timeline-event>
-      <template #date> 04/20 </template>
-      <h3 class="flex flex-wrap items-center gap-2 mb-1">
-        Data Analyst, Carpe Data
-        <span
-          ><p class="text-sm inline">- Santa Barbara</p>
-          <svg
-            class="map-marker"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-            />
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-            />
-          </svg>
-        </span>
-      </h3>
-      <ul class="list-container">
-        <li>
-          Start by creating regular expressions to flag risk characteristics for
-          businesses.
-        </li>
-        <li>
-          Use Python to automate various job tasks like CSV formatting, data
-          cleansing, and other ad hoc solutions.
-        </li>
-        <li>
-          Learned SQL to find business areas where product coverage and accuracy
-          was most lacking in a DB of over 10 million records.
-        </li>
-        <li>
-          Created data collection process for DA team using Python and SQL.
-          Designed new process for validating and storing data to more
-          accurately assess our product and increase validation speed.
-        </li>
-      </ul>
-    </timeline-event>
-
-    <timeline-event>
-      <template #date> 09/19 </template>
-      <h3 class="flex flex-wrap items-center gap-2 mb-1">
-        Web Dev Student, LFZ
-        <span
-          ><p class="text-sm inline">- Irvine, CA</p>
-          <svg
-            class="map-marker"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-            />
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-            /></svg
-        ></span>
-      </h3>
-      <span>
-        <ul class="list-container">
+  <div class="relative w-1/2 m-8">
+    <div
+      class="border-r-2 border-gray-500 absolute h-full top-0"
+      style="left: 15px"
+    ></div>
+    <ul class="list-none m-0 p-0">
+      <timeline-event>
+        <template #title> April 2018 - Data Analyst, Carpe Data </template>
+        <template #list>
+          <li>
+            Start by creating regular expressions to flag risk characteristics
+            for businesses.
+          </li>
+          <li>
+            Use Python to automate various job tasks like CSV formatting, data
+            cleansing, and other ad hoc solutions.
+          </li>
+          <li>
+            Learned SQL to find business areas where product coverage and
+            accuracy was most lacking in a DB of over 10 million records.
+          </li>
+          <li>
+            Created data collection process for DA team using Python and SQL.
+            Designed new process for validating and storing data to more
+            accurately assess our product and increase validation speed.
+          </li>
+        </template>
+      </timeline-event>
+      <timeline-event>
+        <template #title> Sep 2019 - Web Dev Student, LearningFuze </template>
+        <template #list>
           <li>
             Begin with learning HTML, CSS, and JavaScript (ES5), Flexbox ftw,
             and jQuery.
@@ -92,16 +44,13 @@
             interesting and learned Express.js as a challenge for my final
             project
           </li>
-        </ul>
-      </span>
-    </timeline-event>
-    <timeline-event>
-      <template #date> 01/20 </template>
-      <h3 class="flex flex-wrap items-center gap-2 mb-1">
-        Data Science Instructor, Tae Coding
-      </h3>
-      <span>
-        <ul class="list-container">
+        </template>
+      </timeline-event>
+      <timeline-event>
+        <template #title>
+          Jan 2020 - Data Science Instructor, Tae Coding
+        </template>
+        <template #list>
           <li>
             Learned Angular, MongoDB, and AWS Amplify to assist in the
             development of an internal application for class management.
@@ -118,40 +67,13 @@
             Help more than 20 students receive one or more certificates from
             Edx.
           </li>
-        </ul>
-      </span>
-    </timeline-event>
-    <timeline-event :hideTimeline="true">
-      <template #date> 08/20 </template>
-      <h3 class="flex flex-wrap items-center gap-2 mb-1">
-        Software Engineer, SmartSpace AI
-        <span
-          ><p class="text-sm inline">- Costa Mesa, CA</p>
-          <svg
-            class="map-marker"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-            />
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-            />
-          </svg>
-          <p class="text-sm inline text-blue-300">(Current)</p></span
-        >
-      </h3>
-      <span>
-        <ul class="list-container">
+        </template>
+      </timeline-event>
+      <timeline-event>
+        <template #title>
+          Aug 2020 - Software Engineer, SmartSpace AI
+        </template>
+        <template #list>
           <li>
             Use Angular and D3.js to create over 30+ reusable visualizations of
             time series data.
@@ -169,9 +91,20 @@
             Assist in devops by maintaining migrations/seeders, setting up CI/CD
             pipeline using Bitbucket actions.
           </li>
-        </ul>
-      </span>
-    </timeline-event>
+        </template>
+      </timeline-event>
+      <!-- <li class="mb-2">
+        <div class="flex items-center mb-1">
+          <div class="bg-gray-500 rounded-full h-8 w-8"></div>
+          <h3 class="flex-1 ml-4 font-medium"></h3>
+        </div>
+        <div class="ml-12">
+          <ul class="list-container">
+            
+          </ul>
+        </div>
+      </li> -->
+    </ul>
   </div>
 </template>
 <script>
