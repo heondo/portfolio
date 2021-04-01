@@ -1,7 +1,20 @@
 <template>
   <li class="mb-2">
     <div class="flex items-center mb-1">
-      <div class="bg-gray-500 rounded-full h-8 w-8"></div>
+      <div :class="[circleColor]" class="rounded-full h-8 w-8 z-20 p-1">
+        <svg
+          class="h-auto w-auto"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
       <h3 class="flex-1 ml-4 font-medium">
         <slot name="title"> </slot>
       </h3>
@@ -124,6 +137,10 @@ export default {
       type: String,
       default: '',
     },
+    circleColor: {
+      type: String,
+      default: 'bg-green-500',
+    },
   },
   data() {
     return {
@@ -133,13 +150,13 @@ export default {
 }
 </script>
 <style scoped>
-.event .expand-container > svg {
+/* .event .expand-container > svg {
   @apply transition opacity-0 duration-300 ease-in-out;
 }
 
 .event:hover .expand-container > svg {
   @apply transform opacity-100 -translate-y-1 scale-110;
-}
+} */
 
 .event {
   background-color: #3b4252;

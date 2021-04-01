@@ -1,12 +1,12 @@
 <template>
   <div class="relative max-w-3xl mx-auto">
     <div
-      class="border-r-2 border-gray-500 absolute h-full timeline-line"
+      class="border-gray-500 z-10 absolute h-full timeline-line"
       style="left: 15px"
     ></div>
     <ul class="list-none m-0 p-0">
       <timeline-event>
-        <template #title> April 2018 - Data Analyst, Carpe Data </template>
+        <template #title> APR 2018 - Data Analyst, Carpe Data </template>
         <template #list>
           <li>
             Start by creating regular expressions to flag risk characteristics
@@ -28,7 +28,7 @@
         </template>
       </timeline-event>
       <timeline-event>
-        <template #title> Sep 2019 - Web Dev Student, LearningFuze </template>
+        <template #title> SEP 2019 - Web Dev Student, LearningFuze </template>
         <template #list>
           <li>
             Begin with learning HTML, CSS, and JavaScript (ES5), Flexbox ftw,
@@ -48,7 +48,7 @@
       </timeline-event>
       <timeline-event>
         <template #title>
-          Jan 2020 - Data Science Instructor, Tae Coding
+          JAN 2020 - Data Science Instructor, Tae Coding
         </template>
         <template #list>
           <li>
@@ -71,7 +71,8 @@
       </timeline-event>
       <timeline-event>
         <template #title>
-          Aug 2020 - Software Engineer, SmartSpace AI
+          AUG 2020 - Software Engineer, SmartSpace AI
+          <p class="ml-1 text-blue-300 inline">(Current)</p>
         </template>
         <template #list>
           <li>
@@ -122,6 +123,7 @@ export default {
 
 .timeline-line {
   top: 2rem;
+  border-right-width: 1px;
 }
 
 @screem sm {
