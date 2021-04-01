@@ -96,8 +96,7 @@ export default {
 } */
 
 .event {
-  background-color: #3b4252;
-  @apply col-span-9 p-4 text-white rounded-lg shadow-lg relative;
+  @apply bg-gray-700 col-span-9 p-4 text-white rounded-lg shadow-lg relative;
 }
 
 .event > h3 {
