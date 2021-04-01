@@ -62,69 +62,6 @@
       </div>
     </div>
   </li>
-  <!-- <span class="grid grid-cols-12 gap-2 gap-y-5 relative">
-    <div
-      v-if="!hideTimeline"
-      :class="[lineClasses]"
-      class="timeline-line transform"
-    ></div>
-
-    <div class="date">
-      <div class="circle">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-          />
-        </svg>
-      </div>
-      <div><slot name="date"></slot></div>
-    </div>
-    <div class="event relative">
-      <div>
-        <slot></slot>
-      </div>
-      <div class="absolute w-full expand-container">
-        <svg
-          v-if="!eventExpanded"
-          class="h-6 w-6 mt-2 mx-auto"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          @click="eventExpanded = !eventExpanded"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M19 13l-7 7-7-7m14-8l-7 7-7-7"
-          />
-        </svg>
-        <svg
-          v-else
-          class="h-6 w-6 mt-2 mx-auto"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          @click="eventExpanded = !eventExpanded"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M5 11l7-7 7 7M5 19l7-7 7 7"
-          />
-        </svg>
-      </div>
-    </div>
-  </span> -->
 </template>
 <script>
 export default {

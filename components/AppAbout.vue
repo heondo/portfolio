@@ -24,8 +24,7 @@
       enjoy creating
       <p>full stack</p>
       web applications using
-      <p>SQL, Laravel, NodeJs, Vue, React, and Angular</p>
-      .
+      <p>SQL, Laravel, NodeJs, Vue, React, and Angular.</p>
     </div>
   </div>
 </template>
@@ -33,7 +32,7 @@
 export default {}
 </script>
 <style scoped>
-span > div > p {
+p {
   @apply inline text-blue-300 font-semibold;
 }
 /* .content {

@@ -165,16 +165,18 @@ export default {}
   @apply transition duration-300 ease-in-out;
 }
 
-.skill-icon-container:hover .skill-icon {
+.skill-icon-container:hover .skill-icon,
+.skill-icon-container:active .skill-icon {
   @apply transform -translate-y-3 scale-110;
 }
 
 .skill-icon-container .skill-desc {
-  @apply invisible text-center opacity-0;
+  @apply text-center opacity-0;
 }
 
-.skill-icon-container:hover .skill-desc {
-  @apply visible opacity-100;
+.skill-icon-container:hover .skill-desc,
+.skill-icon-container:active .skill-desc {
+  @apply opacity-100;
 }
 
 @screen md {
