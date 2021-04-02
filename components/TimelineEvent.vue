@@ -99,26 +99,6 @@ export default {
   @apply bg-gray-700 p-4 text-white rounded-lg shadow-lg relative;
 }
 
-.event > h3 {
-  @apply font-semibold uppercase;
-}
-
-@screen sm {
-  .event > h3 {
-    @apply text-lg;
-  }
-
-  .timeline-line {
-    left: 2rem;
-  }
-}
-
-@screen md {
-  .timeline-line {
-    left: 2rem;
-  }
-}
-
 .list-container {
   max-height: 50rem;
   @apply list-disc pl-4  transform transition duration-300 ease-in-out;
