@@ -90,7 +90,7 @@ export default {
 } */
 
 .list-container {
-  max-height: 50rem;
+  /* max-height: 50rem; */
   @apply list-disc pl-4  transform transition duration-300 ease-in-out;
 }
 </style>
