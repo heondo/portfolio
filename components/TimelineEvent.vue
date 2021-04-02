@@ -96,7 +96,7 @@ export default {
 } */
 
 .event {
-  @apply bg-gray-700 col-span-9 p-4 text-white rounded-lg shadow-lg relative;
+  @apply bg-gray-700 p-4 text-white rounded-lg shadow-lg relative;
 }
 
 .event > h3 {
@@ -104,9 +104,6 @@ export default {
 }
 
 @screen sm {
-  .event {
-  }
-
   .event > h3 {
     @apply text-lg;
   }
@@ -117,9 +114,6 @@ export default {
 }
 
 @screen md {
-  .event {
-    @apply col-span-10;
-  }
   .timeline-line {
     left: 2rem;
   }
