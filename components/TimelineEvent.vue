@@ -19,7 +19,9 @@
         <slot name="title"> </slot>
       </h3>
     </div>
-    <div class="ml-12 event text-sm sm:text-base">
+    <div
+      class="ml-12 bg-gray-700 p-4 text-white rounded-lg shadow-lg relative text-sm sm:text-base"
+    >
       <ul
         class="list-container"
         :class="[eventExpanded ? '' : 'h-24 overflow-y-hidden']"
@@ -66,14 +68,6 @@
 <script>
 export default {
   props: {
-    hideTimeline: {
-      type: Boolean,
-      default: false,
-    },
-    lineClasses: {
-      type: String,
-      default: '',
-    },
     circleColor: {
       type: String,
       default: 'bg-green-500',
@@ -94,10 +88,6 @@ export default {
 .event:hover .expand-container > svg {
   @apply transform opacity-100 -translate-y-1 scale-110;
 } */
-
-.event {
-  @apply bg-gray-700 p-4 text-white rounded-lg shadow-lg relative;
-}
 
 .list-container {
   max-height: 50rem;
