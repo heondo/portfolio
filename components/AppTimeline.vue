@@ -1,5 +1,5 @@
 <template>
-  <div class="relative max-w-3xl mx-auto">
+  <div class="relative max-w-4xl mx-auto">
     <div
       class="border-gray-500 z-10 absolute h-full timeline-line"
       style="left: 15px"

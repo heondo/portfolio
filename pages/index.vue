@@ -12,20 +12,13 @@
         <template #title> Skills </template>
         <app-skills></app-skills>
       </section-layout>
-      <section-layout
-        id="timeline"
-        class="slanted"
-        bgColor="bg-blue-900"
-        width="max-w-6xl"
-      >
+      <section-layout id="timeline" class="slanted" bgColor="bg-blue-900">
         <template #title> Timeline</template>
-
         <app-timeline></app-timeline>
       </section-layout>
 
       <section-layout id="resume">
-        <template #title> Resume</template>
-
+        <template #title> Resume </template>
         <iframe
           class="mx-auto rounded-lg shadow-xl"
           src="https://drive.google.com/file/d/13fR9a1kTlyQtHKRe60S_YbUUE2mvOq3L/preview"
@@ -67,8 +60,8 @@ export default {
 } */
 
 .slanted {
-  padding: 5rem 0 4rem 0;
-  margin: 8rem 0 4rem 0;
+  /* padding: 3rem 0; */
+  /* margin: 8rem 0 0 0; */
   transform: skewY(-3deg);
   transform-origin: 0;
 }

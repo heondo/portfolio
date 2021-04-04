@@ -1,5 +1,5 @@
 <template>
-  <section :class="{ [bgColor]: true }" class="">
+  <section :class="{ [bgColor]: true }" class="py-12 md:py-16">
     <div :class="[width]" class="mx-auto py-6 px-6 sm:px-8">
       <h3 v-if="$slots.title" class="text-xl uppercase font-bold mb-4">
         <slot name="title"></slot>
