@@ -12,7 +12,7 @@
     <div>
       <h2 class="text-xl md:text-2xl">
         <nuxt-link
-          class="hover:text-white text-blue-400 font-bold transition duration-150 ease-in-out"
+          class="text-white font-bold"
           :to="{ name: 'articles-slug', params: { slug: article.slug } }"
         >
           {{ article.title }}
