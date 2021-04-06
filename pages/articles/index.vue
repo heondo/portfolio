@@ -4,7 +4,7 @@
       <section-layout>
         <template #title> Articles </template>
         <ul>
-          <li v-for="article in articles" :key="article.slug" class="my-4">
+          <li v-for="article in articles" :key="article.slug" class="my-12">
             <!-- <nuxt-link
               :to="{ name: 'articles-slug', params: { slug: article.slug } }"
             > -->

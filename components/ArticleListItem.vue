@@ -1,7 +1,7 @@
 <template>
   <span class="flex flex-col gap-3">
     <div class="flex justify-between">
-      <span class="text-lg text-indigo-400 uppercase">
+      <span class="text-lg font-semibold pl-2 border-l-4 border-indigo-600">
         {{ article.subject }}
       </span>
       <span>
@@ -12,7 +12,7 @@
     <div>
       <h2 class="text-xl md:text-2xl">
         <nuxt-link
-          class="hover:text-blue-200 font-bold transition duration-150 ease-in-out"
+          class="hover:text-white text-blue-400 font-bold transition duration-150 ease-in-out"
           :to="{ name: 'articles-slug', params: { slug: article.slug } }"
         >
           {{ article.title }}
@@ -24,7 +24,7 @@
     </div>
     <span class="w-auto">
       <nuxt-link
-        class="hover:text-white text-blue-400 transition duration-150 ease-in-out"
+        class="hover:text-white text-blue-400 transition duration-200 ease-in-out"
         :to="{ name: 'articles-slug', params: { slug: article.slug } }"
       >
         Read More
