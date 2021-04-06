@@ -149,7 +149,7 @@
     <main class="">
       <div class="">
         <!-- Replace with your content -->
-        <div class="pt-24 pb-8">
+        <div class="pt-16">
           <slot name="content"></slot>
         </div>
         <!-- /End replace -->
@@ -157,18 +157,18 @@
     </main>
 
     <footer>
-      <section-layout>
+      <!-- <section-layout class="py-2"> -->
+      <div class="max-w-4xl mx-auto px-6 sm:px-8">
         <app-footer></app-footer>
-      </section-layout>
+      </div>
+      <!-- </section-layout> -->
     </footer>
   </div>
 </template>
 <script>
-import SectionLayout from '~/layouts/SectionLayout'
 import AppFooter from '~/components/AppFooter'
 export default {
   components: {
-    SectionLayout,
     AppFooter,
   },
   data() {
