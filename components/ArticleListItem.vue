@@ -1,0 +1,62 @@
+<template>
+  <span class="flex flex-col gap-3">
+    <div class="flex justify-between">
+      <span class="text-lg text-indigo-400 uppercase">
+        {{ article.subject }}
+      </span>
+      <span>
+        {{ $formatDate(new Date(article.createdAt), 'EEEE - MMMM dd, yyyy') }}
+      </span>
+    </div>
+    <!-- Start of desc and content -->
+    <div>
+      <h2 class="text-xl md:text-2xl">
+        <nuxt-link
+          class="hover:text-blue-200 font-bold transition duration-150 ease-in-out"
+          :to="{ name: 'articles-slug', params: { slug: article.slug } }"
+        >
+          {{ article.title }}
+        </nuxt-link>
+      </h2>
+      <div>
+        {{ article.description }}
+      </div>
+    </div>
+    <span class="w-auto">
+      <nuxt-link
+        class="hover:text-white text-blue-400 transition duration-150 ease-in-out"
+        :to="{ name: 'articles-slug', params: { slug: article.slug } }"
+      >
+        Read More
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="inline h-5 w-5"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </nuxt-link>
+    </span>
+    <!-- End of desc and content -->
+  </span>
+</template>
+<script>
+export default {
+  props: {
+    article: {
+      type: Object,
+      required: true,
+    },
+  },
+  methods: {
+    // formatDate() {
+    //   return new Date(this.date)
+    // },
+  },
+}
+</script>

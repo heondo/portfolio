@@ -4,12 +4,12 @@
       <section-layout>
         <template #title> Articles </template>
         <ul>
-          <li v-for="article in articles" :key="article.slug">
-            <nuxt-link
+          <li v-for="article in articles" :key="article.slug" class="my-4">
+            <!-- <nuxt-link
               :to="{ name: 'articles-slug', params: { slug: article.slug } }"
-            >
-              {{ article.title }}</nuxt-link
-            >
+            > -->
+            <article-list-item :article="article"> </article-list-item>
+            <!-- {{ article }} -->
           </li>
         </ul>
       </section-layout>
@@ -19,8 +19,9 @@
 <script>
 import AppLayout from '~/layouts/AppLayout.vue'
 import SectionLayout from '~/layouts/SectionLayout.vue'
+import ArticleListItem from '~/components/ArticleListItem'
 export default {
-  components: { AppLayout, SectionLayout },
+  components: { AppLayout, SectionLayout, ArticleListItem },
   async asyncData({ $content }) {
     const articles = await $content('articles').fetch()
 
