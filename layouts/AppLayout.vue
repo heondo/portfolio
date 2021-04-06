@@ -149,7 +149,7 @@
     <main class="">
       <div class="">
         <!-- Replace with your content -->
-        <div class="pt-24">
+        <div class="pt-16">
           <slot name="content"></slot>
         </div>
         <!-- /End replace -->
