@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-800 text-white">
+  <div class="bg-gray-800 text-white min-h-screen">
     <nav class="fixed bg-gray-800 z-10 w-full shadow-md">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
@@ -158,7 +158,7 @@
 
     <footer>
       <!-- <section-layout class="py-2"> -->
-      <div class="max-w-4xl mx-auto px-6 sm:px-8">
+      <div class="max-w-4xl mx-auto px-6 sm:px-8 pb-8">
         <app-footer></app-footer>
       </div>
       <!-- </section-layout> -->
