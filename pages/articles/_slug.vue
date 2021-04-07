@@ -3,8 +3,19 @@
     <template #content>
       <section-layout>
         <template #title>
-          {{ article.title }}
+          <h2 class="text-2xl sm:text-4xl">
+            {{ article.title }}
+          </h2>
         </template>
+        <div class="text-lg mb-4">
+          Heondo Kim -
+          {{
+            $formatDate(
+              new Date(article.createdAt),
+              "MMMM dd, yyyy 'at' hh:mm aaa"
+            )
+          }}
+        </div>
         <article>
           <nuxt-content :document="article" />
         </article>
