@@ -16,7 +16,7 @@
             )
           }}
         </div>
-        <article>
+        <article class="prose">
           <nuxt-content :document="article" />
         </article>
       </section-layout>
@@ -37,3 +37,33 @@ export default {
   },
 }
 </script>
+<style>
+.nuxt-content h1 {
+  @apply text-5xl;
+}
+.nuxt-content h2 {
+  @apply text-4xl;
+}
+.nuxt-content h3 {
+  @apply text-3xl;
+}
+.nuxt-content h4 {
+  @apply text-2xl;
+}
+.nuxt-content h5 {
+  @apply text-xl;
+}
+.nuxt-content h6 {
+  @apply text-lg;
+}
+
+.nuxt-content table {
+  border-collapse: collapse;
+  border: 1px solid white;
+}
+
+.nuxt-content table td {
+  border: 1px solid white;
+  padding: 2rem;
+}
+</style>
