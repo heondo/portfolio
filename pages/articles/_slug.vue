@@ -50,6 +50,11 @@ export default {
 }
 </script>
 <style>
+.nuxt-content .caption {
+  border-left: 3px solid;
+  @apply border-indigo-400 pl-2 my-2 text-gray-300;
+}
+
 article {
   border: none;
 }

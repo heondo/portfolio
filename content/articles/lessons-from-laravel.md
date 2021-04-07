@@ -4,235 +4,49 @@ subject: Web Dev
 description: 'Empower your NuxtJS application with @nuxt/content module: write in a content/ directory and fetch your Markdown, JSON, YAML and CSV files through a MongoDB like API, acting as a Git-based Headless CMS.'
 ---
 
-<!-- ---
+1. [Example](#example)
+2. [Example2](#example2)
+3. [Third Example](#third-example)
+4. [Fourth Example](#fourth-examplehttpwwwfourthexamplecom)
 
-**Advertisement :)**
+## Example
 
-- **[pica](https://nodeca.github.io/pica/demo/)** - high quality and fast image
-  resize in browser.
-- **[babelfish](https://github.com/nodeca/babelfish/)** - developer friendly
-  i18n with plurals support and easy syntax.
+While we work together to slow the spread of coronavirus disease (also called COVID-19), some people might be tempted to buy or use questionable products that claim to help diagnose, treat, cure, and even prevent COVID-19.
 
-You will like those projects!
+The U.S. Food and Drug Administration (FDA) recently issued Emergency Use Authorizations for COVID-19 vaccines. Additionally, the FDA is working with other vaccine and drug manufacturers, developers, and researchers to help expedite the development and availability of medical products – such as additional vaccines, antibodies, and medicines – to prevent or treat COVID-19.
 
---- -->
+Meanwhile, some people and companies are trying to profit from this pandemic by selling unproven and illegally marketed products that make false claims, such as being effective against the coronavirus.
 
-# h1 Heading 8-)
+These fraudulent products that claim to cure, treat, or prevent COVID-19 haven’t been evaluated by the FDA for safety and effectiveness and might be dangerous to you and your family.
 
-## h2 Heading
+The FDA is particularly concerned that these deceptive and misleading products might cause Americans to delay or stop appropriate medical treatment, leading to serious and life-threatening harm. It’s likely that the products do not do what they claim, and the ingredients in them could cause adverse effects and could interact with, and potentially interfere with, essential medications.
 
-### h3 Heading
+The FDA has also seen unauthorized fraudulent test kits for COVID-19 being sold online. You will risk unknowingly spreading COVID-19 or not getting treated appropriately if you use an unauthorized test.
 
-#### h4 Heading
+For more information on COVID-19, visit:
 
-##### h5 Heading
+    FDA: Coronavirus Disease 2019 (COVID-19)
+    COVID-19 Vaccines
 
-###### h6 Heading
+## Example2
 
-## Horizontal Rules
+While we work together to slow the spread of coronavirus disease (also called COVID-19), some people might be tempted to buy or use questionable products that claim to help diagnose, treat, cure, and even prevent COVID-19.
 
----
+The U.S. Food and Drug Administration (FDA) recently issued Emergency Use Authorizations for COVID-19 vaccines. Additionally, the FDA is working with other vaccine and drug manufacturers, developers, and researchers to help expedite the development and availability of medical products – such as additional vaccines, antibodies, and medicines – to prevent or treat COVID-19.
 
----
+Meanwhile, some people and companies are trying to profit from this pandemic by selling unproven and illegally marketed products that make false claims, such as being effective against the coronavirus.
 
----
+These fraudulent products that claim to cure, treat, or prevent COVID-19 haven’t been evaluated by the FDA for safety and effectiveness and might be dangerous to you and your family.
 
-## Typographic replacements
+The FDA is particularly concerned that these deceptive and misleading products might cause Americans to delay or stop appropriate medical treatment, leading to serious and life-threatening harm. It’s likely that the products do not do what they claim, and the ingredients in them could cause adverse effects and could interact with, and potentially interfere with, essential medications.
 
-Enable typographer option to see result.
+The FDA has also seen unauthorized fraudulent test kits for COVID-19 being sold online. You will risk unknowingly spreading COVID-19 or not getting treated appropriately if you use an unauthorized test.
 
-(c) (C) (r) (R) (tm) (TM) (p) (P) +-
+For more information on COVID-19, visit:
 
-test.. test... test..... test?..... test!....
+    FDA: Coronavirus Disease 2019 (COVID-19)
+    COVID-19 Vaccines
 
-!!!!!! ???? ,, -- ---
+## Third Example
 
-"Smartypants, double quotes" and 'single quotes'
-
-## Emphasis
-
-**This is bold text**
-
-**This is bold text**
-
-_This is italic text_
-
-_This is italic text_
-
-~~Strikethrough~~
-
-## Blockquotes
-
-> Blockquotes can also be nested...
->
-> > ...by using additional greater-than signs right next to each other...
-> >
-> > > ...or with spaces between arrows.
-
-## Lists
-
-Unordered
-
-- Create a list by starting a line with `+`, `-`, or `*`
-- Sub-lists are made by indenting 2 spaces:
-  - Marker character change forces new list start:
-    - Ac tristique libero volutpat at
-    * Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-- Very easy!
-
-Ordered
-
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
-
-4. You can use sequential numbers...
-5. ...or keep all the numbers as `1.`
-
-6. foo
-7. bar
-
-## Code
-
-Inline `code`
-
-Indented code
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-
-Block code "fences"
-
-```
-Sample text here...
-```
-
-Syntax highlighting
-
-```js
-var foo = function (bar) {
-  return bar++
-}
-
-console.log(foo(5))
-```
-
-## Tables
-
-| Option | Description                                                               |
-| ------ | ------------------------------------------------------------------------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default.    |
-| ext    | extension to be used for dest files.                                      |
-
-Right aligned columns
-
-| Option |                                                               Description |
-| -----: | ------------------------------------------------------------------------: |
-|   data | path to data files to supply the data that will be passed into templates. |
-| engine |    engine to be used for processing templates. Handlebars is the default. |
-|    ext |                                      extension to be used for dest files. |
-
-## Links
-
-[link text](http://dev.nodeca.com)
-
-[link with title](http://nodeca.github.io/pica/demo/ 'title text!')
-
-Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
-
-## Images
-
-![Minion](https://octodex.github.com/images/minion.png)
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg 'The Stormtroopocat')
-
-Like links, Images also have a footnote style syntax
-
-![Alt text][id]
-
-With a reference later in the document defining the URL location:
-
-[id]: https://octodex.github.com/images/dojocat.jpg 'The Dojocat'
-
-## Plugins
-
-The killer feature of `markdown-it` is very effective support of
-[syntax plugins](https://www.npmjs.org/browse/keyword/markdown-it-plugin).
-
-### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
-
-> Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:
->
-> Shortcuts (emoticons): :-) :-( 8-) ;)
-
-see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
-
-### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
-
-- 19^th^
-- H~2~O
-
-### [\<ins>](https://github.com/markdown-it/markdown-it-ins)
-
-++Inserted text++
-
-### [\<mark>](https://github.com/markdown-it/markdown-it-mark)
-
-==Marked text==
-
-### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
-
-Footnote 1 link[^first].
-
-Footnote 2 link[^second].
-
-Inline footnote^[Text of inline footnote] definition.
-
-Duplicated footnote reference[^second].
-
-[^first]: Footnote **can have markup**
-
-    and multiple paragraphs.
-
-[^second]: Footnote text.
-
-### [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
-
-Term 1
-
-: Definition 1
-with lazy continuation.
-
-Term 2 with _inline markup_
-
-: Definition 2
-
-        { some code, part of Definition 2 }
-
-    Third paragraph of definition 2.
-
-_Compact style:_
-
-Term 1
-~ Definition 1
-
-Term 2
-~ Definition 2a
-~ Definition 2b
-
-### [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
-
-This is HTML abbreviation example.
-
-It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
-
-\*[HTML]: Hyper Text Markup Language
-
-### [Custom containers](https://github.com/markdown-it/markdown-it-container)
-
-::: warning
-_here be dragons_
-:::
+## [Fourth Example](http://www.fourthexample.com)
