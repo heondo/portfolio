@@ -24,7 +24,7 @@
     </div>
     <span class="w-auto">
       <nuxt-link
-        class="hover:text-white text-blue-400 transition duration-200 ease-in-out"
+        class="hover:text-white read-more text-blue-400 transition duration-200 ease-in-out"
         :to="{ name: 'articles-slug', params: { slug: article.slug } }"
       >
         Read More
@@ -60,3 +60,16 @@ export default {
   },
 }
 </script>
+<style scoped>
+/* read-more svg {
+  @apply 
+} */
+
+.read-more svg {
+  @apply transition duration-300 ease-in-out text-xl;
+}
+
+.read-more:hover svg {
+  @apply transform translate-x-1 scale-110;
+}
+</style>
