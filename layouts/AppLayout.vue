@@ -4,7 +4,7 @@
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <div class="flex items-center">
-            <a class="flex-shrink-0 text-white font-bold" href="/">HK</a>
+            <a class="app-logo" href="/">HK</a>
             <!-- Desktop nav -->
             <nav class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
@@ -179,6 +179,14 @@ export default {
 }
 </script>
 <style scoped>
+.app-logo {
+  @apply transform duration-300 text-xl ease-in-out flex-shrink-0 text-white font-bold;
+}
+
+.app-logo:hover {
+  @apply transition scale-125 text-blue-300;
+}
+
 .nav-link {
   @apply px-3 py-2 rounded-md text-sm font-medium transition ease-in-out duration-300;
 }

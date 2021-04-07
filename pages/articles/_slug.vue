@@ -16,7 +16,7 @@
             )
           }}
         </div>
-        <article class="prose">
+        <article>
           <nuxt-content :document="article" />
         </article>
       </section-layout>
