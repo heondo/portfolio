@@ -179,19 +179,13 @@ export default {}
   @apply opacity-100;
 }
 
+.skill-icon-container {
+  @apply h-auto w-16;
+}
+
 @screen md {
   .skill-icon-container {
-    @apply h-auto w-20;
+    /* @apply w-16; */
   }
 }
-/* .content {
-  column-count: 1;
-} */
-
-/* @screen md {
-  .content {
-    column-count: 2;
-    column-gap: 2rem;
-  }
-} */
 </style>

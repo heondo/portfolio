@@ -1,7 +1,7 @@
 <template>
   <span class="flex flex-col gap-3">
     <div class="flex justify-between">
-      <span class="text-lg font-semibold pl-2 border-l-4 border-indigo-600">
+      <span class="text-lg font-semibold pl-2 border-l-4 border-indigo-400">
         {{ article.subject }}
       </span>
       <span>
