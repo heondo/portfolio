@@ -22,9 +22,7 @@
         <slot name="title"> </slot>
       </h3>
     </div>
-    <div
-      class="ml-12 bg-gray-700 p-4 text-white rounded-lg shadow-lg relative text-sm sm:text-base"
-    >
+    <div class="ml-12 p-4 text-white rounded-lg relative text-sm sm:text-base">
       <ul
         class="list-container"
         :class="[eventExpanded ? '' : 'h-24 overflow-y-hidden']"
@@ -73,7 +71,7 @@ export default {
   props: {
     circleColor: {
       type: String,
-      default: 'bg-green-500',
+      default: 'bg-indigo-500',
     },
   },
   data() {

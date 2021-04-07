@@ -8,7 +8,7 @@
         <template #title class="underline"> Who, Me? </template>
         <app-about></app-about>
       </section-layout>
-      <section-layout id="skills">
+      <section-layout id="skills" class="anchor">
         <template #title> Skills </template>
         <app-skills></app-skills>
       </section-layout>

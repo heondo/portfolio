@@ -14,7 +14,7 @@
             {{ article.subject }}
           </span>
         </nav>
-        <article class="pl-0 sm:pl-3 md:pl-6">
+        <article class="pl-0 sm:pl-2 md:pl-4">
           <h2 class="text-3xl sm:text-5xl font-bold">
             {{ article.title }}
           </h2>
@@ -61,28 +61,40 @@ article {
 
 @screen sm {
   article {
-    border-left: 1px solid;
+    border-left: 1px dashed;
     @apply border-gray-700;
   }
 }
 
 .nuxt-content h1 {
-  @apply text-5xl;
-}
-.nuxt-content h2 {
   @apply text-4xl;
 }
-.nuxt-content h3 {
+.nuxt-content h2 {
   @apply text-3xl;
 }
-.nuxt-content h4 {
+.nuxt-content h3 {
   @apply text-2xl;
 }
-.nuxt-content h5 {
+.nuxt-content h4 {
   @apply text-xl;
 }
-.nuxt-content h6 {
+.nuxt-content h5 {
   @apply text-lg;
+}
+.nuxt-content h6 {
+}
+
+.nuxt-content h1,
+.nuxt-content h2,
+.nuxt-content h3,
+.nuxt-content h4,
+.nuxt-content h5,
+.nuxt-content h6 {
+  scroll-margin-top: 2em;
+  @apply text-blue-300;
+  /* thank you 
+  https://gomakethings.com/how-to-prevent-anchor-links-from-scrolling-behind-a-sticky-header-with-one-line-of-css/ 
+  */
 }
 
 .nuxt-content table {
@@ -97,14 +109,15 @@ article {
 
 .nuxt-content ul,
 .nuxt-content ol {
-  /* @apply: ml-2; */
   padding-left: 1rem;
 }
 
 .nuxt-content ul > li {
   list-style-type: disc;
+  @apply my-1;
 }
 .nuxt-content ol > li {
   list-style-type: decimal;
+  @apply my-1;
 }
 </style>
