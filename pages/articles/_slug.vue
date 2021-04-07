@@ -14,7 +14,7 @@
             {{ article.subject }}
           </span>
         </nav>
-        <article class="-mx-2 sm:-mx-0 pl-3 md:pl-6">
+        <article class="pl-0 sm:pl-3 md:pl-6">
           <h2 class="text-3xl sm:text-5xl font-bold">
             {{ article.title }}
           </h2>
@@ -51,8 +51,14 @@ export default {
 </script>
 <style>
 article {
-  border-left: 1px solid;
-  @apply border-gray-700;
+  border: none;
+}
+
+@screen sm {
+  article {
+    border-left: 1px solid;
+    @apply border-gray-700;
+  }
 }
 
 .nuxt-content h1 {
