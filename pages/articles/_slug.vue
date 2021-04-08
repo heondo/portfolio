@@ -51,18 +51,22 @@ export default {
 </script>
 <style>
 .nuxt-content .caption {
-  border-left: 3px solid;
-  @apply border-indigo-400 pl-2 my-2 text-gray-300;
+  @apply border-l-4 border-indigo-400 pl-2 my-4 text-gray-300;
+}
+
+.nuxt-content img {
+  @apply mx-auto my-6;
 }
 
 article {
   border: none;
+  @apply text-base;
 }
 
 @screen sm {
   article {
     border-left: 1px dashed;
-    @apply border-gray-700;
+    @apply border-gray-700 text-lg;
   }
 }
 
@@ -91,10 +95,21 @@ article {
 .nuxt-content h5,
 .nuxt-content h6 {
   scroll-margin-top: 2em;
-  @apply text-blue-300;
+  @apply text-blue-300 my-4;
   /* thank you 
   https://gomakethings.com/how-to-prevent-anchor-links-from-scrolling-behind-a-sticky-header-with-one-line-of-css/ 
   */
+}
+
+.nuxt-content a {
+  @apply underline text-lg;
+}
+
+.nuxt-content .tech-word {
+  @apply text-blue-300 font-semibold;
+}
+
+.nuxt-content code {
 }
 
 .nuxt-content table {

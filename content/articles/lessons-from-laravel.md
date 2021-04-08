@@ -1,7 +1,7 @@
 ---
 title: Lessons from Laravel
 subject: Web Dev
-description: 'Empower your NuxtJS application with @nuxt/content module: write in a content/ directory and fetch your Markdown, JSON, YAML and CSV files through a MongoDB like API, acting as a Git-based Headless CMS.'
+description: 'Why building a web application with Laravel was the best learning experience I could have asked for.'
 ---
 
 1. [A Brief Intro](#a-brief-intro)
@@ -10,29 +10,32 @@ description: 'Empower your NuxtJS application with @nuxt/content module: write i
 
 ## A Brief Intro
 
-## PHP? You lost me
+<div>
+I am a self taught developer who worked primarily with <span class="tech-word">React</span> and <span class="tech-word">Express.js</span> when I first began. Early on in my development journey, I relied on videos from channels like <a href="https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg" target="__blank">NetNinja</a> and <a href="https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w" target="__blank">Academind</a> to watch tutorials for how to bootstrap a full stack web application with Express and React together, leaving me with a repo that often looks like the following.
+<img src="https://imgur.com/Iy4UUyy.png">
+<div class="caption">And I was very excited to begin creating my full stack app with this!</div>
+ That combination got me quite far in learning the basics of CRUD and REST operations, interaction between the front-end and back-end but they always felt <span class="italic font-semibold">amateurish</span> and that bugged me. I struggled to wrap my head around pagination, caching, job queueing, proper authentication, and other real world application problems.
+<br>
 
-I still don't like PHP, it's far too different and archaic compared to other languages, but that's not the purpose of this discussion because Laravel is wonderful.
+####
 
-## Vue, Tailwind, and Authentication
+When I was asked to create a full stack web application for my work using a tech stack of Laravel, Vue, MySQL, and Docker, I realized that I shouldn't have to create solutions for all of those issues. Those are problems that every enterprise application has run into with well documented and tested libraries for enabling those features in your application. As someone who learns well through example and connecting the dots by seeing things in action, Laravel has broken down a lot of the perceived complexities of these features (caching, queueing, etc).
 
-While we work together to slow the spread of coronavirus disease (also called COVID-19), some people might be tempted to buy or use questionable products that claim to help diagnose, treat, cure, and even prevent COVID-19.
+<br>
+<span class="caption italic" >
+And Laravel showed me a really great way to do it (for small to medium sized companies). I am not bashing on Express, it's extremely simple and that allows teams to build their API exactly the way they want it but for smaller teams there's <span class="not-italic font-semibold"> no benefit to writing solutions for extremely common issues like pagination, caching, authentication. </span>
+</span>
 
-The U.S. Food and Drug Administration (FDA) recently issued Emergency Use Authorizations for COVID-19 vaccines. Additionally, the FDA is working with other vaccine and drug manufacturers, developers, and researchers to help expedite the development and availability of medical products – such as additional vaccines, antibodies, and medicines – to prevent or treat COVID-19.
+</div>
 
-Meanwhile, some people and companies are trying to profit from this pandemic by selling unproven and illegally marketed products that make false claims, such as being effective against the coronavirus.
+## But its written in PHP, and therefore you lost me and my respect
 
-These fraudulent products that claim to cure, treat, or prevent COVID-19 haven’t been evaluated by the FDA for safety and effectiveness and might be dangerous to you and your family.
+<!-- ![Alt Text](https://i.kym-cdn.com/entries/icons/original/000/034/772/Untitled-1.png) -->
 
-The FDA is particularly concerned that these deceptive and misleading products might cause Americans to delay or stop appropriate medical treatment, leading to serious and life-threatening harm. It’s likely that the products do not do what they claim, and the ingredients in them could cause adverse effects and could interact with, and potentially interfere with, essential medications.
+<img src="https://i.kym-cdn.com/entries/icons/original/000/034/772/Untitled-1.png" class="h-48 w-auto ">
 
-The FDA has also seen unauthorized fraudulent test kits for COVID-19 being sold online. You will risk unknowingly spreading COVID-19 or not getting treated appropriately if you use an unauthorized test.
+I don't have TOO much of a counterpoint here, I'm not going to and can't argue that learning PHP is really worth your time in the current dev market. There are without a doubt PHP and Laravel jobs out there (although PHP can often mean Wordpress and other CMS platforms) but its understandable if it's not something you are interested in spending time learning.
 
-For more information on COVID-19, visit:
+If that is the case, and you want to stick with <span class="tech-word">Node.js</span> to keep the language for your client and server side code the same (which is a super valid reason), check out [Nest.js](https://nestjs.com/) or [AdonisJs](https://adonisjs.com/). Mainly, if you are self taught and still learning, I would not be surprised if you were still using Express.js to write your server applications.
 
-    FDA: Coronavirus Disease 2019 (COVID-19)
-    COVID-19 Vaccines
-
-## Third Example
-
-## [Fourth Example](http://www.fourthexample.com)
+## Okay, now that that's out of the way, lets get to it
