@@ -76,17 +76,18 @@
         </template>
         <template #list>
           <li>
+            Develop and deploy full stack application consisting of Laravel,
+            Vue.js, and MariaDB. Using Docker Compose and various services like
+            Nginx, websockets, and PhpMyAdmin to implement features such as
+            realtime notifications and load balancing.
+          </li>
+          <li>
             Use Angular and D3.js to create over 30+ reusable visualizations of
             time series data.
           </li>
           <li>
             Use Python and AWS Sagemaker to create over 1000+ computer vision
             training data labeling jobs.
-          </li>
-          <li>
-            Develop full stack application consisting of Laravel, Vue.js, and
-            MariaDB. Using Docker/Docker Compose and various services like
-            Nginx, websockets, and PhpMyAdmin.
           </li>
           <li>
             Assist in devops by maintaining migrations/seeders, setting up CI/CD

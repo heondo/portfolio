@@ -18,7 +18,7 @@ I am a self taught developer who worked primarily with <span class="tech-word">R
 
 ####
 
-When I was asked to create a full stack web application for my work using a tech stack of Laravel, Vue, MySQL, and Docker, I realized that I shouldn't have to create solutions for all of those issues. Those are problems that every enterprise application has run into with well documented and tested libraries for enabling those features in your application. As someone who learns well through example and connecting the dots by seeing things in action, Laravel has broken down a lot of the perceived complexities of these features (caching, queueing, etc).
+When I was asked to create a full stack web application for my work using a tech stack of <span class="tech-word">Laravel</span>, <span class="tech-word">Vue</span>, <span class="tech-word">MySQL</span>, and <span class="tech-word">Docker</span>, I realized that I shouldn't have to create solutions for all of those issues. Those are problems that every enterprise application has run into with well documented and tested libraries for enabling those features in your application. As someone who learns well through example and connecting the dots by seeing things in action, Laravel has broken down a lot of the perceived complexities of these features (caching, queueing, etc).
 
 <div class="caption" >
 And Laravel showed me a really great way to do it (for small to medium sized companies). I am not bashing on Express, it's extremely simple and that allows teams to build their API exactly the way they want it but for smaller teams there's <span class="not-italic font-semibold"> no benefit to writing solutions for extremely common issues like pagination, caching, authentication. </span>
@@ -35,8 +35,10 @@ And Laravel showed me a really great way to do it (for small to medium sized com
 I'm not going to and can't argue that learning PHP is really worth your time based on your local job market. There are without a doubt PHP and Laravel jobs out there (although PHP can often mean Wordpress and other CMS platforms) but it's understandable if you are not interested in working through a new language, especially one this archaic.
 
 <div class="caption">
-If that is the case, check out other production-level REST frameworks for your language of choice, and if you want to stick with <span class="tech-word">Node.js</span> to keep the language for your client and server side code the same (which is a super valid reason), check out <a href="https://nestjs.com/">Nest.js</a> or <a href="https://adonisjs.com/">AdonisJs</a>.</div>
+If that is the case, check out other production-level REST frameworks for your language of choice. If you want to use <span class="tech-word">Node.js</span> to keep the language for your client and server side code the same (which is a super valid reason), check out <a href="https://nestjs.com/">Nest.js</a> or <a href="https://adonisjs.com/">AdonisJs</a>.</div>
 
-## Okay, now that that's out of the way, lets get to it
+## Laravel is a monolith
 
-Why Laravel is Great
+<span>You won't understand Laravel within a week, by the end of the second week you might finally start to understand all of the pieces. There is a lot happening under the hood and Laravel's documentation while great cannot demonstrate more complex examples or abstractions.
+
+ddd</span>

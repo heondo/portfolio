@@ -51,7 +51,7 @@ export default {
 </script>
 <style>
 .nuxt-content .caption {
-  @apply border-l-4 border-indigo-400 pl-2 my-2 text-gray-300;
+  @apply border-l-4 border-indigo-400 italic pl-2 my-2 text-gray-300;
 }
 
 .nuxt-content img {
