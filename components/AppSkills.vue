@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="container mb-8 grid grid-cols-5 gap-y-4 gap-x-6 md:gap-y-8 md:gap-x-12 justify-center"
+      class="container mb-8 grid grid-cols-3 md:grid-cols-5 gap-y-4 md:gap-y-8 gap-x-8 md:gap-36 justify-center items-center"
     >
       <span class="skill-icon-container">
         <svg
@@ -161,6 +161,10 @@
 export default {}
 </script>
 <style scoped>
+.skill-icon-container {
+  @apply;
+}
+
 .skill-icon-container * {
   @apply transition duration-300 ease-in-out;
 }
@@ -180,7 +184,7 @@ export default {}
 }
 
 .skill-icon-container {
-  @apply h-auto w-16;
+  @apply flex flex-col justify-center items-center h-auto w-auto;
 }
 
 @screen md {
