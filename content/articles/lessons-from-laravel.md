@@ -11,7 +11,7 @@ description: 'Why building a web application with Laravel was the best learning 
 ## A Brief Intro
 
 <div>
-I am a self taught developer who worked primarily with <span class="tech-word">React</span> and <span class="tech-word">Express.js</span> when I first began. Early on in my development journey, I relied on videos from channels like <a href="https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg" target="__blank">NetNinja</a> and <a href="https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w" target="__blank">Academind</a> to watch tutorials for how to bootstrap a full stack web application with Express and React together, leaving me with a repo that often looks like the following.
+I am a self taught developer who worked primarily with <span class="tech-word">React</span> and <span class="tech-word">Express.js</span> when I first began. Early on in my development journey, I relied on videos from channels like <a href="https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg" target="__blank">NetNinja</a> and <a href="https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w" target="__blank">Academind</a> to watch tutorials for how to bootstrap a full stack web application with Express and React together, leaving me with a repo that often began looking like the following.
 <img src="https://imgur.com/Iy4UUyy.png">
 <div class="caption">And I was very excited to begin creating my full stack app with this!</div>
  That combination got me quite far in learning the basics of CRUD and REST operations, interaction between the front-end and back-end but they always felt <span class="italic font-semibold">amateurish</span> and that bugged me. I struggled to wrap my head around pagination, caching, job queueing, proper authentication, and other real world application problems.
@@ -37,8 +37,60 @@ I'm not going to and can't argue that learning PHP is really worth your time bas
 <div class="caption">
 If that is the case, check out other production-level REST frameworks for your language of choice. If you want to use <span class="tech-word">Node.js</span> to keep the language for your client and server side code the same (which is a super valid reason), check out <a href="https://nestjs.com/">Nest.js</a> or <a href="https://adonisjs.com/">AdonisJs</a>.</div>
 
-## Laravel is a monolith
+## Laravel has a lot going on, and it will take time
 
-<span>You won't understand Laravel within a week, by the end of the second week you might finally start to understand all of the pieces. There is a lot happening under the hood and Laravel's documentation while great cannot demonstrate more complex examples or abstractions.
+<span>My first few weeks learning Laravel were pretty frustrating, I felt like anytime I wanted to understand one concept I had to look up two or three additional terms.
 
-ddd</span>
+<div class="italic">
+Within a month I was comfortable with most of the terminology and after two I could comfortable create a new web page with data pre-loaded from the server in minutes. Thanks to Vue and the great tooling surrounding Laravel.
+</div>
+<br>
+Coming from working largely with Express and some GraphQL, this ecosystem was an eye opener. I realized this is how I should have been making APIs the entire time. I am sure some articles or research papers would have told me the same thing but I cannot guarantee I would understand them. Laravel was a very practical way of learning some common standards and best practices in web development. On top of the MVC structure, Laravel broken down the following concepts for me:
+
+#### Pagination
+
+```
+return Posts::paginate(15);
+```
+
+Here's the simplest way to paginate results from one table. After viewing the json response
+
+```
+{
+  "current_page": 1,
+  "data": [...]
+  "next_page_url": null,
+  "path": "http://localhost:8000/api/posts",
+  "per_page": 15,
+  "prev_page_url": "null",
+  "to": 25,
+  "total": 25
+}
+```
+
+it was clear to me what is necessary to get pagination working. So if you were to implement your own pagination from scratch the only two things you have to know from the client are:
+
+- what page is being requested (current page)
+- The number of results per page (set by user or just static like example)
+
+#### Request Caching
+
+I always wondered, isn't implementing caching for a website extremely complicated? Well, yes and no. Really all you have to do is specify what you want to cache, what the data being saved as the value is, and how long you want to cache it for. The simplest way to get started is a database but you could imagine a route working like this:
+
+```
+Route::get(function() {
+  $users = Cache::remember('users', 60, function () {
+    return DB::table('users')->get();
+  });
+
+  return $users;
+});
+```
+
+<div class="caption">
+  This route servers the users in the database. If there is data in the cache that has not expired we will serve that old users data or else we will run a query to get the users. That's the gist of it, implementing your own library in your application to function the same way will take time but you can picture the process of caching your queries. 
+</div>
+
+####
+
+</span>

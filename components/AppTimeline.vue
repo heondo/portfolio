@@ -35,14 +35,13 @@
             and jQuery.
           </li>
           <li>
-            Learn React and ES6 once familiarizing ourself with vanilla
+            Learned React and ES6 once familiarizing ourself with vanilla
             JavaScript, trying to understand the basics of web dev.
           </li>
           <li>
-            Taught SQL and PHP for developing backends for our applications. I
-            was familiar with SQL so that was straightforward, PHP was
-            interesting and learned Express.js as a challenge for my final
-            project
+            Used SQL and PHP initially for developing our backends, it was
+            straightforward, but found out that Node.js was very popular and
+            would let me utilize my existing JavaScript knowledge.
           </li>
         </template>
       </timeline-event>
@@ -52,8 +51,8 @@
         </template>
         <template #list>
           <li>
-            Learned Angular, MongoDB, and AWS Amplify to assist in the
-            development of an internal application for class management.
+            Developed an application for class management using Angular,
+            MongoDB, and AWS Amplify to assist in the development.
           </li>
           <li>
             Brushing up my Pandas and Python skills to teach high schoolers
@@ -78,34 +77,22 @@
           <li>
             Develop and deploy full stack application consisting of Laravel,
             Vue.js, and MariaDB. Using Docker Compose and various services like
-            Nginx, websockets, and PhpMyAdmin to implement features such as
-            realtime notifications and load balancing.
-          </li>
-          <li>
-            Use Angular and D3.js to create over 30+ reusable visualizations of
-            time series data.
-          </li>
-          <li>
-            Use Python and AWS Sagemaker to create over 1000+ computer vision
-            training data labeling jobs.
+            Nginx, websockets, certbot.
           </li>
           <li>
             Assist in devops by maintaining migrations/seeders, setting up CI/CD
             pipeline using Bitbucket actions.
           </li>
+          <li>
+            Developer over 30+ reusable visualizations of time series data using
+            Angular, D3.js, and Chart.js.
+          </li>
+          <li>
+            Create over 1000+ computer vision training data labeling jobs using
+            Python and AWS Sagemaker.
+          </li>
         </template>
       </timeline-event>
-      <!-- <li class="mb-2">
-        <div class="flex items-center mb-1">
-          <div class="bg-gray-500 rounded-full h-8 w-8"></div>
-          <h3 class="flex-1 ml-4 font-medium"></h3>
-        </div>
-        <div class="ml-12">
-          <ul class="list-container">
-            
-          </ul>
-        </div>
-      </li> -->
     </ul>
   </div>
 </template>
