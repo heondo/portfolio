@@ -5,20 +5,20 @@ description: 'Why building a web application with Laravel was the best learning 
 ---
 
 1. [A Brief Intro](#a-brief-intro)
-1. [PHP? But why?](#php-but-why)
+1. [PHP? But why?](#but-php)
 1. [Vue, Tailwind](#example2)
 
-## A Brief Intro
+<h2 id="a-brief-intro">A Brief Intro</h2>
 
-<div>
 I am a self taught developer who worked primarily with <span class="tech-word">React</span> and <span class="tech-word">Express.js</span> when I first began. Early on in my development journey, I relied on videos from channels like <a href="https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg" target="__blank">NetNinja</a> and <a href="https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w" target="__blank">Academind</a> to watch tutorials for how to bootstrap a full stack web application with Express and React together, leaving me with a repo that often began looking like the following.
 <img src="https://imgur.com/Iy4UUyy.png">
+
 <div class="caption">And I was very excited to begin creating my full stack app with this!</div>
  That combination got me quite far in learning the basics of CRUD and REST operations, interaction between the front-end and back-end but they always felt <span class="italic font-semibold">amateurish</span> and that bugged me. I struggled to wrap my head around pagination, caching, job queueing, proper authentication, and other real world application problems.
 
 ####
 
-When I was asked to create a full stack web application for my work using a tech stack of <span class="tech-word">Laravel</span>, <span class="tech-word">Vue</span>, <span class="tech-word">MySQL</span>, and <span class="tech-word">Docker</span>, I realized that I shouldn't have to create solutions for all of those issues. Those are problems that every enterprise application has run into with well documented and tested libraries for enabling those features in your application. As someone who learns well through example and connecting the dots by seeing things in action, Laravel has broken down a lot of the perceived complexities of these features (caching, queueing, etc).
+When I was asked to create a full stack web application for my work using a tech stack of <span class="tech-word">Laravel</span>, <span class="tech-word">Vue</span>, <span class="tech-word">MySQL</span>, and <span class="tech-word">Docker</span>, I stopped creating looking at new features as a challenge and just picked the best solution, often existing packages. As someone who learns well through example and connecting the dots by seeing things in action, Laravel has broken down a lot of the perceived complexities of certain features (caching, queueing, etc).
 
 <div class="caption" >
 And Laravel showed me a really great way to do it (for small to medium sized companies). I am not bashing on Express, it's extremely simple and that allows teams to build their API exactly the way they want it but for smaller teams there's <span class="not-italic font-semibold"> no benefit to writing solutions for extremely common issues like pagination, caching, authentication. </span>
@@ -26,7 +26,9 @@ And Laravel showed me a really great way to do it (for small to medium sized com
 
 </div>
 
-## But its written in PHP, and therefore you lost me and my respect
+<h2 id="but-php">
+But its written in PHP, and therefore you lost me and my respect
+</h2>
 
 <!-- ![Alt Text](https://i.kym-cdn.com/entries/icons/original/000/034/772/Untitled-1.png) -->
 
@@ -91,6 +93,66 @@ Route::get(function() {
   This route servers the users in the database. If there is data in the cache that has not expired we will serve that old users data or else we will run a query to get the users. That's the gist of it, implementing your own library in your application to function the same way will take time but you can picture the process of caching your queries. 
 </div>
 
-####
+#### Managing your Database
+
+Previously, when I just built everything on my own to "learn" I would probably have a SQL data dump after configuring my database for the first time. As I built out my tables I would occasionally dump the newest version of the database so I could recreate it. This led to a variety of issues, for a variety of reasons. I was absolutely terrified to modify my schema because it meant modifying my database and dumping it or writing a large SQL query. Neither were preferable and both were impossible to rollback easily.
+<br>
+Laravel taught me about the wonderful world of migrations, factories, and seeders that absolutely changed my mind. I won't even bother starting a project without first configuring that portion of my database so I can regularly refresh my database and version control my changes.
+Migration files define our database schema.
+
+###### To create a table in our database we would need this file
+
+```
+# users_migration.php
+Schema::create('users', function (Blueprint $table) {
+    $table->id();
+
+    $table->string('name');
+    $table->string('email')->unique();
+    $table->timestamp('email_verified_at')->nullable();
+    $table->string('password');
+    $table->rememberToken();
+    $table->foreignId('current_team_id')->nullable();
+    $table->text('profile_photo_path')->nullable();
+
+    $table->timestamps();
+});
+```
+
+##### If we want to modify our database
+
+```
+# modify_users_table.php
+
+# to add a birthYear column
+Schema::table('users', function (Blueprint $table) {
+    $table->integer('birthYear')->default(1900);
+});
+
+# to remove an existing column, for example profile photo path
+Schema::table('users', function (Blueprint $table) {
+    $table->dropColumn('profile_photo_path');
+});
+```
+
+<div class="caption">
+And thanks to learning about this I make drastic changes to my database with confidence and that allows my application and development process to be very fluid. Also in large part to seeders, and factories when necessary.
+</div>
+
+<h2>The Point</h2>
+
+In all honesty, if you have a <span class="tech-word" >smaller development team</span> and need to implement a <span class="tech-word">feature rich web application</span>, Laravel will work wonderfully. Almost any service or feature of modern web applications are accounted for in this framework and I still encounter questions from people using documentation from 5.7 that is still relevant for me now in 8.x.
+
+So, I've loved my time using Laravel. PHP isn't perfect, and I wasn't super keen on brushing up on it but I learned so much in the process that I am extremely grateful I have.
+
+<div class="caption">
+I hope to work with Spark, Django/Flask, and Nest.js and see how each one stacks up against one another, what the advantages and disadvantages may be.</div>
+
+<span>
+Thanks for reading! Writing is tough for me, but I hope to just use this website as a place to document my thoughts and development/recreational experiences.
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mb-2 text-red-500 inline" viewBox="0 0 20 20" fill="currentColor">
+    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+  </svg>
+</span>
 
 </span>

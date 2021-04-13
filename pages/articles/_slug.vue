@@ -29,7 +29,7 @@
               )
             }}
           </div>
-          <nuxt-content :document="article" />
+          <NuxtContent class="prose lg:prose-lg mx-auto" :document="article" />
         </article>
       </div>
     </template>
@@ -50,7 +50,78 @@ export default {
 }
 </script>
 <style>
+.nuxt-content a {
+  @apply underline;
+}
+
+.nuxt-content .tech-word {
+  @apply text-blue-300 font-semibold;
+}
+
+.nuxt-content code * {
+  @apply bg-gray-500;
+}
+
+.nuxt-content table {
+  border-collapse: collapse;
+  border: 1px solid white;
+}
+
+.nuxt-content table td {
+  border: 1px solid white;
+  padding: 2rem;
+}
+
+.nuxt-content ul,
+.nuxt-content ol {
+  @apply pl-4;
+}
+
+.nuxt-content ul > li {
+  list-style-type: disc;
+  @apply my-1 p-0;
+}
+.nuxt-content ol > li {
+  list-style-type: decimal;
+  @apply my-1 p-0;
+}
+
 .nuxt-content .caption {
+  @apply border-l-4 border-indigo-400 italic pl-2 my-4 text-gray-300;
+}
+
+.nuxt-content img {
+  @apply mx-auto my-6;
+}
+
+.nuxt-content h1,
+.nuxt-content h2,
+.nuxt-content h3,
+.nuxt-content h4,
+.nuxt-content h5,
+.nuxt-content h6 {
+  scroll-margin-top: 2.5em;
+  @apply text-blue-300 my-4;
+}
+
+.nuxt-content h1 {
+  @apply text-4xl;
+}
+.nuxt-content h2 {
+  @apply text-3xl;
+}
+.nuxt-content h3 {
+  @apply text-2xl;
+}
+.nuxt-content h4 {
+  @apply text-xl;
+}
+.nuxt-content h5 {
+  @apply text-lg;
+}
+.nuxt-content h6 {
+}
+/* .nuxt-content .caption {
   @apply border-l-4 border-indigo-400 italic pl-2 my-2 text-gray-300;
 }
 
@@ -96,9 +167,6 @@ article {
 .nuxt-content h6 {
   scroll-margin-top: 2em;
   @apply text-blue-300 my-4;
-  /* thank you 
-  https://gomakethings.com/how-to-prevent-anchor-links-from-scrolling-behind-a-sticky-header-with-one-line-of-css/ 
-  */
 }
 
 .nuxt-content a {
@@ -134,5 +202,5 @@ article {
 .nuxt-content ol > li {
   list-style-type: decimal;
   @apply my-1;
-}
+} */
 </style>
