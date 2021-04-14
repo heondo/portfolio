@@ -100,8 +100,20 @@ export default {
 .nuxt-content h4,
 .nuxt-content h5,
 .nuxt-content h6 {
-  scroll-margin-top: 2.5em;
+  scroll-margin-top: 2.75em;
   @apply text-blue-300 my-4;
+}
+
+@screen sm {
+  .nuxt-content h1,
+  .nuxt-content h2,
+  .nuxt-content h3,
+  .nuxt-content h4,
+  .nuxt-content h5,
+  .nuxt-content h6 {
+    scroll-margin-top: 2em;
+    @apply text-blue-300 my-4;
+  }
 }
 
 .nuxt-content h1 {

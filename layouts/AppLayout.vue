@@ -109,12 +109,12 @@
             </div>
             <!-- actual content -->
             <div
-              class="z-20 bg-gray-700 text-white rounded-lg px-4 py-2 mx-auto max-w-2xl shadow-xl transition-all"
+              class="z-20 bg-gray-700 text-white rounded-lg px-2 py-2 mx-auto max-w-2xl shadow-xl transition-all"
               role="dialog"
               aria-modal="true"
               aria-labelledby="modal-headline"
             >
-              <div class="flex space-x-4">
+              <div class="flex">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 <a
                   href="/#about"
@@ -147,6 +147,14 @@
                   }"
                   class="nav-link"
                   >Resume</a
+                >
+                <a
+                  href="/articles"
+                  :class="{
+                    'bg-gray-600': $route.path.startsWith('/articles'),
+                  }"
+                  class="nav-link"
+                  >Articles</a
                 >
               </div>
             </div>
@@ -205,7 +213,7 @@ export default {
 }
 
 .desktop-nav-link {
-  @apply border-b-2 inline-flex items-center px-2 py-2 text-sm font-medium transition ease-in-out duration-300;
+  @apply border-b-2 inline-flex items-center px-1 py-2 text-sm font-medium transition ease-in-out duration-300;
 }
 
 .desktop-nav-link:hover {

@@ -6,7 +6,7 @@ description: 'Why building a web application with Laravel was the best learning 
 
 1. [A Brief Intro](#a-brief-intro)
 1. [PHP? But why?](#but-php)
-1. [Vue, Tailwind](#example2)
+1. [It'll take a while, but it's worth it](#takes-a-while)
 
 <h2 id="a-brief-intro">A Brief Intro</h2>
 
@@ -39,7 +39,7 @@ I'm not going to and can't argue that learning PHP is really worth your time bas
 <div class="caption">
 If that is the case, check out other production-level REST frameworks for your language of choice. If you want to use <span class="tech-word">Node.js</span> to keep the language for your client and server side code the same (which is a super valid reason), check out <a href="https://nestjs.com/">Nest.js</a> or <a href="https://adonisjs.com/">AdonisJs</a>.</div>
 
-## Laravel has a lot going on, and it will take time
+<h2 id="takes-a-while">Laravel has a lot going on, and it will take time</h2>
 
 <span>My first few weeks learning Laravel were pretty frustrating, I felt like anytime I wanted to understand one concept I had to look up two or three additional terms.
 
