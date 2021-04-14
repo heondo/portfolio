@@ -47,6 +47,15 @@
                   >
                     Resume
                   </a>
+                  <a
+                    href="/articles"
+                    class="desktop-nav-link border-transparent"
+                    :class="{
+                      'border-blue-400': $route.path.startsWith('/articles'),
+                    }"
+                  >
+                    Articles
+                  </a>
                 </div>
               </div>
             </nav>

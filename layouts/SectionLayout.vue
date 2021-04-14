@@ -15,7 +15,7 @@
         <slot name="title"></slot>
       </h3>
       <div
-        class="px-2 sm:px-0 transition transform opacity-0 duration-800 ease-in-out"
+        class="px-2 sm:px-0 transition transform opacity-0 duration-1000 ease-in-out"
         :class="[visible ? 'opacity-100 translate-x-0' : ' -translate-x-6']"
       >
         <slot> </slot>
