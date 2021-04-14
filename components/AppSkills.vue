@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="container mb-8 grid grid-cols-3 md:grid-cols-5 gap-y-4 md:gap-y-8 gap-x-8 md:gap-36 justify-center items-center"
+      class="container mb-8 flex flex-wrap gap-y-8 gap-x-8 sm:gap-x-12 md:gap-x-36 justify-center items-center"
     >
       <span class="skill-icon-container">
         <svg
@@ -161,8 +161,8 @@
 export default {}
 </script>
 <style scoped>
-.skill-icon-container {
-  @apply;
+.skill-icon {
+  @apply h-auto w-16;
 }
 
 .skill-icon-container * {
@@ -188,8 +188,8 @@ export default {}
 }
 
 @screen md {
-  .skill-icon-container {
-    /* @apply w-16; */
+  .skill-icon {
+    @apply w-20;
   }
 }
 </style>

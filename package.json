@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts",
+    "watch": "nuxt-ts",
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
@@ -25,7 +25,8 @@
     "@nuxtjs/axios": "^5.12.2",
     "core-js": "^3.6.5",
     "date-fns": "^2.19.0",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.14.6",
+    "vue-observe-visibility": "^1.0.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.6",

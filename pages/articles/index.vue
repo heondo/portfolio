@@ -1,7 +1,7 @@
 <template>
   <app-layout>
     <template #content>
-      <div class="max-w-4xl mx-auto py-6 px-6 sm:px-8">
+      <div class="max-w-4xl mx-auto py-6 px-4 sm:px-6 md:px-8">
         <h3 class="text-xl uppercase font-bold mb-4">Articles</h3>
         <div class="px-2 sm:px-0">
           <ul>
