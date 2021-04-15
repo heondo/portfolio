@@ -50,6 +50,21 @@ export default {
 }
 </script>
 <style>
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+article > * {
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
 .nuxt-content a {
   @apply underline;
 }
@@ -58,8 +73,12 @@ export default {
   @apply text-blue-300 font-semibold;
 }
 
-.nuxt-content code * {
-  @apply bg-gray-500;
+.nuxt-content pre.line-numbers {
+  background-color: aliceblue;
+}
+
+.nuxt-content .token.operator {
+  @apply bg-transparent;
 }
 
 .nuxt-content table {
@@ -101,6 +120,7 @@ export default {
 .nuxt-content h5,
 .nuxt-content h6 {
   scroll-margin-top: 2.75em;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
   @apply text-blue-300 my-4;
 }
 

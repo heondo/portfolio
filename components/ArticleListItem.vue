@@ -4,7 +4,7 @@
       <span class="text-lg font-semibold pl-2 border-l-4 border-indigo-400">
         {{ article.subject }}
       </span>
-      <span>
+      <span class="text-gray-300">
         {{ $formatDate(new Date(article.createdAt), 'EEEE - MMMM dd, yyyy') }}
       </span>
     </div>
