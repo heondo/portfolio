@@ -47,6 +47,9 @@ export default {
       article,
     }
   },
+  mounted() {
+    console.log(new Date(this.article.createdAt))
+  },
 }
 </script>
 <style>
