@@ -48,7 +48,7 @@ export default {
     }
   },
   mounted() {
-    console.log(new Date(this.article.updatedAt))
+    // console.log(new Date(this.article.updatedAt))
   },
 }
 </script>

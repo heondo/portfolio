@@ -5,7 +5,7 @@
         {{ article.subject }}
       </span>
       <span class="text-gray-300">
-        {{ $formatDate(new Date(article.createdAt), 'EEEE - MMMM dd, yyyy') }}
+        {{ $formatDate(new Date(article.updatedAt), 'EEEE - MMMM dd, yyyy') }}
       </span>
     </div>
     <!-- Start of desc and content -->
