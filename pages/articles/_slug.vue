@@ -24,7 +24,7 @@
             Heondo Kim -
             {{
               $formatDate(
-                new Date(article.createdAt),
+                new Date(article.updatedAt),
                 "MMM d, yyyy 'at' hh:mm aaa"
               )
             }}
@@ -48,7 +48,7 @@ export default {
     }
   },
   mounted() {
-    console.log(new Date(this.article.createdAt))
+    console.log(new Date(this.article.updatedAt))
   },
 }
 </script>
