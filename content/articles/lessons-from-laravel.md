@@ -125,14 +125,14 @@ Schema::create('users', function (Blueprint $table) {
 ```php
 # modify_users_table.php
 
-# to add a birthYear column
+# to add a birthYear column to our users table
 Schema::table('users', function (Blueprint $table) {
     $table->integer('birthYear')->default(1900);
 });
 
 # to remove an existing column, for example profile photo path
 Schema::table('users', function (Blueprint $table) {
-    $table->dropColumn('profile_photo_path');
+    $table->dropColumn('birthYear');
 });
 ```
 
