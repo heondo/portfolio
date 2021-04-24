@@ -93,6 +93,31 @@
           </li>
         </template>
       </timeline-event>
+      <timeline-event>
+        <template #title>
+          Mar 2021 - Backend Developer (Volunteer), Curious Five
+          <p class="ml-1 text-blue-300 inline">(Current)</p>
+        </template>
+        <template #list>
+          <li>
+            Hwisung Jung cold emailed me asking if I was interested in
+            volunteering as a developer, wanting to keep my skills fresh I
+            gladly accepted and have been working to get onboarded myself.
+          </li>
+          <li>
+            Develop CRUD and authentication endpoints using TypeScript,
+            PostgreSQL, Express and Sequelize
+          </li>
+          <li>
+            Collaborate via Github, Notion, and Slack to fill out feature
+            requirements and complete tickets
+          </li>
+          <li>
+            Assist in configuring development environment via Docker Compose,
+            filling in documentation, and logging various onboarding issues
+          </li>
+        </template>
+      </timeline-event>
     </ul>
   </div>
 </template>
