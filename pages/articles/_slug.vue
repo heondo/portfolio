@@ -1,6 +1,9 @@
 <template>
   <app-layout>
     <template #content>
+      <article-modal v-if="article.inProgress" :defaultState="true">
+      </article-modal>
+
       <div class="max-w-4xl mx-auto py-6 px-4 sm:px-8">
         <nav class="flex text-lg mb-3">
           <nuxt-link
@@ -17,9 +20,12 @@
         <article class="pl-0 sm:pl-2 md:pl-4">
           <h2 class="text-3xl sm:text-5xl font-bold">
             {{ article.title }}
+            <span v-if="article.inProgress" class="md:text-xl text-lg">
+              (in progress)
+            </span>
           </h2>
           <div
-            class="text-gray-200 mt-2 mb-4 pl-2 border-l-4 border-indigo-400 text-sm sm:text-base"
+            class="text-gray-200 mt-2 mb-4 pl-2 border-l-4 border-indigo-400"
           >
             Heondo Kim -
             {{
@@ -36,10 +42,11 @@
   </app-layout>
 </template>
 <script>
-import AppLayout from '~/layouts/AppLayout.vue'
+import AppLayout from '~/layouts/AppLayout'
+import ArticleModal from '~/components/ArticleModal'
 
 export default {
-  components: { AppLayout },
+  components: { AppLayout, ArticleModal },
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
 
@@ -48,7 +55,7 @@ export default {
     }
   },
   mounted() {
-    // console.log(new Date(this.article.updatedAt))
+    console.log(this.article.inProgress)
   },
 }
 </script>

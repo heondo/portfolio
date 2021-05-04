@@ -6,11 +6,7 @@
         <div class="px-2 sm:px-0">
           <ul>
             <li v-for="article in articles" :key="article.slug" class="my-12">
-              <!-- <nuxt-link
-              :to="{ name: 'articles-slug', params: { slug: article.slug } }"
-            > -->
               <article-list-item :article="article"> </article-list-item>
-              <!-- {{ article }} -->
             </li>
           </ul>
         </div>
