@@ -11,10 +11,7 @@
     :class="[visible ? 'opacity-100 translate-x-0' : ' -translate-x-6']"
   >
     <div class="flex items-center mb-1">
-      <div
-        :class="[circleColor]"
-        class="rounded-full h-8 w-8 z-20 p-1 shadow-md"
-      >
+      <div :class="[circleColor]" class="rounded-full h-8 w-8 z-20 p-1">
         <svg
           class="h-auto w-auto"
           xmlns="http://www.w3.org/2000/svg"
@@ -32,9 +29,9 @@
         <slot name="title"> </slot>
       </h3>
     </div>
-    <div class="ml-12 p-4 text-white rounded-lg relative text-sm sm:text-base">
+    <div class="list-container">
       <ul
-        class="list-container"
+        class="list-disc pl-4 transform transition duration-300 ease-in-out"
         :class="[eventExpanded ? '' : 'h-24 overflow-y-hidden']"
       >
         <slot name="list"></slot>
@@ -99,16 +96,20 @@ export default {
 }
 </script>
 <style scoped>
-/* .event .expand-container > svg {
-  @apply transition opacity-0 duration-300 ease-in-out;
-}
-
-.event:hover .expand-container > svg {
-  @apply transform opacity-100 -translate-y-1 scale-110;
-} */
-
 .list-container {
-  /* max-height: 50rem; */
-  @apply list-disc pl-4  transform transition duration-300 ease-in-out;
+  background: #3e79f9;
+  background: -webkit-linear-gradient(top, #3e79f9, #2254c1);
+  background: -moz-linear-gradient(top, #3e79f9, #2254c1);
+  background: linear-gradient(to bottom, #3e79f9, #2254c1);
+  @apply ml-12 p-4 text-white rounded-lg relative text-sm;
 }
+
+@screen sm {
+  .list-container {
+    @apply text-base;
+  }
+}
+/* .list-container {
+  @apply ;
+} */
 </style>
