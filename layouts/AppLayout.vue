@@ -8,9 +8,7 @@
             <!-- Desktop nav -->
             <nav class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
-                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 <div class="lg:ml-6 lg:flex lg:space-x-8">
-                  <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-300" -->
                   <a
                     href="/#about"
                     class="desktop-nav-link border-transparent"
@@ -115,7 +113,6 @@
               aria-labelledby="modal-headline"
             >
               <div class="flex">
-                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 <a
                   href="/#about"
                   :class="{
@@ -165,20 +162,16 @@
 
     <main class="">
       <div class="">
-        <!-- Replace with your content -->
         <div class="pt-16">
           <slot name="content"></slot>
         </div>
-        <!-- /End replace -->
       </div>
     </main>
 
     <footer>
-      <!-- <section-layout class="py-2"> -->
       <div class="max-w-4xl mx-auto px-6 sm:px-8 pt-16 pb-8">
         <app-footer></app-footer>
       </div>
-      <!-- </section-layout> -->
     </footer>
   </div>
 </template>
