@@ -4,7 +4,7 @@
       once: true,
       callback: visibilityChanged,
       intersection: {
-        threshold: 0.6,
+        threshold,
       },
     }"
     :class="{ [bgColor]: true }"
@@ -33,6 +33,10 @@ export default {
     width: {
       type: String,
       default: 'max-w-4xl',
+    },
+    threshold: {
+      type: Number,
+      default: 0.6,
     },
   },
   data() {

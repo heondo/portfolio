@@ -24,7 +24,7 @@ import ArticleListItem from '~/components/ArticleListItem'
 export default {
   components: { AppLayout, ArticleListItem },
   async asyncData({ $content }) {
-    const articles = await $content('articles').fetch()
+    const articles = await $content('articles').sortBy('date', 'desc').fetch()
 
     return { articles }
   },

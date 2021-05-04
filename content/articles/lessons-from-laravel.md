@@ -1,6 +1,8 @@
 ---
 title: Lessons from Laravel
 subject: Web Dev
+createdAt: 04 April 2021 00:00:00 PDT
+updatedAt: 04 April 2021 00:00:00 PDT
 description: 'Why building a web application with Laravel was the best learning experience I could have asked for.'
 ---
 
