@@ -78,7 +78,7 @@ export default {
   props: {
     circleColor: {
       type: String,
-      default: 'bg-indigo-500',
+      default: 'bg-green-600',
     },
   },
   data() {
@@ -97,12 +97,11 @@ export default {
 </script>
 <style scoped>
 .list-container {
-  background: #4648ac;
-  background: -webkit-linear-gradient(top, #4648ac, #383991);
-  background: -moz-linear-gradient(top, #4648ac, #383991);
-  background: linear-gradient(to bottom, #4648ac, #383991);
-
-  @apply ml-12 p-4 text-white rounded-lg relative text-sm shadow-md;
+  background: #4f51be;
+  background: -webkit-linear-gradient(top, #4f51be, #3c3d9c);
+  background: -moz-linear-gradient(top, #4f51be, #3c3d9c);
+  background: linear-gradient(to bottom, #4f51be, #3c3d9c);
+  @apply ml-12 p-4 text-white rounded-md relative text-sm shadow-md;
 }
 
 @screen sm {
