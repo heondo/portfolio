@@ -1,9 +1,6 @@
 <template>
   <div class="relative max-w-4xl mx-auto">
-    <div
-      class="border-gray-500 z-10 absolute h-full timeline-line"
-      style="left: 15px"
-    ></div>
+    <div class="border-gray-500 absolute h-full timeline-line"></div>
     <ul class="list-none m-0 p-0 flex flex-col gap-4">
       <timeline-event>
         <template #title> Apr 2018 - Data Analyst, Carpe Data </template>
@@ -136,12 +133,14 @@ export default {
 
 .timeline-line {
   top: 2rem;
+  left: 1.4rem;
   border-right-width: 2px;
 }
 
-@screem sm {
+@screen sm {
   .timeline-line {
     top: 0;
+    left: 15px;
   }
 }
 </style>

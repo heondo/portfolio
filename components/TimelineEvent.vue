@@ -11,7 +11,7 @@
     :class="[visible ? 'opacity-100 translate-x-0' : ' -translate-x-6']"
   >
     <div class="flex items-center mb-1">
-      <div :class="[circleColor]" class="rounded-full h-8 w-8 z-20 p-1">
+      <div :class="[circleColor]" class="rounded-full h-8 w-8 z-30 p-1">
         <svg
           class="h-auto w-auto"
           xmlns="http://www.w3.org/2000/svg"
