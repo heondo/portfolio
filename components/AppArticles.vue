@@ -56,7 +56,7 @@
       to="articles"
       class="hover:text-gray-400 duration-300 ease-in-out transform text-center block"
     >
-      to articles
+      <p class="inline underline">to articles</p>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="h-4 w-4 inline"
