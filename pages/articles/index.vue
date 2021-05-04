@@ -20,7 +20,9 @@ import ArticleListItem from '~/components/ArticleListItem'
 export default {
   components: { AppLayout, ArticleListItem },
   async asyncData({ $content }) {
-    const articles = await $content('articles').sortBy('date', 'desc').fetch()
+    const articles = await $content('articles')
+      .sortBy('createdAt', 'desc')
+      .fetch()
 
     return { articles }
   },
