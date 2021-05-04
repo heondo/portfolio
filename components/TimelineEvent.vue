@@ -39,7 +39,7 @@
       <div class="absolute w-full expand-container">
         <svg
           v-show="!eventExpanded"
-          class="h-6 w-6 mt-2 mx-auto"
+          class="h-5 w-5 mt-2 mx-auto"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -55,7 +55,7 @@
         </svg>
         <svg
           v-show="eventExpanded"
-          class="h-6 w-6 mt-2 mx-auto"
+          class="h-5 w-5 mt-2 mx-auto"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
