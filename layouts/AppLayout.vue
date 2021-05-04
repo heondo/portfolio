@@ -175,7 +175,7 @@
 
     <footer>
       <!-- <section-layout class="py-2"> -->
-      <div class="max-w-4xl mx-auto px-6 sm:px-8 pb-8">
+      <div class="max-w-4xl mx-auto px-6 sm:px-8 pt-16 pb-8">
         <app-footer></app-footer>
       </div>
       <!-- </section-layout> -->

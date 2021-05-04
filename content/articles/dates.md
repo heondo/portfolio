@@ -1,5 +1,5 @@
 ---
-title: Lessons from Laravel
+title: Newest
 subject: Web Dev
 createdAt: 04 April 2021 00:00:00 PDT
 updatedAt: 04 April 2021 00:00:00 PDT

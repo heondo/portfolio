@@ -15,7 +15,7 @@
       <section-layout
         id="timeline"
         class="slanted"
-        threshold="0.2"
+        :threshold="0.2"
         bgColor="bg-blue-900"
       >
         <template #title> Timeline</template>
@@ -33,7 +33,7 @@
       </section-layout>
       <section-layout id="articles-comp" class="slanted" bgColor="bg-blue-900">
         <template #title> articles</template>
-        <app-articles></app-articles>
+        <app-articles :articles="articles"></app-articles>
       </section-layout>
     </template>
   </app-layout>
@@ -57,22 +57,19 @@ export default {
     AppTimeline,
     AppArticles,
   },
+  async asyncData({ $content }) {
+    const articles = await $content('articles')
+      .sortBy('date', 'desc')
+      .limit(3)
+      .fetch()
+
+    return { articles }
+  },
 }
 </script>
 
 <style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-/* html {
-  scroll-behavior: smooth;
-} */
-
 .slanted {
-  /* padding: 3rem 0; */
-  /* margin: 8rem 0 0 0; */
   transform: skewY(-3deg);
   transform-origin: 0;
 }
