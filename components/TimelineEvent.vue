@@ -98,9 +98,9 @@ export default {
 <style scoped>
 .list-container {
   background: #3e79f9;
-  background: -webkit-linear-gradient(top, #3169e4, #2254c1);
-  background: -moz-linear-gradient(top, #3169e4, #2254c1);
-  background: linear-gradient(to bottom, #3169e4, #2254c1);
+  background: -webkit-linear-gradient(top, #3169e4, #1c4aac);
+  background: -moz-linear-gradient(top, #3169e4, #1c4aac);
+  background: linear-gradient(to bottom, #3169e4, #1c4aac);
   @apply ml-12 p-4 text-white rounded-lg relative text-sm shadow-md;
 }
 

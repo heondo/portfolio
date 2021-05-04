@@ -1,14 +1,17 @@
 <template>
-  <table class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-    <tr
-      v-for="(article, i) in articles"
+  <div
+    class="grid grid-cols-1 gap-4 sm:gap-6 justify-center"
+    :class="[`sm:grid-cols-${articles.length}`]"
+  >
+    <section
+      v-for="(article, i) in massagedArticles"
       :key="article.slug"
       class="article-container"
       :class="{
-        elevated: articles.length === 3 && i === 1,
+        elevated: articles.length >= 3 && i === 1,
       }"
     >
-      <td class="flex flex-col gap-2 h-full">
+      <span class="flex flex-col gap-2 h-full">
         <header class="font-semibold">
           {{ article.subject }}
         </header>
@@ -40,9 +43,9 @@
             />
           </svg>
         </nuxt-link>
-      </td>
-    </tr>
-  </table>
+      </span>
+    </section>
+  </div>
 </template>
 <script>
 export default {
@@ -50,6 +53,15 @@ export default {
     articles: {
       type: Array,
       required: true,
+    },
+  },
+  computed: {
+    massagedArticles() {
+      if (this.articles.length < 3) {
+        return [...this.articles]
+      }
+      // if more than 3 articles, put the newest article in the center.
+      return [this.articles[0], this.articles[2], this.articles[1]]
     },
   },
 }
