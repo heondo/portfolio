@@ -12,12 +12,17 @@
         <template #title> Skills </template>
         <app-skills></app-skills>
       </section-layout>
-      <section-layout id="timeline" class="slanted" bgColor="bg-blue-900">
+      <section-layout
+        id="timeline"
+        class="slanted"
+        threshold="0.2"
+        bgColor="bg-blue-900"
+      >
         <template #title> Timeline</template>
         <app-timeline></app-timeline>
       </section-layout>
 
-      <section-layout id="resume">
+      <section-layout id="resume" class="slanted">
         <template #title> Resume </template>
         <iframe
           class="mx-auto rounded-lg shadow-xl"
@@ -25,6 +30,10 @@
           width="80%"
           height="350"
         ></iframe>
+      </section-layout>
+      <section-layout id="articles-comp" class="slanted" bgColor="bg-blue-900">
+        <template #title> articles</template>
+        <app-articles></app-articles>
       </section-layout>
     </template>
   </app-layout>
@@ -37,6 +46,7 @@ import AppLanding from '~/components/AppLanding'
 import AppAbout from '~/components/AppAbout'
 import AppSkills from '~/components/AppSkills'
 import AppTimeline from '~/components/AppTimeline'
+import AppArticles from '~/components/AppArticles'
 export default {
   components: {
     AppLayout,
@@ -45,6 +55,7 @@ export default {
     AppAbout,
     AppSkills,
     AppTimeline,
+    AppArticles,
   },
 }
 </script>

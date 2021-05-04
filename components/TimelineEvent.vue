@@ -1,5 +1,15 @@
 <template>
-  <li class="mb-2">
+  <li
+    v-observe-visibility="{
+      once: true,
+      callback: visibilityChanged,
+      intersection: {
+        threshold: 0.6,
+      },
+    }"
+    class="px-2 sm:px-0 mb-2 transition transform opacity-0 duration-1000 ease-in-out"
+    :class="[visible ? 'opacity-100 translate-x-0' : ' -translate-x-6']"
+  >
     <div class="flex items-center mb-1">
       <div
         :class="[circleColor]"
@@ -76,8 +86,15 @@ export default {
   },
   data() {
     return {
+      visible: false,
       eventExpanded: false,
     }
+  },
+  methods: {
+    visibilityChanged(isVisible) {
+      this.visible = isVisible
+      // console.log('i just viewed this component')
+    },
   },
 }
 </script>
