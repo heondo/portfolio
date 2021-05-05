@@ -22,6 +22,13 @@
       you can bear with me.
     </template>
     <template #buttonText> Got it, thanks! </template>
+    <template #trigger>
+      <span
+        class="text-base hover:text-gray-400 transition duration-300 ease-in-out"
+      >
+        (in progress)</span
+      >
+    </template>
   </modal>
 </template>
 <script>
