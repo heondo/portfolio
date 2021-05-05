@@ -82,7 +82,7 @@ it was clear to me what is necessary to get pagination working. So if you were t
 I always wondered, isn't implementing caching for a website extremely complicated? Well, yes and no. All you have to do is specify the key-value pair of your cached data, and how long you want to cache it for. The simplest way to get started is a database but you could imagine a route working like this:
 
 ```php
-Route::get(function() {
+Route::get('/', function() {
   $users = Cache::remember('users', 60, function () {
     return DB::table('users')->get();
   });
