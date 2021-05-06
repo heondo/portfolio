@@ -20,18 +20,23 @@
             <article-modal v-if="article.inProgress" :defaultState="true">
             </article-modal>
           </h2>
-          <div
-            class="text-gray-200 mt-2 mb-4 pl-2 border-l-4 border-indigo-400"
-          >
-            Heondo Kim -
-            {{
-              $formatDate(
-                new Date(article.updatedAt),
-                "MMM d, yyyy 'at' hh:mm aaa"
-              )
-            }}
+          <div class="content">
+            <div
+              class="text-gray-200 mt-2 mb-4 pl-2 border-l-4 border-indigo-400"
+            >
+              Heondo Kim -
+              {{
+                $formatDate(
+                  new Date(article.updatedAt),
+                  "MMM d, yyyy 'at' hh:mm aaa"
+                )
+              }}
+            </div>
+            <NuxtContent
+              class="prose lg:prose-lg mx-auto"
+              :document="article"
+            />
           </div>
-          <NuxtContent class="prose lg:prose-lg mx-auto" :document="article" />
         </article>
       </div>
     </template>
@@ -67,7 +72,7 @@ export default {
   }
 }
 
-article > * {
+article > .content {
   animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
