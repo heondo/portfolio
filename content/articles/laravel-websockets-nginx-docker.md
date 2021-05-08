@@ -176,66 +176,128 @@ When testing the email verification feature, I ran into the same issue as [here]
 
 So I created a new Nginx configuration file `./docker-compose/nginx/prod/nginx.conf` with the contents
 
-```{1,3,5}conf[./docker-compose/nginx/prod/nginx.conf]
+<div class="caption">
+After following the tutorial, our files should look something like this, with a few differences</div>
+
+```diff[./docker-compose/nginx/prod/nginx.conf]
 server {
     listen 80;
-    listen [::]:80;
++   listen [::]:80;
 
-    location /.well-known/acme-challenge/ {
-        root /var/www/certbot;
-    }
++   location /.well-known/acme-challenge/ {
++       root /var/www/certbot;
++   }
 
-    return 301 https://$host$request_uri;
-}
++   return 301 https://$host$request_uri;
 
-
-server {
-    listen 443 ssl http2;
-    listen [::]:443 ssl http2;
-
-    root /var/www/public;
-    server_tokens off;
-
-    access_log /var/log/nginx/access.log;
-
-    add_header X-Frame-Options "SAMEORIGIN";
-    add_header X-XSS-Protection "1; mode=block";
-    add_header X-Content-Type-Options "nosniff";
-
-    index index.html index.php;
-
-
-    location / {
-        try_files $uri $uri/ /index.php?$query_string;
-        gzip_static on;
-    }
-
-    location ~ \.php$ {
-        fastcgi_split_path_info ^(.+\.php)(/.+)$;
-        fastcgi_pass myapp-app:9000;
-        fastcgi_index index.php;
-        include fastcgi_params;
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-        fastcgi_param PATH_INFO $fastcgi_path_info;
-    }
-
-    client_max_body_size 20M;
-
-    gzip on;
-    gzip_disable "msie6";
-
-    tcp_nopush on;
-    tcp_nodelay on;
-
-    charset utf-8;
-
-    ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
-    include /etc/letsencrypt/options-ssl-nginx.conf;
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
-
+-   index index.php index.html;
+-     error_log  /var/log/nginx/error.log;
+-     access_log /var/log/nginx/access.log;
+-     root /var/www/public;
+-     location ~ \.php$ {
+-         try_files $uri =404;
+-         fastcgi_split_path_info ^(.+\.php)(/.+)$;
+-         fastcgi_pass myapp-app:9000;
+-         fastcgi_index index.php;
+-         include fastcgi_params;
+-         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+-         fastcgi_param PATH_INFO $fastcgi_path_info;
+-     }
+-     location / {
+-         try_files $uri $uri/ /index.php?$query_string;
+-         gzip_static on;
+-     }
 
 }
+
++server {
++    listen 443 ssl http2;
++    listen [::]:443 ssl http2;
++
++    root /var/www/public;
++    server_tokens off;
++
++    access_log /var/log/nginx/access.log;
++
++    add_header X-Frame-Options "SAMEORIGIN";
++    add_header X-XSS-Protection "1; mode=block";
++    add_header X-Content-Type-Options "nosniff";
++
++    index index.html index.php;
++
++
++    location / {
++        try_files $uri $uri/ /index.php?$query_string;
++        gzip_static on;
++    }
++
++    location ~ \.php$ {
++        fastcgi_split_path_info ^(.+\.php)(/.+)$;
++        fastcgi_pass myapp-app:9000;
++        fastcgi_index index.php;
++        include fastcgi_params;
++        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
++        fastcgi_param PATH_INFO $fastcgi_path_info;
++    }
++
++    client_max_body_size 20M;
++
++    gzip on;
++    gzip_disable "msie6";
++
++    tcp_nopush on;
++    tcp_nodelay on;
++
++    charset utf-8;
++
++    ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
++    ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
++    include /etc/letsencrypt/options-ssl-nginx.conf;
++    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
++}
+```
+
+```diff[docker-compose.yml]
+version: '3.7'
+services:
+  # remaining services above
+
+  myapp-nginx:
+    image: nginx:alpine
+    container_name: myapp-nginx
+    restart: unless-stopped
+    ports:
+-     - ${APP_PORT}:80
++     - ${APP_PORT}:443
+    volumes:
+      - ./:/var/www
+-     - ./docker-compose/nginx/local:/etc/nginx/conf.d/
++     - ./docker-compose/nginx/prod:/etc/nginx/conf.d/
++     - ./docker-compose/certbot/conf:/etc/letsencrypt
++     - ./docker-compose/certbot/www:/var/www/certbot
+
+    networks:
+      - myapp
+
++  myapp-certbot:
++    image: certbot/certbot
++    container_name: myapp-certbot
++    volumes:
++      - ./docker-compose/certbot/conf:/etc/letsencrypt
++      - ./docker-compose/certbot/www:/var/www/certbot
++    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
++    networks:
++      - myapp
+
+# Volumes and networks unchanged
+# add certbot service and volume mappings to compose
+```
+
+```diff[.env]
+- APP_PORT=80
++ APP_PORT=443
+- APP_URL=http://localhost
++ APP_URL=https://myapp.com
 ```
 
 <span class="caption">
@@ -247,15 +309,17 @@ I praise <a href="https://www.linkedin.com/in/travisjryan/" target="_blank">Trav
 
 <img class="w-auto h-80" src="https://i.imgur.com/w1JnsQX.png" alt="purple-google-results">
 
-So that was solved, but I realized my websockets connection kept failing. It took weeks to diagnose and resolve this issue, but it was also done.
+So that was solved, but I realized my <div class="tech-word">websockets</div> connection kept failing now that our SSL configuration was complete. It took weeks to diagnose and resolve this issue, but it was also done.
 
-### For this, it was actually extremely simple...
+### The problem with websockets?
+
+Once we moved from local to production and our app was being served with SSL, the application could no longer communicate to our websockets service. It tooks weeks of diagnosing but it was unfortunately quite simple...
 
 <span class="caption">
-    The only exposed port in our application is 443, all traffic is reverse proxied
+    The only exposed port in our application is 443, all traffic must be reverse proxied. Begin by removing port mapping for our websockets container and modify our Nginx configuration to reverse proxy the websockets traffic as well.
 </span>
 
-```
+```diff[docker-compose.yml]
 version: '3.7'
 services:
   ...
@@ -267,100 +331,51 @@ services:
     working_dir: /var/www/
     volumes:
       - ./:/var/www
-    # remove port mapping
+-   ports:
+-     - ${LARAVEL_WEBSOCKETS_PORT}:6001
     networks:
       - myapp
-
-  myapp-nginx:
-    image: nginx:alpine
-    container_name: myapp-nginx
-    depends_on:
-      - myapp-certbot
-    restart: unless-stopped
-    ports:
-      - 443:443
-    volumes:
-      - ./:/var/www
-      - ./docker-compose/nginx/prod:/etc/nginx/conf.d/
-      - ./docker-compose/certbot/conf:/etc/letsencrypt
-      - ./docker-compose/certbot/www:/var/www/certbot
-    command: '/bin/sh -c ''while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g "daemon off;"'''
-    networks:
-      - myapp
-
-  myapp-certbot:
-    image: certbot/certbot
-    container_name: myapp-certbot
-    volumes:
-      - ./docker-compose/certbot/conf:/etc/letsencrypt
-      - ./docker-compose/certbot/www:/var/www/certbot
-    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
-    networks:
-      - myapp
-
-networks:
-  myapp:
-    driver: bridge
-volumes:
-  db-data:
-    driver: local
-    driver_opts:
-      o: bind
-      type: none
-      device: ${DB_DATA}
 ```
 
 ```diff
+...
 server {
-    listen 80;
-    listen [::]:80;
-
-    location /.well-known/acme-challenge/ {
-        root /var/www/certbot;
-    }
-
-    return 301 https://$host$request_uri;
-}
-
-
-server {
-    listen 443 ssl http2;
-    listen [::]:443 ssl http2;
-
     ...
-    # your other configuration stuff here
+    # in the 443 block!
     ...
 
-    location /app/ {
-        proxy_pass             http://myapp-websockets:6001;
-        # THIS IS IMPORTANT, host is not localhost anymore
-        proxy_read_timeout     60;
-        proxy_connect_timeout  60;
-        proxy_redirect         off;
++    location /app/ {
++        proxy_pass             http://myapp-websockets:6001;
++        # THIS IS IMPORTANT, host is container name
++        proxy_read_timeout     60;
++        proxy_connect_timeout  60;
++        proxy_redirect         off;
++
++    #     Allow the use of websockets
++        proxy_http_version 1.1;
++        proxy_set_header Upgrade $http_upgrade;
++        proxy_set_header Connection 'upgrade';
++        proxy_set_header Host $host;
++        proxy_cache_bypass $http_upgrade;
++     }
 
-    #     Allow the use of websockets
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection 'upgrade';
-        proxy_set_header Host $host;
-        proxy_cache_bypass $http_upgrade;
-     }
+    # The below may not be necessary
 
-    location = /favicon.ico { access_log off; log_not_found off; }
-    location = /robots.txt  { access_log off; log_not_found off; }
-
-    location ~ \/.ht {
-        deny all;
-    }
++    location = /favicon.ico { access_log off; log_not_found off; }
++    location = /robots.txt  { access_log off; log_not_found off; }
++
++    location ~ \/.ht {
++        deny all;
++    }
 }
 ```
 
 ```diff[.env]
-LARAVEL_WEBSOCKETS_HOST=myapp-websockets # from localhost to docker container name
+- LARAVEL_WEBSOCKETS_HOST=localhost
++ LARAVEL_WEBSOCKETS_HOST=myapp-websockets # from localhost to docker container name
 LARAVEL_WEBSOCKETS_PORT=6001
-LARAVEL_WEBSOCKETS_SSL_LOCAL_CERT=
-+ LARAVEL_WEBSOCKETS_SSL_LOCAL_PK=
-LARAVEL_WEBSOCKETS_SSL_PASSPHRASE=
-
-# All other env variables...
 ```
+
+## Those were the primary changes to take our application from development to production using Laravel, Docker Compose, Nginx, and Websockets.
+
+I may have missed some external deployment steps regarding Laravel steps but you have to follow the documentation for that. The infrastructure needs to be improved, we need to move our database from a <span class="tech-word">Docker</span> container into the cloud, same with <span class="tech-word">Redis</span> and even <span class="tech-word">Websockets</span> as we scale, really any X-as-a-service. However, those are typically a matter of changing environment variables and configuration files again, but just gettinng the application deployed via HTTPS was a big step. I saw many people running similar issues as myself, so maybe I will pop up in a search.
