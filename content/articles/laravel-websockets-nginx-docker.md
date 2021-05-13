@@ -3,9 +3,14 @@ title: Deploying with Docker Compose, Laravel, Websockets, NGINX, and Let's Encr
 subject: Dev Ops
 createdAt: 09 May 2021 7:24:00 PDT
 updatedAt: 09 May 2021 7:24:00 PDT
-inProgress: true
 description: "The harrowing journey of configuring NGINX to work with Docker containers, websockets, and Let's Encrypt. Having exhausted every article regarding this issue, maybe this blog can appear somewhere and help another developer out."
 ---
+
+1. [The Primary Bits](#project-stack)
+1. [Getting an SSL cert with Let's Encrypt, Nginx, and Docker](#lets-encrypt)
+1. [403 Invalid Signature and Email Verification](#invalid-signature)
+1. [The problem with websockets? Nginx of course!](#websockets-issues)
+1. [Final words](#final-words)
 
 ### So, I just got through the process of deploying a Docker application with Websockets, Nginx, Let's Encrypt.
 
@@ -19,7 +24,9 @@ After many days of going four search results deep with all purple links, my cowo
 
 If you are here, I am assuming you have a <span class="tech-word">Dockerized Laravel</span> application that you are attempting to deploy to some server like <span class="tech-word">AWS EC2, Digital Ocean, GCP, Azure</span>, etc. But what's this, your Nginx configuration is causing issues with SSL/Websockets? I hope this can help a bit.
 
-### The primary bits
+<h2 id="project-stack">
+The primary bits
+</h2>
 
 <ul>
     <li>
@@ -162,7 +169,9 @@ MIX_PUSHER_APP_TLS="false"
 
 With this configuration, locally, websockets works fine. My client app can listen in and react to real time events. However, once we attempt to deploy we run into a whole bunch of issues.
 
-### Beginning the deployment process
+<h2 id="lets-encrypt">
+Getting an SSL cert with Let's Encrypt, Nginx, and Docker
+</h2>
 
 It was simple at first, buy a server, clone the repo, and spin up the containers like I do locally. Yay! Well, http works which is unacceptable in any modern website.
 
@@ -170,7 +179,9 @@ So I did what any developer does, Google how to do X with Y. After failing, I lo
 
 I followed them to a T and what do you know, I was able to visit my HTTPS website, with a wonderful lock. Fiddle with your .env files and Laravel configuration to match the new production/HTTPS environment. Now, here is where the `403 email invalid signature` appeared and caused my client to throw various errors when attempting to connect to the websockets channel.
 
-### 403 Invalid Signature and Email Verification
+<h2 id="invalid-signature">
+403 Invalid Signature and Email Verification
+</h2>
 
 When testing the email verification feature, I ran into the same issue as [here](https://stackoverflow.com/questions/52917152/laravel-5-7-email-verification-throws-403). I couldn't figure it out until I realized I did not modify the Nginx configuration file to fully work through HTTPS.
 
@@ -311,7 +322,9 @@ I praise <a href="https://www.linkedin.com/in/travisjryan/" target="_blank">Trav
 
 So that was solved, but I realized my <div class="tech-word">websockets</div> connection kept failing now that our SSL configuration was complete. It took weeks to diagnose and resolve this issue, but it was also done.
 
-### The problem with websockets?
+<h2 id="websockets-issues">
+The problem with websockets? Nginx of course!
+</h2>
 
 Once we moved from local to production and our app was being served with SSL, the application could no longer communicate to our websockets service. It took weeks of diagnosing but it was unfortunately quite simple...
 
@@ -376,6 +389,8 @@ server {
 LARAVEL_WEBSOCKETS_PORT=6001
 ```
 
-## Those were the primary changes to take our application from development to production using Laravel, Docker Compose, Nginx, and Websockets.
+<h2 id="final-words">
+Those were the primary changes to take our application from development to production using Laravel, Docker Compose, Nginx, and Websockets.
+</h2>
 
 I may have missed some external deployment steps regarding Laravel steps but you have to follow the documentation for that. The infrastructure needs to be improved, we need to move our database from a <span class="tech-word">Docker</span> container into the cloud, same with <span class="tech-word">Redis</span> and even <span class="tech-word">Websockets</span> as we scale, really any X-as-a-service. However, those are typically a matter of changing environment variables and configuration files again, but just getting the application deployed via HTTPS was a big step. I saw many people running similar issues like myself, so maybe I will pop up in a search.
