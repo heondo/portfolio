@@ -278,7 +278,7 @@ services:
     container_name: myapp-nginx
     restart: unless-stopped
     ports:
--     - ${APP_PORT}:80
+      - ${APP_PORT}:80
 +     - ${APP_PORT}:443
     volumes:
       - ./:/var/www
