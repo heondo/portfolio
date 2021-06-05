@@ -7,7 +7,16 @@
         threshold: 0.6,
       },
     }"
-    class="px-2 sm:px-0 mb-2 transition transform opacity-0 duration-1000 ease-in-out"
+    class="
+      px-2
+      sm:px-0
+      mb-2
+      transition
+      transform
+      opacity-0
+      duration-1000
+      ease-in-out
+    "
     :class="[visible ? 'opacity-100 translate-x-0' : ' -translate-x-6']"
   >
     <div class="flex items-center mb-1">

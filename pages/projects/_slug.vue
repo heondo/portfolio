@@ -5,7 +5,14 @@
         <nav class="flex text-lg mb-3">
           <nuxt-link
             to="/articles"
-            class="text-blue-400 hover:text-white transition duration-150 ease-in-out font-semibold"
+            class="
+              text-blue-400
+              hover:text-white
+              transition
+              duration-150
+              ease-in-out
+              font-semibold
+            "
           >
             Project
           </nuxt-link>
@@ -33,7 +40,14 @@
             <nuxt-img
               provider="cloudinary"
               :src="project.banner"
-              class="h-64 w-full overflow-hidden object-cover object-top rounded-lg shadow-md"
+              class="
+                h-64
+                w-full
+                overflow-hidden
+                object-cover object-top
+                rounded-lg
+                shadow-md
+              "
             />
             <div class="my-4 flex flex-col gap-2">
               <!-- Private, project urls, or other -->

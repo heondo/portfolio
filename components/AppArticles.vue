@@ -22,7 +22,14 @@
             }}
           </p>
           <nuxt-link
-            class="hover:text-gray-400 transition duration-300 ease-in-out sm:text-lg font-bold"
+            class="
+              hover:text-gray-400
+              transition
+              duration-300
+              ease-in-out
+              sm:text-lg
+              font-bold
+            "
             :to="{ name: 'articles-slug', params: { slug: article.slug } }"
           >
             {{ article.title }}
@@ -54,7 +61,14 @@
     </div>
     <nuxt-link
       to="articles"
-      class="hover:text-gray-400 duration-300 ease-in-out transform text-center block"
+      class="
+        hover:text-gray-400
+        duration-300
+        ease-in-out
+        transform
+        text-center
+        block
+      "
     >
       <p class="inline underline">to articles</p>
       <svg

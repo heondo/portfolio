@@ -7,7 +7,16 @@
     >
       <!-- thumbnail -->
       <nuxt-link
-        class="m-auto h-36 w-auto overflow-hidden flex justify-center items-center rounded-md"
+        class="
+          m-auto
+          h-36
+          w-auto
+          overflow-hidden
+          flex
+          justify-center
+          items-center
+          rounded-md
+        "
         :to="{ name: 'projects-slug', params: { slug: p.slug } }"
       >
         <nuxt-img
@@ -19,7 +28,14 @@
       <!-- end thumbnail -->
       <div class="flex flex-col">
         <nuxt-link
-          class="text-lg font-bold uppercase hover:text-gray-300 ease-in-out duration-300"
+          class="
+            text-lg
+            font-bold
+            uppercase
+            hover:text-gray-300
+            ease-in-out
+            duration-300
+          "
           :to="{ name: 'projects-slug', params: { slug: p.slug } }"
         >
           {{ p.title }}

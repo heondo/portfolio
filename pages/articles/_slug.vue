@@ -5,7 +5,14 @@
         <nav class="flex text-lg mb-3">
           <nuxt-link
             to="/articles"
-            class="text-blue-400 hover:text-white transition duration-150 ease-in-out font-semibold"
+            class="
+              text-blue-400
+              hover:text-white
+              transition
+              duration-150
+              ease-in-out
+              font-semibold
+            "
           >
             Articles
           </nuxt-link>

@@ -44,7 +44,15 @@
       >
       <div class="mt-1 relative rounded-md shadow-sm mb-4">
         <div
-          class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+          class="
+            absolute
+            inset-y-0
+            left-0
+            pl-3
+            flex
+            items-center
+            pointer-events-none
+          "
         >
           <!-- Heroicon name: solid/mail -->
           <svg
@@ -64,7 +72,20 @@
           id="email"
           type="text"
           name="_replyto"
-          class="bg-gray-700 shadow-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 pr-4 py-2 sm:text-sm border-gray-300 rounded-md"
+          class="
+            bg-gray-700
+            shadow-lg
+            focus:ring-indigo-500
+            focus:border-indigo-500
+            block
+            w-full
+            pl-10
+            pr-4
+            py-2
+            sm:text-sm
+            border-gray-300
+            rounded-md
+          "
           placeholder="you@example.com"
         />
       </div>
@@ -92,7 +113,21 @@
         <textarea
           id="message"
           name="message"
-          class="bg-gray-700 shadow-lg align-middle focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 pr-4 py-2 sm:text-sm border-gray-300 rounded-md"
+          class="
+            bg-gray-700
+            shadow-lg
+            align-middle
+            focus:ring-indigo-500
+            focus:border-indigo-500
+            block
+            w-full
+            pl-10
+            pr-4
+            py-2
+            sm:text-sm
+            border-gray-300
+            rounded-md
+          "
           placeholder="Lets talk!"
         />
       </div>
@@ -101,7 +136,27 @@
 
       <div class="flex justify-end">
         <button
-          class="inline-flex shadow-xl items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transform transition duration-300 ease-in-out"
+          class="
+            inline-flex
+            shadow-xl
+            items-center
+            px-4
+            py-2
+            border border-transparent
+            text-sm
+            font-medium
+            rounded-md
+            shadow-sm
+            text-white
+            bg-blue-600
+            hover:bg-blue-700
+            focus:outline-none
+            focus:ring-2 focus:ring-offset-2 focus:ring-blue-500
+            transform
+            transition
+            duration-300
+            ease-in-out
+          "
           type="submit"
         >
           Send

@@ -71,7 +71,19 @@
           <div class="flex md:hidden">
             <button
               type="button"
-              class="text-white inline-flex items-center justify-center p-1 rounded-md text-white hover:text-white hover:bg-gray-700 transition duration-150 ease-in-out"
+              class="
+                text-white
+                inline-flex
+                items-center
+                justify-center
+                p-1
+                rounded-md
+                hover:text-white
+                hover:bg-gray-700
+                transition
+                duration-150
+                ease-in-out
+              "
               aria-controls="mobile-menu"
               aria-expanded="false"
               @click="menuOpen = !menuOpen"
@@ -117,7 +129,18 @@
             </div>
             <!-- actual content -->
             <div
-              class="z-20 bg-gray-700 text-white rounded-lg px-2 py-2 mx-auto max-w-2xl shadow-xl transition-all"
+              class="
+                z-20
+                bg-gray-700
+                text-white
+                rounded-lg
+                px-2
+                py-2
+                mx-auto
+                max-w-2xl
+                shadow-xl
+                transition-all
+              "
               role="dialog"
               aria-modal="true"
               aria-labelledby="modal-headline"

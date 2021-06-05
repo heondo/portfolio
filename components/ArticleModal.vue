@@ -24,7 +24,13 @@
     <template #buttonText> Got it, thanks! </template>
     <template #trigger>
       <span
-        class="text-base hover:text-gray-400 transition duration-300 ease-in-out"
+        class="
+          text-base
+          hover:text-gray-400
+          transition
+          duration-300
+          ease-in-out
+        "
       >
         (in progress)</span
       >

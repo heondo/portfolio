@@ -12,7 +12,14 @@
     <div>
       <h2 class="text-xl md:text-2xl">
         <nuxt-link
-          class="hover:text-gray-400 transition duration-300 ease-in-out text-white font-bold"
+          class="
+            hover:text-gray-400
+            transition
+            duration-300
+            ease-in-out
+            text-white
+            font-bold
+          "
           :to="{ name: 'articles-slug', params: { slug: article.slug } }"
         >
           {{ article.title }}
@@ -24,7 +31,14 @@
     </div>
     <span class="w-auto">
       <nuxt-link
-        class="hover:text-white read-more text-blue-300 transition duration-300 ease-in-out"
+        class="
+          hover:text-white
+          read-more
+          text-blue-300
+          transition
+          duration-300
+          ease-in-out
+        "
         :to="{ name: 'articles-slug', params: { slug: article.slug } }"
       >
         Read More
