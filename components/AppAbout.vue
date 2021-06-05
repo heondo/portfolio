@@ -35,14 +35,4 @@ export default {}
 p {
   @apply inline text-blue-300 font-semibold;
 }
-/* .content {
-  column-count: 1;
-} */
-
-/* @screen md {
-  .content {
-    column-count: 2;
-    column-gap: 2rem;
-  }
-} */
 </style>
