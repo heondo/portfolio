@@ -76,7 +76,7 @@ export default {
 </script>
 <style scoped>
 /* read-more svg {
-  @apply 
+  @apply
 } */
 
 .read-more svg {

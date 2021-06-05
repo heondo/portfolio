@@ -111,6 +111,7 @@ export default {
 @screen sm {
   .elevated {
     transform: scale(1.12);
+
     @apply text-sm;
   }
 }
@@ -120,6 +121,7 @@ export default {
   background: -webkit-linear-gradient(top, #314485, #243364);
   background: -moz-linear-gradient(top, #314485, #243364);
   background: linear-gradient(to bottom, #314485, #243364);
+
   @apply p-4 rounded-lg shadow-lg;
 }
 

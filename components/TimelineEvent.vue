@@ -110,6 +110,7 @@ export default {
   background: -webkit-linear-gradient(top, #314485, #243364);
   background: -moz-linear-gradient(top, #314485, #243364);
   background: linear-gradient(to bottom, #314485, #243364);
+
   @apply ml-12 p-4 text-white rounded-md relative text-sm shadow-md;
 }
 
@@ -118,6 +119,7 @@ export default {
     @apply text-base;
   }
 }
+
 /* .list-container {
   @apply ;
 } */

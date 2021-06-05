@@ -62,16 +62,19 @@ export default {
 .sliding-container {
   margin-right: 8.5rem;
 }
-/*Vertical Sliding*/
+
+/* Vertical Sliding */
 .sliding-vertical {
   display: inline;
   text-indent: 8px;
+
   @apply text-indigo-300;
 }
+
 .sliding-vertical span {
   animation: topToBottom 6s linear 0s;
-  -ms-animation: topToBottom 6s linear 0s;
-  -webkit-animation: topToBottom 6s linear 0s;
+  -ms-animation: toptobottom 6s linear 0s;
+  -webkit-animation: toptobottom 6s linear 0s;
   opacity: 0;
   overflow: hidden;
   position: absolute;
@@ -79,111 +82,135 @@ export default {
 
 .sliding-vertical div.last {
   animation: finalKeyframe 6s linear 0s;
-  -ms-animation: finalKeyframe 6s linear 0s;
-  -webkit-animation: finalKeyframe 6s linear 0s;
+  -ms-animation: finalkeyframe 6s linear 0s;
+  -webkit-animation: finalkeyframe 6s linear 0s;
   opacity: 0;
   position: absolute;
   animation-fill-mode: forwards;
 }
+
 .sliding-vertical span:nth-child(2) {
   animation-delay: 1.5s;
   -ms-animation-delay: 1.5s;
   -webkit-animation-delay: 1.5s;
 }
+
 .sliding-vertical span:nth-child(3) {
   animation-delay: 3s;
   -ms-animation-delay: 3s;
   -webkit-animation-delay: 3s;
 }
+
 .sliding-vertical span:nth-child(4) {
   animation-delay: 4.5s;
   -ms-animation-delay: 4.5s;
   -webkit-animation-delay: 4.5s;
 }
+
 .sliding-vertical div:nth-child(5) {
   animation-delay: 6s;
   -ms-animation-delay: 6s;
   -webkit-animation-delay: 6s;
 }
 
-/*topToBottom Animation*/
+/* topToBottom Animation */
 @-moz-keyframes topToBottom {
   0% {
     opacity: 0;
   }
+
   5% {
     opacity: 0;
     -moz-transform: translateY(-30px);
   }
+
   10% {
     opacity: 1;
-    -moz-transform: translateY(0px);
+    -moz-transform: translateY(0);
   }
+
   25% {
     opacity: 1;
-    -moz-transform: translateY(0px);
+    -moz-transform: translateY(0);
   }
+
   30% {
     opacity: 0;
     -moz-transform: translateY(30px);
   }
+
   80% {
     opacity: 0;
   }
+
   100% {
     opacity: 0;
   }
 }
+
 @-webkit-keyframes topToBottom {
   0% {
     opacity: 0;
   }
+
   5% {
     opacity: 0;
     -webkit-transform: translateY(-30px);
   }
+
   10% {
     opacity: 1;
-    -webkit-transform: translateY(0px);
+    -webkit-transform: translateY(0);
   }
+
   25% {
     opacity: 1;
-    -webkit-transform: translateY(0px);
+    -webkit-transform: translateY(0);
   }
+
   30% {
     opacity: 0;
     -webkit-transform: translateY(30px);
   }
+
   80% {
     opacity: 0;
   }
+
   100% {
     opacity: 0;
   }
 }
+
 @-ms-keyframes topToBottom {
   0% {
     opacity: 0;
   }
+
   5% {
     opacity: 0;
     -ms-transform: translateY(-30px);
   }
+
   10% {
     opacity: 1;
-    -ms-transform: translateY(0px);
+    -ms-transform: translateY(0);
   }
+
   25% {
     opacity: 1;
-    -ms-transform: translateY(0px);
+    -ms-transform: translateY(0);
   }
+
   30% {
     opacity: 0;
     -ms-transform: translateY(30px);
   }
+
   80% {
     opacity: 0;
   }
+
   100% {
     opacity: 0;
   }
@@ -193,86 +220,115 @@ export default {
   0% {
     opacity: 0;
   }
+
   5% {
     opacity: 0;
     -moz-transform: translateY(-30px);
   }
+
   10% {
     opacity: 1;
-    -moz-transform: translateY(0px);
+    -moz-transform: translateY(0);
   }
+
   25% {
     opacity: 1;
-    -moz-transform: translateY(0px);
+    -moz-transform: translateY(0);
   }
+
   30% {
     opacity: 1;
+
     @apply text-blue-300;
   }
+
   80% {
     opacity: 1;
+
     @apply text-blue-300;
   }
+
   100% {
     opacity: 1;
+
     @apply text-blue-300;
   }
 }
+
 @-webkit-keyframes finalKeyframe {
   0% {
     opacity: 0;
   }
+
   5% {
     opacity: 0;
     -webkit-transform: translateY(-30px);
   }
+
   10% {
     opacity: 1;
-    -webkit-transform: translateY(0px);
+    -webkit-transform: translateY(0);
   }
+
   25% {
     opacity: 1;
-    -webkit-transform: translateY(0px);
+    -webkit-transform: translateY(0);
   }
+
   30% {
     opacity: 1;
+
     @apply text-blue-300;
   }
+
   80% {
     opacity: 1;
+
     @apply text-blue-300;
   }
+
   100% {
     opacity: 1;
+
     @apply text-blue-300;
   }
 }
+
 @-ms-keyframes finalKeyframe {
   0% {
     opacity: 0;
   }
+
   5% {
     opacity: 0;
     -ms-transform: translateY(-30px);
   }
+
   10% {
     opacity: 1;
-    -ms-transform: translateY(0px);
+    -ms-transform: translateY(0);
   }
+
   25% {
     opacity: 1;
-    -ms-transform: translateY(0px);
+    -ms-transform: translateY(0);
   }
+
   30% {
     opacity: 1;
+
     @apply text-blue-300;
   }
+
   80% {
     opacity: 1;
+
     @apply text-blue-300;
   }
+
   100% {
     opacity: 1;
+
     @apply text-blue-300;
   }
 }

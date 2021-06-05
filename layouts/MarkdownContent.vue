@@ -17,6 +17,7 @@ export default {
     opacity: 0;
     transform: translateY(30px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -64,10 +65,13 @@ article > .content {
 
 .nuxt-content ul > li {
   list-style-type: disc;
+
   @apply my-1 p-0;
 }
+
 .nuxt-content ol > li {
   list-style-type: decimal;
+
   @apply my-1 p-0;
 }
 
@@ -83,6 +87,7 @@ article > .content {
 .nuxt-content h6 {
   scroll-margin-top: 2em;
   animation: 1s ease-out 0s 1 slideInFromLeft;
+
   @apply text-blue-300 my-2;
 }
 
@@ -101,18 +106,20 @@ article > .content {
 .nuxt-content h1 {
   @apply text-4xl;
 }
+
 .nuxt-content h2 {
   @apply text-3xl;
 }
+
 .nuxt-content h3 {
   @apply text-2xl;
 }
+
 .nuxt-content h4 {
   @apply text-xl;
 }
+
 .nuxt-content h5 {
   @apply text-lg;
-}
-.nuxt-content h6 {
 }
 </style>
