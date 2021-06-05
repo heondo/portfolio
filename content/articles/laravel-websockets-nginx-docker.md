@@ -177,7 +177,7 @@ It was simple at first, buy a server, clone the repo, and spin up the containers
 
 So I did what any developer does, Google how to do X with Y. After failing, I looked up how to do X with Y and Z, and X with ❅. More failing, until I stumbled upon a wonderful [article](https://pentacent.medium.com/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71) with many claps and a [Github Repo](https://github.com/wmnnd/nginx-certbot) for the script file with many stars to go with it.
 
-I followed them to a T and what do you know, I was able to visit my HTTPS website, with a wonderful lock. Fiddle with your .env files and Laravel configuration to match the new production/HTTPS environment. Now, here is where the `403 email invalid signature` appeared and caused my client to throw various errors when attempting to connect to the websockets channel.
+I followed them to a T and what do you know, I was able to visit my HTTPS website, with a wonderful lock. Fiddle with your .env files and Laravel configuration to match the new production/HTTPS environment. Now, here is where the <code>403 email invalid signature</code> appeared and caused my client to throw various errors when attempting to connect to the websockets channel.
 
 <h2 id="invalid-signature">
 403 Invalid Signature and Email Verification
@@ -185,7 +185,7 @@ I followed them to a T and what do you know, I was able to visit my HTTPS websit
 
 When testing the email verification feature, I ran into the same issue as [here](https://stackoverflow.com/questions/52917152/laravel-5-7-email-verification-throws-403). I couldn't figure it out until I realized I did not modify the Nginx configuration file to fully work through HTTPS.
 
-So I created a new NGINX configuration file ./docker-compose/nginx/prod/nginx.conf with the contents
+So I created a new NGINX configuration file <code>./docker-compose/nginx/prod/nginx.conf</code> with the contents
 
 <div class="caption">
 After following the tutorial, our files should look something like this, with a few differences</div>
