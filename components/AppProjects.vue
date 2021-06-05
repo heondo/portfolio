@@ -1,6 +1,6 @@
 <template>
   <div>
-    <li class="list-none" v-for="p in projects" :key="p.slug">
+    <li v-for="p in projects" :key="p.slug" class="list">
       {{ p.slug }}
     </li>
   </div>
