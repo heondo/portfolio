@@ -102,10 +102,10 @@ export default {
 }
 
 .article-container {
-  background: #4f51be;
-  background: -webkit-linear-gradient(top, #4f51be, #3c3d9c);
-  background: -moz-linear-gradient(top, #4f51be, #3c3d9c);
-  background: linear-gradient(to bottom, #4f51be, #3c3d9c);
+  background: #314485;
+  background: -webkit-linear-gradient(top, #314485, #243364);
+  background: -moz-linear-gradient(top, #314485, #243364);
+  background: linear-gradient(to bottom, #314485, #243364);
   @apply p-4 rounded-lg shadow-lg;
 }
 

@@ -185,7 +185,7 @@ I followed them to a T and what do you know, I was able to visit my HTTPS websit
 
 When testing the email verification feature, I ran into the same issue as [here](https://stackoverflow.com/questions/52917152/laravel-5-7-email-verification-throws-403). I couldn't figure it out until I realized I did not modify the Nginx configuration file to fully work through HTTPS.
 
-So I created a new Nginx configuration file `./docker-compose/nginx/prod/nginx.conf` with the contents
+So I created a new NGINX configuration file ./docker-compose/nginx/prod/nginx.conf with the contents
 
 <div class="caption">
 After following the tutorial, our files should look something like this, with a few differences</div>
@@ -318,9 +318,9 @@ Once all traffic was forwarded directly to 443, instead of processing a request 
 I praise <a href="https://www.linkedin.com/in/travisjryan/" target="_blank">Travis Ryan</a> for helping me figure this out. Before him my life was this Google page
 </div>
 
-<img class="photo w-auto h-80" src="https://i.imgur.com/w1JnsQX.png" alt="purple-google-results">
+<img class="photo h-64" src="https://i.imgur.com/w1JnsQX.png" alt="purple-google-results">
 
-So that was solved, but I realized my <div class="tech-word">websockets</div> connection kept failing now that our SSL configuration was complete. It took weeks to diagnose and resolve this issue, but it was also done.
+So that was solved, but I realized my <span class="tech-word">websockets</span> connection kept failing now that our SSL configuration was complete. It took weeks to diagnose and resolve this issue, but it was also done.
 
 <h2 id="websockets-issues">
 The problem with websockets? Nginx of course!

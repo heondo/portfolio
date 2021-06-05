@@ -4,7 +4,7 @@
       <section-layout id="#">
         <app-landing></app-landing>
       </section-layout>
-      <section-layout id="about" class="slanted" bgColor="bg-blue-900">
+      <section-layout id="about" class="slanted" bgColor="bg-indigo-900">
         <template #title class="underline"> Who, Me? </template>
         <app-about></app-about>
       </section-layout>
@@ -12,7 +12,7 @@
         <template #title class="underline"> Projects </template>
         <app-projects :projects="projects"></app-projects>
       </section-layout>
-      <section-layout id="skills" class="slanted" bgColor="bg-blue-900">
+      <section-layout id="skills" class="slanted" bgColor="bg-indigo-900">
         <template #title> Skills </template>
         <app-skills></app-skills>
       </section-layout>
@@ -21,7 +21,7 @@
         <app-timeline></app-timeline>
       </section-layout>
 
-      <section-layout id="resume" class="slanted" bgColor="bg-blue-900">
+      <section-layout id="resume" class="slanted" bgColor="bg-indigo-900">
         <template #title> Resume </template>
         <iframe
           loading="lazy"

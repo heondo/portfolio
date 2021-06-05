@@ -13,6 +13,7 @@ banner: '/smartguard/banner.png'
 <div>
     <nuxt-img provider="cloudinary" src="smartguard/details.png" />
 </div>
+
 ### Features
 
 - Real-time notifications on the website and email/sms alerts using Websockets and Pusher.js

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="container mb-8 flex flex-wrap gap-y-8 gap-x-8 sm:gap-x-12 md:gap-x-36 justify-center items-center"
+      class="container mb-8 flex flex-wrap gap-y-8 gap-x-8 sm:gap-x-12 md:gap-x-20 justify-center items-center"
     >
       <span class="skill-icon-container">
         <svg
