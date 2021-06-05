@@ -8,21 +8,20 @@
         <template #title class="underline"> Who, Me? </template>
         <app-about></app-about>
       </section-layout>
-      <section-layout id="skills" class="anchor">
+      <section-layout id="projects" class="slanted">
+        <template #title class="underline"> Projects </template>
+        <app-projects :projects="projects"></app-projects>
+      </section-layout>
+      <section-layout id="skills" class="slanted" bgColor="bg-blue-900">
         <template #title> Skills </template>
         <app-skills></app-skills>
       </section-layout>
-      <section-layout
-        id="timeline"
-        class="slanted"
-        :threshold="0.2"
-        bgColor="bg-blue-900"
-      >
+      <section-layout id="timeline" class="slanted" :threshold="0.2">
         <template #title> Timeline</template>
         <app-timeline></app-timeline>
       </section-layout>
 
-      <section-layout id="resume" class="slanted">
+      <section-layout id="resume" class="slanted" bgColor="bg-blue-900">
         <template #title> Resume </template>
         <iframe
           class="mx-auto rounded-lg shadow-xl"
@@ -31,7 +30,7 @@
           height="350"
         ></iframe>
       </section-layout>
-      <section-layout id="articles-comp" class="slanted" bgColor="bg-blue-900">
+      <section-layout id="articles-comp">
         <template #title> articles</template>
         <app-articles :articles="articles"></app-articles>
       </section-layout>
@@ -47,6 +46,7 @@ import AppAbout from '~/components/AppAbout'
 import AppSkills from '~/components/AppSkills'
 import AppTimeline from '~/components/AppTimeline'
 import AppArticles from '~/components/AppArticles'
+import AppProjects from '~/components/AppProjects'
 export default {
   components: {
     AppLayout,
@@ -56,14 +56,19 @@ export default {
     AppSkills,
     AppTimeline,
     AppArticles,
+    AppProjects,
   },
   async asyncData({ $content }) {
-    const articles = await $content('articles')
-      .sortBy('createdAt', 'desc')
-      .limit(3)
-      .fetch()
+    const getArticles = async () =>
+      await $content('articles').sortBy('createdAt', 'desc').limit(3).fetch()
+    const getProjects = async () =>
+      await $content('projects').sortBy('createdAt', 'desc').fetch()
+    const [articles, projects] = await Promise.all([
+      getArticles(),
+      getProjects(),
+    ])
 
-    return { articles }
+    return { articles, projects }
   },
 }
 </script>
