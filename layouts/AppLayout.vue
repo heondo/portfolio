@@ -79,8 +79,7 @@
                 justify-center
                 p-1
                 rounded-md
-                hover:text-white
-                hover:bg-gray-700
+                hover:text-white hover:bg-gray-700
                 transition
                 duration-150
                 ease-in-out

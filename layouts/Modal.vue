@@ -20,8 +20,7 @@
           px-4
           pb-20
           text-center
-          sm:block
-          sm:p-0
+          sm:block sm:p-0
         "
       >
         <transition
@@ -69,11 +68,7 @@
               shadow-xl
               transform
               transition-all
-              sm:my-8
-              sm:align-middle
-              sm:max-w-sm
-              sm:w-full
-              sm:p-6
+              sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6
               max-w-md
             "
           >
@@ -121,7 +116,9 @@
                   text-white
                   hover:bg-indigo-700
                   focus:outline-none
-                  focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
+                  focus:ring-2
+                  focus:ring-offset-2
+                  focus:ring-indigo-500
                   sm:text-sm
                 "
                 @click="isOpen = !isOpen"
