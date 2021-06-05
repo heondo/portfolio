@@ -13,12 +13,10 @@ description: 'Why building a web application with Laravel was the best learning 
 <h2 id="a-brief-intro">A Brief Intro</h2>
 
 I am a self-taught developer who worked primarily with <span class="tech-word">React</span> and <span class="tech-word">Express.js</span> when I first began. Early on in my development journey, I relied on videos from channels like <a href="https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg" target="__blank">NetNinja</a> and <a href="https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w" target="__blank">Academind</a> to watch tutorials for how to bootstrap a full-stack web application with Express and React together, leaving me with a repo that often began looking like the following.
-<img src="https://imgur.com/Iy4UUyy.png">
+<img class="photo" src="https://imgur.com/Iy4UUyy.png">
 
 <div class="caption">And I was very excited to begin creating my full-stack app with this!</div>
  That combination got me quite far in learning the basics of CRUD and REST operations, the interaction between the front-end and back-end but they always felt <span class="italic font-semibold">amateurish</span> and that bugged me. I struggled to wrap my head around pagination, caching, job queueing, proper authentication, and other real-world application problems.
-
-####
 
 When I was asked to create a full-stack web application for my work using a tech stack of <span class="tech-word">Laravel</span>, <span class="tech-word">Vue</span>, <span class="tech-word">MySQL</span>, and <span class="tech-word">Docker</span>, I stopped looking at new features as a challenge and just picked the best solution, often existing packages. As someone who learns well through example and connecting the dots by seeing things in action, Laravel has broken down a lot of the perceived complexities of certain features (caching, queueing, etc).
 

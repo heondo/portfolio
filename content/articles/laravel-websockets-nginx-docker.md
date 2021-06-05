@@ -318,7 +318,7 @@ Once all traffic was forwarded directly to 443, instead of processing a request 
 I praise <a href="https://www.linkedin.com/in/travisjryan/" target="_blank">Travis Ryan</a> for helping me figure this out. Before him my life was this Google page
 </div>
 
-<img class="w-auto h-80" src="https://i.imgur.com/w1JnsQX.png" alt="purple-google-results">
+<img class="photo w-auto h-80" src="https://i.imgur.com/w1JnsQX.png" alt="purple-google-results">
 
 So that was solved, but I realized my <div class="tech-word">websockets</div> connection kept failing now that our SSL configuration was complete. It took weeks to diagnose and resolve this issue, but it was also done.
 
