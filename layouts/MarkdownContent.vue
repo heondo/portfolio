@@ -29,7 +29,8 @@ article > .content {
 }
 
 .nuxt-content .photo {
-  @apply mx-auto my-6;
+  @apply mx-auto;
+  @apply my-6;
 }
 
 .nuxt-content a {
@@ -37,7 +38,8 @@ article > .content {
 }
 
 .nuxt-content .tech-word {
-  @apply text-blue-300 font-semibold;
+  @apply text-blue-300;
+  @apply font-semibold;
 }
 
 .nuxt-content pre.line-numbers {
@@ -66,17 +68,24 @@ article > .content {
 .nuxt-content ul > li {
   list-style-type: disc;
 
-  @apply my-1 p-0;
+  @apply my-1;
+  @apply p-0;
 }
 
 .nuxt-content ol > li {
   list-style-type: decimal;
 
-  @apply my-1 p-0;
+  @apply my-1;
+  @apply p-0;
 }
 
 .nuxt-content .caption {
-  @apply border-l-4 border-indigo-400 italic pl-2 my-4 text-gray-200;
+  @apply border-l-4;
+  @apply border-indigo-400;
+  @apply italic;
+  @apply pl-2;
+  @apply my-4;
+  @apply text-gray-200;
 }
 
 .nuxt-content h1,
@@ -88,7 +97,8 @@ article > .content {
   scroll-margin-top: 2em;
   animation: 1s ease-out 0s 1 slideInFromLeft;
 
-  @apply text-blue-300 my-2;
+  @apply text-blue-300;
+  @apply my-2;
 }
 
 @screen sm {
