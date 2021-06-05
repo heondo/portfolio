@@ -33,6 +33,8 @@ export default {}
 </script>
 <style scoped>
 p {
-  @apply inline text-blue-300 font-semibold;
+  @apply inline;
+  @apply text-blue-300;
+  @apply font-semibold;
 }
 </style>

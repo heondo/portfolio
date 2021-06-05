@@ -80,10 +80,15 @@ export default {
 } */
 
 .read-more svg {
-  @apply transition duration-300 ease-in-out text-xl;
+  @apply transition;
+  @apply duration-300;
+  @apply ease-in-out;
+  @apply text-xl;
 }
 
 .read-more:hover svg {
-  @apply transform translate-x-1 scale-110;
+  @apply transform;
+  @apply translate-x-1;
+  @apply scale-110;
 }
 </style>

@@ -32,8 +32,8 @@
           ease-in-out
         "
       >
-        (in progress)</span
-      >
+        (in progress)
+      </span>
     </template>
   </modal>
 </template>

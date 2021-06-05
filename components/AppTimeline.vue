@@ -1,6 +1,6 @@
 <template>
   <div class="relative max-w-4xl mx-auto">
-    <div class="border-gray-500 absolute h-full timeline-line"></div>
+    <div class="border-gray-500 absolute h-full timeline-line" />
     <ul class="list-none m-0 p-0 flex flex-col gap-4">
       <timeline-event>
         <template #title> Apr 2018 - Data Analyst, Carpe Data </template>
@@ -128,7 +128,9 @@ export default {
 </script>
 <style scoped>
 .map-marker {
-  @apply h-4 w-4 inline;
+  @apply h-4;
+  @apply w-4;
+  @apply inline;
 }
 
 .timeline-line {

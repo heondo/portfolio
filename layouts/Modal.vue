@@ -36,14 +36,15 @@
             class="fixed inset-0 bg-gray-400 bg-opacity-75 transition-opacity"
             aria-hidden="true"
             @click="isOpen = !isOpen"
-          ></div
-        ></transition>
+          ></div>
+        </transition>
 
         <span
           class="hidden sm:inline-block sm:align-middle sm:h-screen"
           aria-hidden="true"
-          >&#8203;</span
         >
+          &#8203;
+        </span>
 
         <transition
           enter-active-class="ease-out duration-300"

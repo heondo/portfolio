@@ -106,12 +106,18 @@ export default {
 </script>
 <style scoped>
 .list-container {
-  background: #314485;
-  background: -webkit-linear-gradient(top, #314485, #243364);
-  background: -moz-linear-gradient(top, #314485, #243364);
-  background: linear-gradient(to bottom, #314485, #243364);
+  background: #453b7c;
+  background: -webkit-linear-gradient(top, #453b7c, #302761);
+  background: -moz-linear-gradient(top, #453b7c, #302761);
+  background: linear-gradient(to bottom, #453b7c, #302761);
 
-  @apply ml-12 p-4 text-white rounded-md relative text-sm shadow-md;
+  @apply ml-12;
+  @apply p-4;
+  @apply text-white;
+  @apply rounded-md;
+  @apply relative;
+  @apply text-sm;
+  @apply shadow-md;
 }
 
 @screen sm {

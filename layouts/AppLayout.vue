@@ -16,8 +16,9 @@
                       'border-blue-400': $route.hash === '#about',
                     }"
                   >
-                    About </a
-                  ><a
+                    About
+                  </a>
+                  <a
                     href="/#projects"
                     class="desktop-nav-link border-transparent"
                     :class="{
@@ -152,48 +153,54 @@
                     'bg-gray-600': $route.hash === '#about',
                   }"
                   class="nav-link"
-                  >About</a
                 >
+                  About
+                </a>
                 <a
                   href="/#projects"
                   :class="{
                     'bg-gray-600': $route.hash === '#projects',
                   }"
                   class="nav-link"
-                  >Projects</a
                 >
+                  Projects
+                </a>
                 <a
                   href="/#skills"
                   :class="{
                     'bg-gray-600': $route.hash === '#skills',
                   }"
                   class="nav-link"
-                  >Skills</a
                 >
+                  Skills
+                </a>
                 <a
                   href="/#timeline"
                   :class="{
                     'bg-gray-600': $route.hash === '#timeline',
                   }"
                   class="nav-link"
-                  >Timeline</a
                 >
+                  Timeline
+                </a>
                 <a
                   href="/#resume"
                   :class="{
                     'bg-gray-600': $route.hash === '#resume',
                   }"
                   class="nav-link"
-                  >Resume</a
                 >
+                  Resume
+                </a>
                 <a
                   href="/articles"
                   :class="{
                     'bg-gray-600': $route.path.startsWith('/articles'),
                   }"
                   class="nav-link"
-                  >Articles</a
                 >
+                  Articles
+                </a>
               </div>
             </div>
           </div>
@@ -231,15 +238,30 @@ export default {
 </script>
 <style scoped>
 .app-logo {
-  @apply transform duration-300 text-xl ease-in-out flex-shrink-0 text-white font-bold;
+  @apply transform;
+  @apply duration-300;
+  @apply text-xl;
+  @apply ease-in-out;
+  @apply flex-shrink-0;
+  @apply text-white;
+  @apply font-bold;
 }
 
 .app-logo:hover {
-  @apply transition scale-125 text-blue-300;
+  @apply transition;
+  @apply scale-125;
+  @apply text-blue-300;
 }
 
 .nav-link {
-  @apply px-3 py-2 rounded-md text-sm font-medium transition ease-in-out duration-300;
+  @apply px-3;
+  @apply py-2;
+  @apply rounded-md;
+  @apply text-sm;
+  @apply font-medium;
+  @apply transition;
+  @apply ease-in-out;
+  @apply duration-300;
 }
 
 .nav-link:hover {
@@ -247,10 +269,20 @@ export default {
 }
 
 .desktop-nav-link {
-  @apply border-b-2 inline-flex items-center px-1 py-2 text-sm font-medium transition ease-in-out duration-300;
+  @apply border-b-2;
+  @apply inline-flex;
+  @apply items-center;
+  @apply px-1;
+  @apply py-2;
+  @apply text-sm;
+  @apply font-medium;
+  @apply transition;
+  @apply ease-in-out;
+  @apply duration-300;
 }
 
 .desktop-nav-link:hover {
-  @apply border-gray-300 text-gray-300;
+  @apply border-gray-300;
+  @apply text-gray-300;
 }
 </style>

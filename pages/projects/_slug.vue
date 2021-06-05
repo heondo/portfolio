@@ -49,7 +49,7 @@
                 shadow-md
               "
             />
-            <div class="my-4 flex flex-col gap-2">
+            <div class="my-4 flex flex-col gap-2 md:text-lg">
               <!-- Private, project urls, or other -->
               <span
                 v-if="project.private"

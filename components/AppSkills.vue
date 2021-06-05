@@ -171,20 +171,26 @@ export default {}
 </script>
 <style scoped>
 .skill-icon {
-  @apply h-auto w-16;
+  @apply h-auto;
+  @apply w-16;
 }
 
 .skill-icon-container * {
-  @apply transition duration-300 ease-in-out;
+  @apply transition;
+  @apply duration-300;
+  @apply ease-in-out;
 }
 
 .skill-icon-container:hover .skill-icon,
 .skill-icon-container:active .skill-icon {
-  @apply transform -translate-y-3 scale-110;
+  @apply transform;
+  @apply -translate-y-3;
+  @apply scale-110;
 }
 
 .skill-icon-container .skill-desc {
-  @apply text-center opacity-0;
+  @apply text-center;
+  @apply opacity-0;
 }
 
 .skill-icon-container:hover .skill-desc,
@@ -193,7 +199,12 @@ export default {}
 }
 
 .skill-icon-container {
-  @apply flex flex-col justify-center items-center h-auto w-auto;
+  @apply flex;
+  @apply flex-col;
+  @apply justify-center;
+  @apply items-center;
+  @apply h-auto;
+  @apply w-auto;
 }
 
 @screen md {

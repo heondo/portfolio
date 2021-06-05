@@ -14,5 +14,7 @@ module.exports = {
   // add your custom rules here
   rules: {
     'vue/attribute-hyphenation': ['off'],
+    'vue/html-self-closing': ['off'],
+    'vue/singleline-html-element-content-newline': ['off'],
   },
 }

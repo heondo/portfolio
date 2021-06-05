@@ -116,11 +116,13 @@ export default {
 }
 
 .article-container {
-  background: #314485;
-  background: -webkit-linear-gradient(top, #314485, #243364);
-  background: -moz-linear-gradient(top, #314485, #243364);
-  background: linear-gradient(to bottom, #314485, #243364);
-  @apply p-4 rounded-lg shadow-lg;
+  background: #1e4a70;
+  background: -webkit-linear-gradient(top, #1e4a70, #11314b);
+  background: -moz-linear-gradient(top, #1e4a70, #11314b);
+  background: linear-gradient(to bottom, #1e4a70, #11314b);
+  @apply p-4;
+  @apply rounded-lg;
+  @apply shadow-lg;
 }
 
 article {
