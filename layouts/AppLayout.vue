@@ -8,7 +8,7 @@
             <!-- Desktop nav -->
             <nav class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
-                <div class="lg:ml-6 lg:flex lg:space-x-8">
+                <div class="lg:ml-6 flex lg:space-x-8 gap-4">
                   <a
                     href="/#about"
                     class="desktop-nav-link border-transparent"
@@ -16,7 +16,15 @@
                       'border-blue-400': $route.hash === '#about',
                     }"
                   >
-                    About
+                    About </a
+                  ><a
+                    href="/#projects"
+                    class="desktop-nav-link border-transparent"
+                    :class="{
+                      'border-blue-400': $route.hash === '#projects',
+                    }"
+                  >
+                    Projects
                   </a>
                   <a
                     href="/#skills"
@@ -63,7 +71,7 @@
           <div class="flex md:hidden">
             <button
               type="button"
-              class="bg-white bg-opacity-25 text-white inline-flex items-center justify-center p-1 rounded-md text-gray-500 hover:text-white hover:bg-gray-600 transition duration-150 ease-in-out"
+              class="text-white inline-flex items-center justify-center p-1 rounded-md text-white hover:text-white hover:bg-gray-700 transition duration-150 ease-in-out"
               aria-controls="mobile-menu"
               aria-expanded="false"
               @click="menuOpen = !menuOpen"
@@ -72,13 +80,15 @@
               <svg
                 class="h-5 w-7"
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
                 <path
-                  fill-rule="evenodd"
-                  d="M3 7a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 13a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                  clip-rule="evenodd"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
                 />
               </svg>
             </button>
@@ -107,7 +117,7 @@
             </div>
             <!-- actual content -->
             <div
-              class="z-20 bg-gray-700 text-white rounded-lg px-2 py-2 mx-auto max-w-2xl shadow-xl transition-all"
+              class="z-20 bg-gray-600 text-white rounded-lg px-2 py-2 mx-auto max-w-2xl shadow-xl transition-all"
               role="dialog"
               aria-modal="true"
               aria-labelledby="modal-headline"
@@ -120,6 +130,14 @@
                   }"
                   class="nav-link"
                   >About</a
+                >
+                <a
+                  href="/#projects"
+                  :class="{
+                    'bg-gray-600': $route.hash === '#projects',
+                  }"
+                  class="nav-link"
+                  >Projects</a
                 >
                 <a
                   href="/#skills"
@@ -169,7 +187,7 @@
     </main>
 
     <footer>
-      <div class="max-w-4xl mx-auto px-6 sm:px-8 pt-16 pb-8">
+      <div class="max-w-4xl mx-auto px-6 sm:px-8 pb-8">
         <app-footer></app-footer>
       </div>
     </footer>

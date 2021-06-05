@@ -7,12 +7,12 @@
     >
       <!-- thumbnail -->
       <nuxt-link
-        class="m-auto sm:h-60 h-48 w-auto overflow-hidden flex justify-center items-center"
+        class="m-auto h-48 w-auto overflow-hidden flex justify-center items-center"
         :to="{ name: 'projects-slug', params: { slug: p.slug } }"
       >
         <nuxt-img
           provider="cloudinary"
-          class="object-cover rounded-md"
+          class="object-cover object-top rounded-md"
           :src="p.thumbnail"
         />
       </nuxt-link>
