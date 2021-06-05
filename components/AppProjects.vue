@@ -26,7 +26,7 @@
         />
       </nuxt-link>
       <!-- end thumbnail -->
-      <div class="flex flex-col">
+      <div class="flex flex-col gap-1">
         <nuxt-link
           class="
             text-lg
@@ -67,9 +67,8 @@
             leading-5
             font-medium
             rounded-full
-            text-gray-700
+            text-gray-800
             bg-white
-            hover:bg-gray-50
             focus:outline-none
             focus:ring-2
             focus:ring-offset-2
@@ -81,7 +80,7 @@
             <a
               href="https://github.com/heondo"
               target="__blank"
-              class="hover:text-gray-500 duration-300 ease-in-out mx-1"
+              class="hover:text-gray-600 duration-300 ease-in-out mx-1"
             >
               <p class="inline underline">Github</p>
               <svg
