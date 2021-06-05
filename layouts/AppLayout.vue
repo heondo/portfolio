@@ -7,8 +7,8 @@
             <a class="app-logo" href="/">HK</a>
             <!-- Desktop nav -->
             <nav class="hidden md:block">
-              <div class="ml-10 flex items-baseline space-x-4">
-                <div class="lg:ml-6 flex lg:space-x-8 gap-2">
+              <div class="ml-10 flex items-baseline">
+                <div class="lg:ml-6 flex lg:space-x-4">
                   <a
                     href="/#about"
                     class="desktop-nav-link border-transparent"
