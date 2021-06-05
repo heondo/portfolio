@@ -72,7 +72,7 @@ article > .content {
 }
 
 .nuxt-content .caption {
-  @apply border-l-4 border-indigo-400 italic pl-2 my-4 text-gray-300;
+  @apply border-l-4 border-indigo-400 italic pl-2 my-4 text-gray-200;
 }
 
 .nuxt-content h1,

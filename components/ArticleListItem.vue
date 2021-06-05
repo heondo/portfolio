@@ -4,7 +4,7 @@
       <span class="text-lg font-semibold pl-2 border-l-4 border-indigo-400">
         {{ article.subject }}
       </span>
-      <span class="text-gray-300">
+      <span class="text-gray-200">
         {{ $formatDate(new Date(article.createdAt), 'EEEE - MMMM dd, yyyy') }}
       </span>
     </div>
@@ -24,7 +24,7 @@
     </div>
     <span class="w-auto">
       <nuxt-link
-        class="hover:text-white read-more text-blue-400 transition duration-300 ease-in-out"
+        class="hover:text-white read-more text-blue-300 transition duration-300 ease-in-out"
         :to="{ name: 'articles-slug', params: { slug: article.slug } }"
       >
         Read More
