@@ -82,8 +82,7 @@
           class="
             bg-gray-700
             shadow-lg
-            focus:ring-indigo-500
-            focus:border-indigo-500
+            focus:ring-indigo-500 focus:border-indigo-500
             block
             w-full
             pl-10
@@ -124,8 +123,7 @@
             bg-gray-700
             shadow-lg
             align-middle
-            focus:ring-indigo-500
-            focus:border-indigo-500
+            focus:ring-indigo-500 focus:border-indigo-500
             block
             w-full
             pl-10
@@ -157,7 +155,9 @@
             bg-blue-600
             hover:bg-blue-700
             focus:outline-none
-            focus:ring-2 focus:ring-offset-2 focus:ring-blue-500
+            focus:ring-2
+            focus:ring-offset-2
+            focus:ring-blue-500
             transform
             transition
             duration-300
