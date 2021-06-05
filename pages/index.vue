@@ -24,6 +24,7 @@
       <section-layout id="resume" class="slanted" bgColor="bg-blue-900">
         <template #title> Resume </template>
         <iframe
+          loading="lazy"
           class="mx-auto rounded-lg shadow-xl"
           src="https://drive.google.com/file/d/13fR9a1kTlyQtHKRe60S_YbUUE2mvOq3L/preview"
           width="80%"
