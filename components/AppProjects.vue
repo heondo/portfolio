@@ -18,9 +18,12 @@
       </nuxt-link>
       <!-- end thumbnail -->
       <div class="flex flex-col">
-        <h3 class="text-lg font-bold uppercase">
+        <nuxt-link
+          class="text-lg font-bold uppercase hover:text-gray-300 ease-in-out duration-300"
+          :to="{ name: 'projects-slug', params: { slug: p.slug } }"
+        >
           {{ p.title }}
-        </h3>
+        </nuxt-link>
         <p class="mb-2">
           {{ p.description }}
         </p>
