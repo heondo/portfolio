@@ -117,7 +117,7 @@
             </div>
             <!-- actual content -->
             <div
-              class="z-20 bg-gray-600 text-white rounded-lg px-2 py-2 mx-auto max-w-2xl shadow-xl transition-all"
+              class="z-20 bg-gray-700 text-white rounded-lg px-2 py-2 mx-auto max-w-2xl shadow-xl transition-all"
               role="dialog"
               aria-modal="true"
               aria-labelledby="modal-headline"

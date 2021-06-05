@@ -7,7 +7,7 @@
     >
       <!-- thumbnail -->
       <nuxt-link
-        class="m-auto h-48 w-auto overflow-hidden flex justify-center items-center"
+        class="m-auto h-36 w-auto overflow-hidden flex justify-center items-center rounded-md"
         :to="{ name: 'projects-slug', params: { slug: p.slug } }"
       >
         <nuxt-img
