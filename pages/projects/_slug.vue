@@ -33,16 +33,28 @@
             <nuxt-img
               provider="cloudinary"
               :src="project.banner"
-              class="h-auto w-full overflow-hidden object-cover object-top rounded-lg shadow-md"
+              class="h-64 w-full overflow-hidden object-cover object-top rounded-lg shadow-md"
             />
-            <div class="text-gray-200 my-4 pl-2 border-l-4 border-indigo-400">
-              <span v-if="project.private" class="italic">
+            <div class="my-4 flex flex-col gap-2">
+              <!-- Private, project urls, or other -->
+              <span
+                v-if="project.private"
+                class="italic text-gray-200 pl-2 border-l-4 border-indigo-400"
+              >
                 Private application, code cannot be shared
                 <p class="inline not-italic">😔</p>
               </span>
               <span v-else-if="project.repo" class="italic">
+                <!-- If there were a repo, and there should be LOL -->
+                <!-- Create a component  for the product links. Maybe remove it from the caption section? -->
                 {{ project.repo }}
               </span>
+              <!-- end of ifs -->
+              <div>Stack: {{ project.stack }}</div>
+              <section>
+                <h4 class="font-semibold text-lg">Description</h4>
+                {{ project.description }}
+              </section>
             </div>
             <markdown-content
               class="prose lg:prose-lg mx-auto"

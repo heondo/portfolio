@@ -83,7 +83,7 @@ article > .content {
 .nuxt-content h6 {
   scroll-margin-top: 2em;
   animation: 1s ease-out 0s 1 slideInFromLeft;
-  @apply text-blue-300 my-4;
+  @apply text-blue-300 my-2;
 }
 
 @screen sm {
@@ -94,7 +94,7 @@ article > .content {
   .nuxt-content h5,
   .nuxt-content h6 {
     /* scroll-margin-top: 1em; */
-    @apply text-blue-300 my-4;
+    @apply text-blue-300;
   }
 }
 
