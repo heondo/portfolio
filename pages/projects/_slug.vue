@@ -64,6 +64,7 @@
                 {{ project.repo }}
               </span>
               <!-- end of ifs -->
+              <div>Role: {{ project.role }}</div>
               <div>Stack: {{ project.stack }}</div>
               <section>
                 <h4 class="font-semibold text-lg">Description</h4>

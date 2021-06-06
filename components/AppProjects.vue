@@ -45,6 +45,10 @@
         </p>
         <span class="flex-grow">{{ '' }}</span>
         <span>
+          Role:
+          <p class="italic inline font-semibold">{{ p.role }}</p>
+        </span>
+        <span>
           Stack:
           <p class="italic inline font-semibold">{{ p.stack }}</p>
         </span>
