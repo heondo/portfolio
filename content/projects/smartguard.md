@@ -27,6 +27,8 @@ banner: '/smartguard/banner.png'
 
 - Develop new routes/controller logic using Eloquent ORM or raw SQL
 - Create migrations and factories/seeders with complex relations
+- Develop front end using TailwindCSS and Styled Components, along with Vuex and Redux for state management.
+- Integrate with microservices and 3rd party APIs such as Redis, Algolia, and Pusher.
 - Write backend test suite along with documentation to generate Postman/Insomnia requests template
 - Setting up deployment configuration using Docker Swarm, NGINX, and Digital Ocean VPS.
 
