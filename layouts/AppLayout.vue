@@ -118,7 +118,7 @@
         leave-to-class="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
       >
         <div v-show="menuOpen" class="md:hidden fixed inset-0 overflow-y-auto">
-          <div class="flex pt-4 text-center">
+          <div class="flex pt-4 px-2 text-center">
             <!-- background overlay -->
             <div
               class="fixed inset-0 transition-opacity"
@@ -131,7 +131,7 @@
             <div
               class="
                 z-20
-                bg-gray-700
+                bg-gray-900
                 text-white
                 rounded-lg
                 px-2
@@ -145,11 +145,11 @@
               aria-modal="true"
               aria-labelledby="modal-headline"
             >
-              <div class="flex">
+              <div class="flex flex-wrap w-full justify-evenly">
                 <a
                   href="/#about"
                   :class="{
-                    'bg-gray-600': $route.hash === '#about',
+                    'bg-gray-700': $route.hash === '#about',
                   }"
                   class="nav-link"
                 >
@@ -158,7 +158,7 @@
                 <a
                   href="/#projects"
                   :class="{
-                    'bg-gray-600': $route.hash === '#projects',
+                    'bg-gray-700': $route.hash === '#projects',
                   }"
                   class="nav-link"
                 >
@@ -167,7 +167,7 @@
                 <a
                   href="/#skills"
                   :class="{
-                    'bg-gray-600': $route.hash === '#skills',
+                    'bg-gray-700': $route.hash === '#skills',
                   }"
                   class="nav-link"
                 >
@@ -176,7 +176,7 @@
                 <a
                   href="/#timeline"
                   :class="{
-                    'bg-gray-600': $route.hash === '#timeline',
+                    'bg-gray-700': $route.hash === '#timeline',
                   }"
                   class="nav-link"
                 >
@@ -185,7 +185,7 @@
                 <a
                   href="/#resume"
                   :class="{
-                    'bg-gray-600': $route.hash === '#resume',
+                    'bg-gray-700': $route.hash === '#resume',
                   }"
                   class="nav-link"
                 >
@@ -194,7 +194,7 @@
                 <a
                   href="/articles"
                   :class="{
-                    'bg-gray-600': $route.path.startsWith('/articles'),
+                    'bg-gray-700': $route.path.startsWith('/articles'),
                   }"
                   class="nav-link"
                 >
