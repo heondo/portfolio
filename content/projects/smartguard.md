@@ -32,6 +32,12 @@ banner: '/smartguard/banner.png'
 <div>
     <nuxt-img class="rounded-md" provider="cloudinary" src="smartguard/pages_btzg76.png" />
 </div>
+<div class="caption">
+    Pagination (custom component)
+</div>
 <div>
     <nuxt-img class="rounded-md" provider="cloudinary" src="smartguard/blurred_roles_gh2dml.png" />
+</div>
+<div class="caption">
+    Roles and permissions
 </div>
