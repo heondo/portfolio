@@ -20,11 +20,13 @@
       primarily using
       <p>Python</p>
       . It was making scripts to process data and the like but I wanted to
-      create complete appliciations, from the interface to the functionality. I
+      create complete applications, from the interface to the functionality. I
       enjoy creating
       <p>full stack</p>
       web applications using
-      <p>SQL, Laravel, NodeJs, Vue, React, and Angular.</p>
+      <p>
+        PostgreSQL, MySQL, Laravel, Node.js, Vue.js, React.js, and Angular 2.
+      </p>
     </div>
   </div>
 </template>
